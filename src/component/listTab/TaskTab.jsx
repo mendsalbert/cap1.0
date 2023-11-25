@@ -1,7 +1,7 @@
 import ProtoTypes from "prop-types";
 import CustomerInfo from "./CustomerInfo";
 import users from "../../data/user";
-function UserTab({ pageSize }) {
+function TaskTab({ pageSize }) {
   return (
     <div className="table-content w-full overflow-x-auto">
       <table className="w-full">
@@ -35,8 +35,8 @@ function UserTab({ pageSize }) {
   );
 }
 
-UserTab.propTypes = {
+TaskTab.propTypes = {
   pageSize: ProtoTypes.number,
 };
 
-export default UserTab;
+export default TaskTab;
