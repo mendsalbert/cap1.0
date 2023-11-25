@@ -82,7 +82,7 @@ function Task() {
           <div className="badge">+44</div>
         </button>
 
-        <ListTab pageSize={9} />
+        {/* <ListTab pageSize={9} /> */}
         <TaskTab pageSize={9} />
       </section>
       {/* <section className="2xl:flex-1 w-full">
