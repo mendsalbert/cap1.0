@@ -1,0 +1,10 @@
+{
+  "auto-run-command.rules": [
+    {
+      "condition": "isFile",
+      "command": "workbench.action.tasks.runTask",
+      "message": "Running auto git push",
+      "arguments": ["git push"]
+    }
+  ]
+}
