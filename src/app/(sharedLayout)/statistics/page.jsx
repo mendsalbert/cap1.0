@@ -10,9 +10,6 @@ function Statistics() {
   return (
     <>
       <section className="2xl:flex-1 2xl:mb-0 mb-6">
-        <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
-          Buy Carbon
-        </button>
         <div className="w-full mb-[24px] xl:flex xl:space-x-[24px]">
           <SummaryV2 />
           <Efficiency height="h-[180px]" />
