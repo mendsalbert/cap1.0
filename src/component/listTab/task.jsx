@@ -5,6 +5,7 @@ import FilterFull from "../forms/FilterFull";
 import Search from "../forms/Search";
 import UserTab from "./UserTab";
 import TaskSearch from "../forms/TaskSearch";
+import TaskTab from "./TaskTab";
 function ListTab({ pageSize }) {
   return (
     <div className="w-full rounded-lg bg-white px-[24px] py-[20px] dark:bg-darkblack-600">
@@ -15,7 +16,8 @@ function ListTab({ pageSize }) {
         </div>
         {/* <FilterFull /> */}
 
-        <UserTab pageSize={pageSize} />
+        {/* <UserTab pageSize={pageSize} /> */}
+        <TaskTab pageSize={pageSize} />
         {/* <Pagination /> */}
       </div>
     </div>
