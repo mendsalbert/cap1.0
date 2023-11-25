@@ -1,6 +1,7 @@
 "use client";
 
 import ListTab from "@/component/listTab";
+import TaskTab from "@/component/listTab/TaskTab";
 
 import TeamChat from "@/component/teamChat";
 import Wallet from "@/component/wallet";
@@ -82,6 +83,7 @@ function Task() {
         </button>
 
         <ListTab pageSize={9} />
+        <TaskTab pageSize={9} />
       </section>
       {/* <section className="2xl:flex-1 w-full">
         <Wallet />
