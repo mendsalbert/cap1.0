@@ -1,5 +1,4 @@
 import ProtoTypes from "prop-types";
-
 import task from "@/data/task";
 import TaskInfo from "./TaskInfo";
 
