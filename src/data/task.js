@@ -12,6 +12,7 @@ import author3 from "/public/static/images/avatar/ni.png";
 import author4 from "/public/static/images/avatar/am.png";
 import author5 from "/public/static/images/avatar/sr.png";
 import war from "/public/war.png";
+import blood from "/public/blood.jpeg";
 const task = [
   {
     id: 1,
