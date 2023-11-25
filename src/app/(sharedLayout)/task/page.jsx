@@ -80,10 +80,7 @@ function Task() {
           Inbox
           <div className="badge">+99</div>
         </button>
-        <button className="btn">
-          Inbox
-          <div className="badge badge-secondary">+99</div>
-        </button>
+
         <ListTab pageSize={9} />
       </section>
       {/* <section className="2xl:flex-1 w-full">
