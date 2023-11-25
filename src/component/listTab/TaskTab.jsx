@@ -1,12 +1,14 @@
 import ProtoTypes from "prop-types";
 import CustomerInfo from "./CustomerInfo";
 import users from "../../data/user";
+import task from "@/data/task";
+
 function TaskTab({ pageSize }) {
   return (
     <div className="table-content w-full overflow-x-auto">
       <table className="w-full">
         <tbody>
-          {users?.map((user, index) =>
+          {task?.map((user, index) =>
             pageSize
               ? index + 1 <= pageSize && (
                   <CustomerInfo
