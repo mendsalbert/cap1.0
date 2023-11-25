@@ -78,7 +78,7 @@ function Task() {
         {/* <h1 className="text-lg py-2 font-bold">(faseffd)</h1> */}
         <button className="btn mb-3 mt-2">
           Task
-          <div className="badge">+4</div>
+          <div className="badge">+44</div>
         </button>
 
         <ListTab pageSize={9} />
