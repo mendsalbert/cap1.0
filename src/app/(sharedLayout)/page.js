@@ -196,7 +196,7 @@ function Home() {
             </Marker>
           ))}
 
-          {currentLocation && <Marker position={currentLocation} />}
+          {/* {currentLocation && <Marker position={currentLocation} />} */}
         </GoogleMap>
       </LoadScript>
     </>
