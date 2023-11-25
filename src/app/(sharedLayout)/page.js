@@ -28,21 +28,21 @@ function Home() {
   const facilities = [
     {
       id: 1,
-      position: { lat: 5.6037, lng: -0.187 },
+      position: { lat: 31.7683, lng: 35.2137 }, // Jerusalem, Israel
       type: "ambulance",
       info: "Request Ambulance",
       icon: "/ambulance.svg",
     },
     {
       id: 2,
-      position: { lat: 5.605, lng: -0.1895 }, // Adjusted for wider spread
+      position: { lat: 31.7727, lng: 35.217 }, // Slightly north of Jerusalem
       type: "Fire Fighter",
       info: "Request for fire service",
       icon: "/fire-extinguisher.svg",
     },
     {
       id: 3,
-      position: { lat: 5.601, lng: -0.1855 }, // Adjusted for wider spread
+      position: { lat: 31.764, lng: 35.21 }, // Slightly south of Jerusalem
       type: "shelter",
       info: "Find Shelter",
       icon: "/tent.svg",
