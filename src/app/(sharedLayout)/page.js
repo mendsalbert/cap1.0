@@ -43,9 +43,9 @@ function Home() {
     {
       id: 3,
       position: { lat: 31.764, lng: 35.21 }, // Slightly south of Jerusalem
-      type: "shelter",
-      info: "Find Shelter",
-      icon: "/tent.svg",
+      type: "Medical Equipments",
+      info: "Find Medical Equipments (Medicine etc)",
+      icon: "/pill.svg",
     },
   ];
 
