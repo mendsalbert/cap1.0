@@ -1,7 +1,7 @@
 import ProtoTypes from "prop-types";
-import CustomerInfo from "./CustomerInfo";
-import users from "../../data/user";
+
 import task from "@/data/task";
+import TaskInfo from "./TaskInfo";
 
 function TaskTab({ pageSize }) {
   return (
@@ -11,7 +11,7 @@ function TaskTab({ pageSize }) {
           {task?.map((user, index) =>
             pageSize
               ? index + 1 <= pageSize && (
-                  <CustomerInfo
+                  <TaskInfo
                     key={user.id}
                     img={user.img}
                     name={user.name}
@@ -21,7 +21,7 @@ function TaskTab({ pageSize }) {
                   />
                 )
               : index < 3 && (
-                  <CustomerInfo
+                  <TaskInfo
                     key={user.id}
                     img={user.img}
                     name={user.name}
