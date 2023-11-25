@@ -76,7 +76,7 @@ function Task() {
       </div>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
         {/* <h1 className="text-lg py-2 font-bold">(faseffd)</h1> */}
-        <button className="btn mb-3 mt-2">
+        <button className="btn mb-3 mt-2 bg-pink-400">
           Task
           <div className="badge">+44</div>
         </button>
