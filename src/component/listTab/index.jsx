@@ -15,8 +15,8 @@ function ListTab({ pageSize }) {
           {/* <Filter options={["January", "February", "March"]} /> */}
         </div>
         {/* <FilterFull /> */}
-        <TaskTab pageSize={pageSize} />
-        {/* <UserTab pageSize={pageSize} /> */}
+        {/* <TaskTab pageSize={pageSize} /> */}
+        <UserTab pageSize={pageSize} />
         {/* <Pagination /> */}
       </div>
     </div>
