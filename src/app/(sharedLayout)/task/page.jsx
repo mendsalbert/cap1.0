@@ -75,7 +75,15 @@ function Task() {
         </div>
       </div>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
-        <h1 className="text-lg py-2 font-bold">faseffd</h1>
+        {/* <h1 className="text-lg py-2 font-bold">(faseffd)</h1> */}
+        <button className="btn">
+          Inbox
+          <div className="badge">+99</div>
+        </button>
+        <button className="btn">
+          Inbox
+          <div className="badge badge-secondary">+99</div>
+        </button>
         <ListTab pageSize={9} />
       </section>
       {/* <section className="2xl:flex-1 w-full">
