@@ -18,10 +18,10 @@ function Layout({ bg, overlay, children }) {
     <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
       <div className="relative flex w-full">
         {user ? (
-          <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
-        ) : (
+          // <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
           // <NGO handleActive={() => setSidebar(!sidebar)} />
-          // <FR handleActive={() => setSidebar(!sidebar)} />
+          <FR handleActive={() => setSidebar(!sidebar)} />
+        ) : (
           <Sidebar handleActive={() => setSidebar(!sidebar)} />
         )}
 
