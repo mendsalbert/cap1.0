@@ -5,7 +5,6 @@ function TaskInfo({ img, name, email, location, spent }) {
   return (
     <tr className="border-b border-bgray-300 dark:border-darkblack-400">
       <td className="px-6 py-5 xl:px-0">
-        <h1>faseffd</h1>
         <div className="flex w-full items-center space-x-2.5">
           <div className="h-20 w-20 overflow-hidden rounded-lg">
             <Image
