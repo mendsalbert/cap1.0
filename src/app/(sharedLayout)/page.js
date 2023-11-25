@@ -20,7 +20,7 @@ const center = {
 };
 
 function Home() {
-  const [currentLocation, setCurrentLocation] = useState(center);
+  // const [currentLocation, setCurrentLocation] = useState(center);
   const [selectedFacility, setSelectedFacility] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(14);
   const [iconSize, setIconSize] = useState({ width: 30, height: 30 });
@@ -147,13 +147,14 @@ function Home() {
       <LoadScript googleMapsApiKey="AIzaSyBBBcC7nb_9zSAjhYJf4Q2-BCZGVO8p26Y">
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={currentLocation}
+          // center={currentLocation}
+          center={center} // Using Israel as the center
           zoom={zoomLevel}
         >
           {zones.map((zone, index) => (
             <Circle
               key={index}
-              center={currentLocation}
+              center={center}
               radius={zone.radius}
               options={{
                 fillColor: zone.color,
