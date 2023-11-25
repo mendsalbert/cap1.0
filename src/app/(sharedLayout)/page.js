@@ -15,8 +15,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 31.7683, // Latitude of Jerusalem
-  lng: 35.2137, // Longitude of Jerusalem
+  lat: 31.7683, // Latitude of Jerusalem, Israel
+  lng: 35.2137,
 };
 
 function Home() {
