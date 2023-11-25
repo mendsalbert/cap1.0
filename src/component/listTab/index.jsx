@@ -4,6 +4,7 @@ import Filter from "../forms/Filter";
 import FilterFull from "../forms/FilterFull";
 import Search from "../forms/Search";
 import UserTab from "./UserTab";
+import TaskTab from "./TaskTab";
 function ListTab({ pageSize }) {
   return (
     <div className="w-full rounded-lg bg-white px-[24px] py-[20px] dark:bg-darkblack-600">
@@ -13,7 +14,8 @@ function ListTab({ pageSize }) {
           {/* <Filter options={["January", "February", "March"]} /> */}
         </div>
         {/* <FilterFull /> */}
-        <UserTab pageSize={pageSize} />
+        <TaskTab pageSize={pageSize} />
+        {/* <UserTab pageSize={pageSize} /> */}
         {/* <Pagination /> */}
       </div>
     </div>
