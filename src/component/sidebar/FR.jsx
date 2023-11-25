@@ -23,22 +23,6 @@ function FR({ handleActive }) {
             className="block dark:block"
             alt="logo"
           />
-          {/* <Image
-            priority={true}
-            height={logoNew.height}
-            width={logoNew.width}
-            src={logoNew.src}
-            className="hidden dark:block"
-            alt="logo"
-          /> */}
-          {/* <Image
-            priority={true}
-            height={logoW.height}
-            width={logoW.width}
-            src={logoW.src}
-            className="hidden dark:block"
-            alt="logo"
-          /> */}
         </Link>
         <button
           aria-label="none"
