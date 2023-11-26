@@ -18,6 +18,69 @@ function FootPrintComponent() {
           <FootPrint key={footprint.id} footprint={footprint} />
         ))}
       </div>
+
+      <dialog id="my_modal_4" className="modal">
+        <div className="modal-box w-6/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
+          <h3 className="font-bold text-lg my-3">
+            Fill in the details to add a donation
+          </h3>
+          {/* name, category */}
+          <div className="space-x-4 py-2 flex flex-row">
+            <input
+              type="text"
+              placeholder="Name"
+              className="input input-bordered input-md w-full dark:bg-darkblack-500"
+            />
+            <select className="select select-bordered w-full  dark:bg-darkblack-500">
+              <option disabled selected>
+                War
+              </option>
+              <option>Food</option>
+              <option>Normal Orange</option>
+              <option>Normal Tomato</option>
+            </select>
+          </div>
+          {/* target amount - regioin using google map search */}
+          <div className="space-x-4 py-2 flex flex-row">
+            <input
+              type="number"
+              placeholder="eg 5TH"
+              className="input input-bordered input-md w-full  dark:bg-darkblack-500"
+            />
+            <select className="select select-bordered w-full  dark:bg-darkblack-500">
+              <option disabled selected>
+                Isreal
+              </option>
+              <option>Gaza</option>
+              <option>Palenstine</option>
+              <option>Normal Tomato</option>
+            </select>
+          </div>
+          {/* file input */}
+          <div className="form-control w-full py-2">
+            <input
+              type="file"
+              className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
+            />
+          </div>
+          {/* description */}
+          <textarea
+            placeholder="Bio"
+            className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
+          ></textarea>
+          <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
+            Upload
+          </button>
+          {/* add */}
+          <div className="modal-action absolute -top-3 right-4">
+            <form method="dialog">
+              <button className="">
+                <IconX className="dark:text-white " />
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </>
   );
 }
