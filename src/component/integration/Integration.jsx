@@ -123,7 +123,7 @@ function Integration({ integration }) {
               </button>
             </div>
           </div>
-          <div className="modal-action absolute -top-2 right-4">
+          <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className="">
