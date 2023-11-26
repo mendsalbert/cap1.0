@@ -50,7 +50,7 @@ function MyWallet() {
             <input
               type="number"
               placeholder="eg 5TH"
-              className="input input-bordered input-md w-full"
+              className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
             <select className="select select-bordered w-full">
               <option disabled selected>
@@ -65,7 +65,7 @@ function MyWallet() {
           <div className="form-control w-full py-2">
             <input
               type="file"
-              className="file-input file-input-bordered w-full "
+              className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
           {/* description */}
