@@ -13,7 +13,7 @@ function MyWallet() {
         <Wallet />
       </section> */}
       {/* TODO: this must be showend to the admin alone */}
-      <button className="bg-darkblack-600 text-white py-1.5 px-4 rounded-full mb-2">
+      <button className="bg-darkblack-600 text-white py-1.5 px-6 rounded-full mb-2">
         Default
       </button>
 
