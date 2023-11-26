@@ -76,7 +76,7 @@ function Integration({ integration }) {
                 {text}
               </p>
 
-              <div className="flex flex-row space-x-7 text-center items-center">
+              <div className="flex dark:text-white flex-row space-x-7 text-center items-center">
                 <span className="text-center">
                   <span>
                     <IconUser />
