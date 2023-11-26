@@ -48,11 +48,7 @@ function FootPrint({ footprint }) {
 
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
-          {/* <h3 className="font-bold text-lg">Hello!</h3> */}
-          {/* <p className="py-4">
-            Press ESC key or click the button below to close
-          </p> */}
-          <div className="flex  space-x-3">
+          <div className="flex p-2 space-x-5">
             <img src="/for.jpeg" width={500} className="rounded-lg" />
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
