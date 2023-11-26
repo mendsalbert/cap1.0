@@ -14,7 +14,7 @@ function MyWallet() {
         <Wallet />
       </section> */}
       {/* TODO: this must be showend to the admin alone */}
-      <button className="bg-darkblack-600 text-white py-1.5  flex flex-row items-center space-x-2 px-2 rounded-full mb-2">
+      <button className="bg-darkblack-600 text-white py-1.5  flex flex-row items-center space-x-2 px-3 rounded-full mb-2">
         <IconCirclePlus />
         <span>Default</span>
       </button>
