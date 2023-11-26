@@ -73,7 +73,7 @@ function MyWallet() {
             placeholder="Bio"
             className="textarea textarea-bordered textarea-lg mt-2 w-full "
           ></textarea>
-
+          <button>Upload</button>
           {/* add */}
           <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
