@@ -209,6 +209,13 @@ function Logistics({ logistic }) {
               <hr />
             </li>
           </ul>
+          <div className="modal-action absolute -top-3 right-4">
+            <form method="dialog">
+              <button className="">
+                <IconX />
+              </button>
+            </form>
+          </div>
         </div>
       </dialog>
     </>
