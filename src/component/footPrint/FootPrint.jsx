@@ -105,16 +105,16 @@ function FootPrint({ footprint }) {
               </div>
               <div className="flex flex-row justify-between space-x-3 my-3">
                 <button className="rounded-full btn btn-outline btn-info">
-                  50.00 units
+                  50 units
                 </button>
                 <button className="rounded-full btn btn-outline btn-success">
-                  100.00 units
+                  100 units
                 </button>
                 <button className=" rounded-full btn btn-outline btn-warning">
-                  200.00 units
+                  200 units
                 </button>
                 <button className=" rounded-full btn btn-outline btn-error">
-                  500.00 units
+                  500 units
                 </button>
               </div>
               <input
