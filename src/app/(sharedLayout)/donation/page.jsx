@@ -36,6 +36,14 @@ function MyWallet() {
               placeholder="Type here"
               className="input input-bordered input-md w-full max-w-xs"
             />
+            <select className="select select-bordered w-full max-w-xs">
+              <option disabled selected>
+                Normal
+              </option>
+              <option>Normal Apple</option>
+              <option>Normal Orange</option>
+              <option>Normal Tomato</option>
+            </select>
           </div>
           {/* target amount - regioin using google map search */}
           {/* description */}
