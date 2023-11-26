@@ -34,9 +34,9 @@ function MyWallet() {
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered input-md w-full max-w-xs"
+              className="input input-bordered input-md w-full"
             />
-            <select className="select select-bordered w-full max-w-xs">
+            <select className="select select-bordered w-full">
               <option disabled selected>
                 Normal
               </option>
@@ -50,9 +50,9 @@ function MyWallet() {
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered input-md w-full max-w-xs"
+              className="input input-bordered input-md w-full"
             />
-            <select className="select select-bordered w-full max-w-xs">
+            <select className="select select-bordered w-full">
               <option disabled selected>
                 Normal
               </option>
