@@ -34,7 +34,7 @@ function MyWallet() {
             <input
               type="text"
               placeholder="Name"
-              className="input input-bordered input-md w-full dark:bg-darkblack-600"
+              className="input input-bordered input-md w-full dark:bg-darkblack-400"
             />
             <select className="select select-bordered w-full">
               <option disabled selected>
