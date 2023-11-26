@@ -25,7 +25,7 @@ function MyWallet() {
       </div>
 
       <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
+        <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Click the button below to close</p>
           <div className="modal-action">
