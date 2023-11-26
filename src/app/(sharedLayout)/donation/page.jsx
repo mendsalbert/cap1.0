@@ -5,6 +5,7 @@ import SummaryV3 from "@/component/summary/SummaryV3";
 import EfficiencyV2 from "@/component/revenueFlow/EfficiencyV2";
 import Integration from "@/component/integration/Integration";
 import integrations from "@/data/intigration";
+import {IconCirclePlus} from '@tabler/icons-react'
 function MyWallet() {
   return (
     <>
@@ -14,6 +15,7 @@ function MyWallet() {
       </section> */}
       {/* TODO: this must be showend to the admin alone */}
       <button className="bg-darkblack-600 text-white py-1.5 px-6 rounded-full mb-2">
+       <IconCI
         Default
       </button>
 
