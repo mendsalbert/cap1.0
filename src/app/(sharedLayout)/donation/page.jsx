@@ -54,10 +54,10 @@ function MyWallet() {
             />
             <select className="select select-bordered w-full">
               <option disabled selected>
-                Normal
+                Isreal
               </option>
-              <option>Normal Apple</option>
-              <option>Normal Orange</option>
+              <option>Gaza</option>
+              <option>Palenstine</option>
               <option>Normal Tomato</option>
             </select>
           </div>
