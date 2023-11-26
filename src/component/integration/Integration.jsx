@@ -46,7 +46,7 @@ function Integration({ integration }) {
       </div>
 
       <dialog id="my_modal_1" className="modal ">
-        <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
+        <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23] absolute">
           <div className="flex  space-x-3">
             <img src="/war2.png" width={500} className="rounded-lg" />
             <div className="flex flex-col">
@@ -118,7 +118,7 @@ function Integration({ integration }) {
               </button>
             </div>
           </div>
-          <div className="modal-action">
+          <div className="modal-action top-0">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className="btn  bg-error-200">Close</button>
