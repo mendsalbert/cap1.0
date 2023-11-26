@@ -100,7 +100,7 @@ function Logistics({ logistic }) {
               <input
                 type="text"
                 placeholder="Or Enter quantity to supply"
-                className="rounded-full input input-bordered input-md w-full "
+                className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
               <select className="select mt-3 rounded-full w-full">
                 <option disabled selected>
