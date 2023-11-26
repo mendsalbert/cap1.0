@@ -62,7 +62,7 @@ function FootPrint({ footprint }) {
                   </span>
                 </div>
                 <div
-                  className="radial-progress"
+                  className="radial-progress dark:text-white"
                   style={{ "--value": 80 }}
                   role="progressbar"
                 >
