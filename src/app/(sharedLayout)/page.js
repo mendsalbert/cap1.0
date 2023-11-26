@@ -38,7 +38,7 @@ function Home() {
       position: { lat: 31.7727, lng: 35.217 }, // Slightly north of Jerusalem
       type: "Water and Food",
       info: "Request for food or water",
-      icon: "/droplet-half-2-filled",
+      icon: "/droplet-half-2-filled.svg",
     },
     {
       id: 3,
