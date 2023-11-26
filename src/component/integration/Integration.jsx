@@ -115,7 +115,7 @@ function Integration({ integration }) {
               <input
                 type="text"
                 placeholder="Enter amount"
-                className="rounded-full input input-bordered input-md w-full"
+                className="rounded-full dark:bg-darkblack-500 input input-bordered input-md w-full"
               />
               <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
                 Donate
