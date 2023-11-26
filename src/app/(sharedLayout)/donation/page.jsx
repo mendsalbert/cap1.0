@@ -26,7 +26,7 @@ function MyWallet() {
 
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-6/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
-          <h3 className="font-bold text-lg">
+          <h3 className="font-bold text-lg my-3">
             Fill in the details to add a donation
           </h3>
           {/* name, category */}
