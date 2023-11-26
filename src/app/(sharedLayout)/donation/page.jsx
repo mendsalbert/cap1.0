@@ -62,7 +62,7 @@ function MyWallet() {
             </select>
           </div>
           {/* file input */}
-          <div className="form-control w-full max-w-xs">
+          <div className="form-control w-full ">
             <input
               type="file"
               className="file-input file-input-bordered w-full "
