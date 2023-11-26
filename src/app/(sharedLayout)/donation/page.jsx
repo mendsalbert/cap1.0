@@ -61,7 +61,7 @@ function MyWallet() {
               <option>Normal Tomato</option>
             </select>
           </div>
-
+          {/* file input */}
           {/* description */}
           <textarea
             placeholder="Bio"
