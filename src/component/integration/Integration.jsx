@@ -52,7 +52,7 @@ function Integration({ integration }) {
 
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23] relative">
-          <div className="flex p-5 space-x-4">
+          <div className="flex p-5 space-x-5">
             <img src="/war2.png" width={500} className="rounded-lg" />
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
