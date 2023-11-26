@@ -118,7 +118,7 @@ function Integration({ integration }) {
               </button>
             </div>
           </div>
-          <div className="modal-action absolute top-0">
+          <div className="modal-action absolute top-0 left-0">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className="btn  bg-error-200">Close</button>
