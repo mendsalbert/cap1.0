@@ -1,3 +1,4 @@
+"use client";
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
