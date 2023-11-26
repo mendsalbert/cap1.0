@@ -49,7 +49,7 @@ function MyWallet() {
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
-              placeholder="Type here"
+              placeholder="eg 5TH"
               className="input input-bordered input-md w-full"
             />
             <select className="select select-bordered w-full">
