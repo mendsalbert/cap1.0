@@ -46,7 +46,7 @@ function MyWallet() {
             </select>
           </div>
           {/* target amount - regioin using google map search */}
-          <div className="space-x-4 py-2">
+          <div className="space-x-4 py-2 flex flex-row">
             <input
               type="text"
               placeholder="Type here"
