@@ -8,6 +8,7 @@ import profileImg from "/public/static/images/avatar/profile-xs.png";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { IconSend } from "@tabler/icons-react";
 
 function ClientSidebar({ handleActive }) {
   const [activeDashboard, setActiveDashboard] = useState(false);
