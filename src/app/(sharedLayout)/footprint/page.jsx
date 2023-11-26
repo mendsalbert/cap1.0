@@ -66,7 +66,7 @@ function FootPrintComponent() {
           </div>
           {/* description */}
           <textarea
-            placeholder="Bio"
+            placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
           <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
