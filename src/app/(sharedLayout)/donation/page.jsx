@@ -29,7 +29,10 @@ function MyWallet() {
           <h3 className="font-bold text-lg">
             Fill in the details to add a donation
           </h3>
-          <p className="py-4">Click the button below to close</p>
+          {/* name, category */}
+          {/* target amount - regioin using google map search */}
+          {/* description */}
+          {/* add */}
           <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
               <button className="">
