@@ -8,7 +8,7 @@ import profileImg from "/public/static/images/avatar/profile-xs.png";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-
+import { IconSend } from "@tabler/icons-react";
 function NGO({ handleActive }) {
   const [activeDashboard, setActiveDashboard] = useState(false);
   return (
@@ -324,7 +324,7 @@ function NGO({ handleActive }) {
                 <Link href="/messages">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2.5">
-                      <span className="item-ico">
+                      {/* <span className="item-ico">
                         <svg
                           width="20"
                           height="20"
@@ -337,7 +337,8 @@ function NGO({ handleActive }) {
                             fill="#1A202C"
                           />
                         </svg>
-                      </span>
+                      </span> */}
+                      <IconSend />
                       <span className="item-text text-lg font-medium leading-none">
                         {/* //TODO Look for a way to integrate the AI assistance AI[] */}
                         AI Assistant
