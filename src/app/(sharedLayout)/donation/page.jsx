@@ -36,7 +36,7 @@ function MyWallet() {
               placeholder="Name"
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
-            <select className="select select-bordered w-full">
+            <select className="select select-bordered w-full  dark:bg-darkblack-500">
               <option disabled selected>
                 War
               </option>
@@ -52,7 +52,7 @@ function MyWallet() {
               placeholder="eg 5TH"
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
-            <select className="select select-bordered w-full">
+            <select className="select select-bordered w-full  dark:bg-darkblack-500">
               <option disabled selected>
                 Isreal
               </option>
@@ -71,7 +71,7 @@ function MyWallet() {
           {/* description */}
           <textarea
             placeholder="Bio"
-            className="textarea textarea-bordered textarea-lg mt-2 w-full "
+            className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
           <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
             Upload
