@@ -111,13 +111,12 @@ function Integration({ integration }) {
                 <button className=" rounded-full btn btn-outline btn-error">
                   $50.00
                 </button>
-                <input
-                  type="text"
-                  placeholder="Enter amount"
-                  className="rounded-full input input-bordered input-md w-full max-w-xs"
-                />
               </div>
-
+              <input
+                type="text"
+                placeholder="Enter amount"
+                className="rounded-full input input-bordered input-md w-full max-w-xs"
+              />
               <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
                 Donate
               </button>
