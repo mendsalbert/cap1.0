@@ -13,7 +13,6 @@ function MyWallet() {
         <Wallet />
       </section> */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        <p>fasfd</p>
         {integrations?.map((integration) => (
           <Integration key={integration.id} integration={integration} />
         ))}
