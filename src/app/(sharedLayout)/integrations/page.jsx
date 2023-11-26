@@ -4,7 +4,7 @@ import integrations from "@/data/intigration";
 function Integrations() {
   return (
     <>
-    < butto
+      <button>sefsdf</button>
       {integrations?.map((integration) => (
         <Integration key={integration.id} integration={integration} />
       ))}
