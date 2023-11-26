@@ -11,6 +11,7 @@ import {
   IconTargetArrow,
   IconTruckDelivery,
   IconUser,
+  IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
