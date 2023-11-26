@@ -1,8 +1,4 @@
-import ListTab from "@/component/listTab";
-import Wallet from "@/component/wallet";
-import AddBalance from "@/component/addBalance/AddBalance";
-import SummaryV3 from "@/component/summary/SummaryV3";
-import EfficiencyV2 from "@/component/revenueFlow/EfficiencyV2";
+"use client";
 import Integration from "@/component/integration/Integration";
 import integrations from "@/data/intigration";
 import { IconCirclePlus } from "@tabler/icons-react";
