@@ -36,9 +36,9 @@ function Home() {
     {
       id: 2,
       position: { lat: 31.7727, lng: 35.217 }, // Slightly north of Jerusalem
-      type: "Fire Fighter",
-      info: "Request for fire service",
-      icon: "/fire-extinguisher.svg",
+      type: "Water and Food",
+      info: "Request for food or water",
+      icon: "/droplet-half-2-filled",
     },
     {
       id: 3,
