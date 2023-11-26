@@ -61,7 +61,13 @@ function MyWallet() {
               <option>Normal Tomato</option>
             </select>
           </div>
+
           {/* description */}
+          <textarea
+            placeholder="Bio"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+          ></textarea>
+
           {/* add */}
           <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
