@@ -65,7 +65,7 @@ function MyWallet() {
           {/* description */}
           <textarea
             placeholder="Bio"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+            className="textarea textarea-bordered textarea-lg w-full "
           ></textarea>
 
           {/* add */}
