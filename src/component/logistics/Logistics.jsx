@@ -70,7 +70,7 @@ function Logistics({ logistic }) {
           {/* <p className="py-4">
             Press ESC key or click the button below to close
           </p> */}
-          <div className="flex  space-x-3">
+          <div className="flex p-2 space-x-5">
             <img src="/blood.jpeg" width={500} className="rounded-lg" />
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
@@ -120,10 +120,11 @@ function Logistics({ logistic }) {
               </button>
             </div>
           </div>
-          <div className="modal-action">
+          <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
-              {/* <button className="btn">Close</button> */}
+              <button className="">
+                <IconX />
+              </button>
             </form>
           </div>
         </div>
