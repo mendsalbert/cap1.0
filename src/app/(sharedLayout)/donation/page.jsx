@@ -73,7 +73,7 @@ function MyWallet() {
             placeholder="Bio"
             className="textarea textarea-bordered textarea-lg mt-2 w-full "
           ></textarea>
-          <button className="bg-green-500 hover:bg-green-600 w-full my-1">
+          <button className="bg-green-500 hover:bg-green-600 w-full my-1 p-6">
             Upload
           </button>
           {/* add */}
