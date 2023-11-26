@@ -128,7 +128,7 @@ function Logistics({ logistic }) {
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
 
-      <dialog id="my_modal_2" className="modal dark:bg-darkblack-500">
+      <dialog id="my_modal_2" className="modal">
         <div className="modal-box flex flex-row justify-center w-9/12 max-w-3xl">
           <ul className="timeline mt-10">
             <li>
