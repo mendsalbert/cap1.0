@@ -16,7 +16,7 @@ function MyWallet() {
       {/* TODO: this must be showend to the admin alone */}
       <button className="bg-darkblack-600 text-white py-1.5  flex flex-row items-center space-x-2 px-3 rounded-full mb-2">
         <IconCirclePlus />
-        <span>Default</span>
+        <span>Add Donation</span>
       </button>
 
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
