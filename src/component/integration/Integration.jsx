@@ -1,5 +1,10 @@
 "use client";
-import { IconCash, IconTargetArrow, IconUser } from "@tabler/icons-react";
+import {
+  IconCash,
+  IconTargetArrow,
+  IconUser,
+  IconX,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 
@@ -121,7 +126,9 @@ function Integration({ integration }) {
           <div className="modal-action absolute -top-5 right-4">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="">X</button>
+              <button className="">
+                <IconX />
+              </button>
             </form>
           </div>
         </div>
