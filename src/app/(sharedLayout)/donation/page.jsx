@@ -1,7 +1,7 @@
 "use client";
 import Integration from "@/component/integration/Integration";
 import integrations from "@/data/intigration";
-import { IconCirclePlus } from "@tabler/icons-react";
+import { IconCirclePlus, IconX } from "@tabler/icons-react";
 function MyWallet() {
   return (
     <>
@@ -28,10 +28,11 @@ function MyWallet() {
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Click the button below to close</p>
-          <div className="modal-action">
+          <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
-              {/* if there is a button, it will close the modal */}
-              <button className="btn">Close</button>
+              <button className="">
+                <IconX className="dark:text-white " />
+              </button>
             </form>
           </div>
         </div>
