@@ -12,6 +12,7 @@ function MyWallet() {
         <AddBalance />
         <Wallet />
       </section> */}
+      {/* TODO: this must be showend to the admin alone */}
       <button>Add Donation</button>
 
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
