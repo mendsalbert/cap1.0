@@ -102,7 +102,7 @@ function Logistics({ logistic }) {
                 placeholder="Or Enter quantity to supply"
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
-              <select className="select mt-3 rounded-full w-full">
+              <select className="select mt-3 rounded-full w-full  dark:bg-darkblack-500 dark:text-white">
                 <option disabled selected>
                   Location to deliver supply
                 </option>
