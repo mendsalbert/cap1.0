@@ -38,9 +38,9 @@ function MyWallet() {
             />
             <select className="select select-bordered w-full">
               <option disabled selected>
-                Normal
+                War
               </option>
-              <option>Normal Apple</option>
+              <option>Food</option>
               <option>Normal Orange</option>
               <option>Normal Tomato</option>
             </select>
