@@ -30,7 +30,7 @@ function MyWallet() {
             Fill in the details to add a donation
           </h3>
           {/* name, category */}
-          <div className="space-x-4">
+          <div className="space-x-4 py-2">
             <input
               type="text"
               placeholder="Type here"
