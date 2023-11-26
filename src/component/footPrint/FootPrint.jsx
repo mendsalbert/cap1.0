@@ -6,6 +6,7 @@ import {
   IconCash,
   IconTargetArrow,
   IconUser,
+  IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
