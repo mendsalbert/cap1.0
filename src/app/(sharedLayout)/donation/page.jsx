@@ -5,7 +5,7 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 function MyWallet() {
   return (
     <>
-      {/* <section className="2xl:w-[424px]">
+      {/* <sectio className="2xl:w-[424px]">
         <AddBalance />
         <Wallet />
       </section> */}
