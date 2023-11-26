@@ -4,6 +4,7 @@ import integrations from "@/data/intigration";
 function Integrations() {
   return (
     <>
+    < butto
       {integrations?.map((integration) => (
         <Integration key={integration.id} integration={integration} />
       ))}
