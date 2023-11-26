@@ -212,7 +212,7 @@ function Logistics({ logistic }) {
           <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
               <button className="">
-                <IconX className="dark:text-white text-darkblack-600" />
+                <IconX className="dark:text-white " />
               </button>
             </form>
           </div>
