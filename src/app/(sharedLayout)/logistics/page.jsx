@@ -39,16 +39,7 @@ function LogisticsComponent() {
             />
           </div>
           {/* target amount - regioin using google map search */}
-          <div className="space-x-4 py-2 flex flex-row">
-            <select className="select select-bordered w-full  dark:bg-darkblack-500">
-              <option disabled selected>
-                Isreal
-              </option>
-              <option>Gaza</option>
-              <option>Palenstine</option>
-              <option>Normal Tomato</option>
-            </select>
-          </div>
+          <div className="space-x-4 py-2 flex flex-row"></div>
           {/* file input */}
           <div className="form-control w-full py-2">
             <input
