@@ -105,14 +105,13 @@ contract WarZoneDonation {
 
      // Modify the donate function or add a new function to handle conversion
     function donateWithConversion(uint256 _campaignId) public payable {
-        require(campaigns[_campaignId].exists, "Campaign does not exist.");
+ Campaign storage selectedCampaign = campaigns[_campaignId];
         require(msg.value > 0, "Donation amount should be greater than zero.");
 
         int price = getLatestPrice();
         uint256 usdtAmount = uint256(price) * msg.value / 1e18; // Convert ETH to USDT
 
-        // Rest of the donation logic
-         return CampaignDetails({
+        return CampaignDetails({
             name: selectedCampaign.name,
             country: selectedCampaign.country,
             description: selectedCampaign.description,
