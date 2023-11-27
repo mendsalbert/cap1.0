@@ -89,7 +89,7 @@ contract WarZoneDonation {
         emit DonationReceived(_campaignId, msg.sender, msg.value);
     }
 
-    function getCampaignById(uint256 _campaignId) public view returns (CampaignDetails memory) {
+    function getCampaignByIdUSD(uint256 _campaignId) public view returns (CampaignDetails memory) {
         Campaign storage selectedCampaign = campaigns[_campaignId];
         require(selectedCampaign.exists, "Campaign does not exist.");
 
@@ -104,24 +104,22 @@ contract WarZoneDonation {
     }
 
      // Modify the donate function or add a new function to handle conversion
-    function donateWithConversion(uint256 _campaignId) public payable {
-        require(campaigns[_campaignId].exists, "Campaign does not exist.");
-        require(msg.value > 0, "Donation amount should be greater than zero.");
+  function getCampaignById(uint256 _campaignId) public view returns (CampaignDetails memory, uint256) {
+        Campaign storage selectedCampaign = campaigns[_campaignId];
+        require(selectedCampaign.exists, "Campaign does not exist.");
 
         int price = getLatestPrice();
-        uint256 usdtAmount = uint256(price) * msg.value / 1e18; // Convert ETH to USDT
+        uint256 usdValue = uint256(price) * selectedCampaign.totalDonationsReceived / 1e18;
 
-        // Rest of the donation logic
-         return CampaignDetails({
+        return (CampaignDetails({
             name: selectedCampaign.name,
             country: selectedCampaign.country,
             description: selectedCampaign.description,
             imageCID: selectedCampaign.imageCID,
             targetAmount: selectedCampaign.targetAmount,
             totalDonationsReceived: selectedCampaign.totalDonationsReceived
-        });
+        }), usdValue);
     }
-
 
     function getAllCampaigns() public view returns (CampaignDetails[] memory) {
         CampaignDetails[] memory allCampaigns = new CampaignDetails[](totalCampaignsCreated);
