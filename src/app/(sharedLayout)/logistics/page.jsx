@@ -45,7 +45,7 @@ function LogisticsComponent() {
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
-              placeholder="eg 5TH"
+              placeholder="enter quantity"
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
             <select className="select select-bordered w-full  dark:bg-darkblack-500">
