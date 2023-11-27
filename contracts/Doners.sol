@@ -10,6 +10,7 @@ contract WarZoneDonation {
         string imageUrl;
         string description;
         address payable targetAddress;
+        bool isActive;
     }
 
     struct Donor {
@@ -17,10 +18,10 @@ contract WarZoneDonation {
         uint256 amount;
     }
 
-    Campaign public campaign;
-    Donor[] public donors;
+    Campaign[] public campaigns;
+    mapping(uint256 => Donor[]) public donorsByCampaign;
 
-    constructor(
+    function createCampaign(
         string memory _name,
         string memory _category,
         uint256 _targetAmount,
@@ -28,8 +29,8 @@ contract WarZoneDonation {
         string memory _imageUrl,
         string memory _description,
         address payable _targetAddress
-    ) {
-        campaign = Campaign({
+    ) public {
+        campaigns.push(Campaign({
             name: _name,
             category: _category,
             targetAmount: _targetAmount,
@@ -37,31 +38,30 @@ contract WarZoneDonation {
             country: _country,
             imageUrl: _imageUrl,
             description: _description,
-            targetAddress: _targetAddress
-        });
+            targetAddress: _targetAddress,
+            isActive: true
+        }));
     }
 
-    function donate() public payable {
+    function donate(uint256 campaignIndex) public payable {
         require(msg.value > 0, "Donation must be greater than 0");
+        require(campaignIndex < campaigns.length, "Campaign does not exist");
+        require(campaigns[campaignIndex].isActive, "Campaign is not active");
+
+        Campaign storage campaign = campaigns[campaignIndex];
         campaign.amountReceived += msg.value;
-        donors.push(Donor({ donorAddress: msg.sender, amount: msg.value }));
+        donorsByCampaign[campaignIndex].push(Donor({ donorAddress: msg.sender, amount: msg.value }));
 
         if (campaign.amountReceived >= campaign.targetAmount) {
             campaign.targetAddress.transfer(campaign.amountReceived);
-            // Reset campaign or handle completion
+            campaign.isActive = false;
+            // Optionally reset campaign or handle completion
         }
     }
 
-    function getDonors() public view returns (Donor[] memory) {
-        return donors;
+    function listAllCampaigns() public view returns (Campaign[] memory) {
+        return campaigns;
     }
 
-
- function getSingleDonation(uint index) public view returns (Donor memory) {
-        require(index < donors.length, "Donation index out of bounds");
-        return donors[index];
-    }
-
-    
-    // Additional functions like refund to donors if target not met, update campaign details, etc.
+    // Additional functions for viewing donations, handling campaign updates, etc.
 }
