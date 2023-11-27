@@ -2,6 +2,15 @@
 pragma solidity ^0.8.0;
 
 contract WarZoneDonation {
+
+    // Chainlink Price Feed
+    AggregatorV3Interface internal priceFeed;
+
+    // Constructor to set the address of the Chainlink Price Feed
+    constructor(address _priceFeed) {
+        priceFeed = AggregatorV3Interface(_priceFeed);
+    }
+
     struct Campaign {
         string name;
         string country;
@@ -29,6 +38,19 @@ contract WarZoneDonation {
 
     event CampaignCreated(uint256 indexed campaignId, string name, uint256 targetAmount);
     event DonationReceived(uint256 indexed campaignId, address indexed donor, uint256 amount);
+
+     // Function to get the latest price of ETH in USDT (example)
+    function getLatestPrice() public view returns (int) {
+        (
+            , 
+            int price,
+            ,
+            ,
+            
+        ) = priceFeed.latestRoundData();
+        return price; // Price of 1 ETH in terms of USDT
+    }
+
 
     function createCampaign(string memory _name, string memory _country, string memory _description, string memory _imageCID, uint256 _targetAmount) public {
         require(_targetAmount > 0, "Target amount should be greater than zero.");
@@ -79,6 +101,26 @@ contract WarZoneDonation {
             totalDonationsReceived: selectedCampaign.totalDonationsReceived
         });
     }
+
+     // Modify the donate function or add a new function to handle conversion
+    function donateWithConversion(uint256 _campaignId) public payable {
+        require(campaigns[_campaignId].exists, "Campaign does not exist.");
+        require(msg.value > 0, "Donation amount should be greater than zero.");
+
+        int price = getLatestPrice();
+        uint256 usdtAmount = uint256(price) * msg.value / 1e18; // Convert ETH to USDT
+
+        // Rest of the donation logic
+         return CampaignDetails({
+            name: selectedCampaign.name,
+            country: selectedCampaign.country,
+            description: selectedCampaign.description,
+            imageCID: selectedCampaign.imageCID,
+            targetAmount: selectedCampaign.targetAmount,
+            totalDonationsReceived: selectedCampaign.totalDonationsReceived
+        });
+    }
+
 
     function getAllCampaigns() public view returns (CampaignDetails[] memory) {
         CampaignDetails[] memory allCampaigns = new CampaignDetails[](totalCampaignsCreated);
