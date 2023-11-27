@@ -53,7 +53,7 @@ contract WarZoneAssistanceRequest {
         admin = _newAdmin;
     }
 
-//fucntion to view all request
+    //fucntion to view all request
      function viewAllRequests() public view returns (Request[] memory) {
         return requests;
     }
