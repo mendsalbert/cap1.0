@@ -48,7 +48,7 @@ function LogisticsComponent() {
           </div>
           {/* description */}
           <textarea
-            placeholder="Enter the description for this project"
+            placeholder="Enter the description for this product"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
           <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
