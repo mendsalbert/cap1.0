@@ -19,18 +19,18 @@ contract WarZoneCarbonFootPrint {
         string imageCID;
     }
 
-struct ProjectDetails {
-    string name;
-    string country;
-    string description;
-    string latitude;
-    string longitude;
-     uint256 targetCarbonOffset;
-    uint256 carbonOffsetRemoved;
-    uint256 deadline;
-    uint256 totalDonationsReceived;
-    string imageCID;
-}
+    struct ProjectDetails {
+        string name;
+        string country;
+        string description;
+        string latitude;
+        string longitude;
+        uint256 targetCarbonOffset;
+        uint256 carbonOffsetRemoved;
+        uint256 deadline;
+        uint256 totalDonationsReceived;
+        string imageCID;
+    }
 
     uint256 public totalProjectsCreated;
     mapping(uint256 => Project) public projects;
@@ -96,49 +96,50 @@ struct ProjectDetails {
 
         emit DonationReceived(_projectId, msg.sender, adjustedValue);
     }
-function getProjectById(uint256 _projectId) public view returns (string memory, string memory, string memory, string memory, string memory, uint256, uint256, bool, address[] memory, string memory) {
-    Project storage selectedProject = projects[_projectId];
-    require(selectedProject.exists, "Project does not exist.");
 
-    return (selectedProject.name, selectedProject.country, selectedProject.description, selectedProject.latitude, selectedProject.longitude, selectedProject.targetCarbonOffset, selectedProject.carbonOffsetRemoved, selectedProject.exists, selectedProject.doners, selectedProject.imageCID);
-}
+    function getProjectById(uint256 _projectId) public view returns (string memory, string memory, string memory, string memory, string memory, uint256, uint256, bool, address[] memory, string memory) {
+        Project storage selectedProject = projects[_projectId];
+        require(selectedProject.exists, "Project does not exist.");
 
-function getAllProjects() public view returns(ProjectDetails[] memory) {
-    ProjectDetails[] memory allProjects = new ProjectDetails[](totalProjectsCreated);
-    uint counter = 0;
-    for (uint i = 0; i < totalProjectsCreated; i++) {
-        if (projects[i].exists) {
-            Project storage project = projects[i];
-            ProjectDetails memory projectDetails = ProjectDetails({
-                name: project.name,
-                country: project.country,
-                description: project.description,
-                latitude: project.latitude,
-                longitude: project.longitude,
-                targetCarbonOffset: project.targetCarbonOffset,
-                carbonOffsetRemoved: project.carbonOffsetRemoved,
-                deadline: project.deadline,
-                totalDonationsReceived: project.totalDonationsReceived,
-                imageCID: project.imageCID
-            });
-            allProjects[counter] = projectDetails;
-            counter++;
-        }
+        return (selectedProject.name, selectedProject.country, selectedProject.description, selectedProject.latitude, selectedProject.longitude, selectedProject.targetCarbonOffset, selectedProject.carbonOffsetRemoved, selectedProject.exists, selectedProject.doners, selectedProject.imageCID);
     }
-    return allProjects;
-}
 
-function getProjectIdByName(string memory _name) public view returns (uint256) {
-    bytes32 nameHash = keccak256(abi.encodePacked(_name));
-    uint256 projectId = projectIdByName[nameHash];
-    require(projectId != 0, "Project does not exist.");
-    return projectId;
-}
+    function getAllProjects() public view returns(ProjectDetails[] memory) {
+        ProjectDetails[] memory allProjects = new ProjectDetails[](totalProjectsCreated);
+        uint counter = 0;
+        for (uint i = 0; i < totalProjectsCreated; i++) {
+            if (projects[i].exists) {
+                Project storage project = projects[i];
+                ProjectDetails memory projectDetails = ProjectDetails({
+                    name: project.name,
+                    country: project.country,
+                    description: project.description,
+                    latitude: project.latitude,
+                    longitude: project.longitude,
+                    targetCarbonOffset: project.targetCarbonOffset,
+                    carbonOffsetRemoved: project.carbonOffsetRemoved,
+                    deadline: project.deadline,
+                    totalDonationsReceived: project.totalDonationsReceived,
+                    imageCID: project.imageCID
+                });
+                allProjects[counter] = projectDetails;
+                counter++;
+            }
+        }
+        return allProjects;
+    }
 
-function carbonOffsetRemoved(uint256 _projectId) public view returns(uint256) {
-    Project storage selectedProject = projects[_projectId];
-    require(selectedProject.exists, "Project does not exist.");
+    function getProjectIdByName(string memory _name) public view returns (uint256) {
+        bytes32 nameHash = keccak256(abi.encodePacked(_name));
+        uint256 projectId = projectIdByName[nameHash];
+        require(projectId != 0, "Project does not exist.");
+        return projectId;
+    }
 
-    return selectedProject.carbonOffsetRemoved;
-}
+    function carbonOffsetRemoved(uint256 _projectId) public view returns(uint256) {
+        Project storage selectedProject = projects[_projectId];
+        require(selectedProject.exists, "Project does not exist.");
+
+        return selectedProject.carbonOffsetRemoved;
+    }
 }
