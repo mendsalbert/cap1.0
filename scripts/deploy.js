@@ -28,11 +28,11 @@ async function main() {
   await donation.deployed();
   console.log("Donation contract address:", donation.address);
 
-  // Deploy News
-  const News = await hre.ethers.getContractFactory("News");
-  const news = await News.deploy();
-  await news.deployed();
-  console.log("News contract address:", news.address);
+  // // Deploy News
+  // const News = await hre.ethers.getContractFactory("News");
+  // const news = await News.deploy();
+  // await news.deployed();
+  // console.log("News contract address:", news.address);
 
   // Deploy Product
   const Product = await hre.ethers.getContractFactory("Product");
