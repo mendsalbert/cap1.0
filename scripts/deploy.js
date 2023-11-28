@@ -14,9 +14,9 @@ async function main() {
 
   // Deploy the Donation contract
   // Replace these parameters with your actual parameters
-  const priceFeedAddress = "0x..."; // Chainlink Price Feed Oracle address
+  const priceFeedAddress = "0x9326BFA02ADD2366b30bacB125260Af641031331"; // Chainlink Price Feed Oracle address
   const interval = 24 * 60 * 60; // 24 hours in seconds
-  const recipientAddress = "0x..."; // Recipient address
+  const recipientAddress = "0x5B29F4A7C1715ef2f974f21216FfFb1834a33F04"; // Recipient address
   const Donation = await hre.ethers.getContractFactory("WarZoneDonation");
   const donation = await Donation.deploy(
     priceFeedAddress,
