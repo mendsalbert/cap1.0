@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/albertmends/Documents/CAP/contracts/CarbonFootPrint.sol": {
-      "lastModificationDate": 1701073233382,
-      "contentHash": "b0c27d32ce66d26568ccea75b87d83ec",
+      "lastModificationDate": 1701193159493,
+      "contentHash": "a3a1b19f3df08fee4307077420c5e2d6",
       "sourceName": "contracts/CarbonFootPrint.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -801,8 +801,8 @@
       ]
     },
     "/Users/albertmends/Documents/CAP/contracts/Request.sol": {
-      "lastModificationDate": 1701161564555,
-      "contentHash": "eba7292f27e483d58bab187594bda4e1",
+      "lastModificationDate": 1701193150524,
+      "contentHash": "8003e56fe26bf8f5a28e88fa297c448a",
       "sourceName": "contracts/Request.sol",
       "solcConfig": {
         "version": "0.8.4",
