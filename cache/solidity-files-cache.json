@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/albertmends/Documents/CAP/contracts/CarbonFootPrint.sol": {
-      "lastModificationDate": 1701193159493,
-      "contentHash": "a3a1b19f3df08fee4307077420c5e2d6",
+      "lastModificationDate": 1701196821564,
+      "contentHash": "a881012e6451d217109b958468f8c9bb",
       "sourceName": "contracts/CarbonFootPrint.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -33,12 +33,12 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "WarZoneCarbonFootPrint"
+        "CarbonFootPrint"
       ]
     },
     "/Users/albertmends/Documents/CAP/contracts/Donation.sol": {
-      "lastModificationDate": 1701158973792,
-      "contentHash": "47a79de2b44cc117abc0433930432c18",
+      "lastModificationDate": 1701196827013,
+      "contentHash": "fd10cfa3635343aaa57e82af5eef520e",
       "sourceName": "contracts/Donation.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -71,7 +71,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "WarZoneDonation"
+        "Donation"
       ]
     },
     "/Users/albertmends/Documents/CAP/node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
@@ -255,8 +255,8 @@
       ]
     },
     "/Users/albertmends/Documents/CAP/contracts/News.sol": {
-      "lastModificationDate": 1701171708763,
-      "contentHash": "8fdcc1392d73d4147dcff065b15821b3",
+      "lastModificationDate": 1701196839415,
+      "contentHash": "c62c63fcd5a92ad343324861fa7c785a",
       "sourceName": "contracts/News.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -288,7 +288,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "WarNewsFeed"
+        "News"
       ]
     },
     "/Users/albertmends/Documents/CAP/node_modules/@chainlink/contracts/src/v0.8/ChainlinkClient.sol": {
@@ -766,8 +766,8 @@
       ]
     },
     "/Users/albertmends/Documents/CAP/contracts/Product.sol": {
-      "lastModificationDate": 1701073742020,
-      "contentHash": "d974b8e10c1c5b1d9fb351ef2c58a2b6",
+      "lastModificationDate": 1701196848388,
+      "contentHash": "6248bb33235353d8c7097c8076b64544",
       "sourceName": "contracts/Product.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -797,13 +797,13 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "ProductCatalog"
+        "Product"
       ]
     },
-    "/Users/albertmends/Documents/CAP/contracts/Request.sol": {
-      "lastModificationDate": 1701193150524,
-      "contentHash": "8003e56fe26bf8f5a28e88fa297c448a",
-      "sourceName": "contracts/Request.sol",
+    "/Users/albertmends/Documents/CAP/contracts/RequestC.sol": {
+      "lastModificationDate": 1701196870861,
+      "contentHash": "e92ba0d25181eeb15ae550bbbfaaa670",
+      "sourceName": "contracts/RequestC.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
@@ -832,7 +832,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "WarZoneAssistanceRequest"
+        "RequestC"
       ]
     }
   }
