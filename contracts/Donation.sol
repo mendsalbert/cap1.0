@@ -66,7 +66,6 @@ contract WarZoneDonation {
             }
         }
     }
-
      // Function to get the latest price of ETH in USDT (example)
     function getLatestPrice() public view returns (int) {
         (
