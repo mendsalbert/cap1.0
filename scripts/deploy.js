@@ -1,53 +1,55 @@
 const hre = require("hardhat");
 
 async function main() {
-  // Compile all contracts
-  await hre.run("compile");
+  const [deployer] = await hre.ethers.getSigners();
 
-  // Deploy the CarboonFootPrint contract
-  const CarboonFootPrint = await hre.ethers.getContractFactory(
-    "WarZoneCarbonFootPrint"
+  console.log("Deploying contracts with the account:", deployer.address);
+
+  // Parameters for the Donation contract constructor
+  const priceFeedAddress = "0x9326BFA02ADD2366b30bacB125260Af641031331"; // The address of the Chainlink Price Feed contract
+  const interval = 86400; // 24 hours in seconds
+  const recipientAddress = "0x5B29F4A7C1715ef2f974f21216FfFb1834a33F04"; // The recipient address
+
+  // Deploy CarbonFootPrint
+  const CarbonFootPrint = await hre.ethers.getContractFactory(
+    "CarbonFootPrint"
   );
-  const carboonFootPrint = await CarboonFootPrint.deploy();
-  await carboonFootPrint.deployed();
-  console.log(`CarboonFootPrint deployed to: ${carboonFootPrint.address}`);
+  const carbonFootPrint = await CarbonFootPrint.deploy();
+  await carbonFootPrint.deployed();
+  console.log("CarbonFootPrint contract address:", carbonFootPrint.address);
 
-  // Deploy the Donation contract
-  // Replace these parameters with your actual parameters
-  const priceFeedAddress = "0x9326BFA02ADD2366b30bacB125260Af641031331"; // Chainlink Price Feed Oracle address
-  const interval = 24 * 60 * 60; // 24 hours in seconds
-  const recipientAddress = "0x5B29F4A7C1715ef2f974f21216FfFb1834a33F04"; // Recipient address
-  const Donation = await hre.ethers.getContractFactory("WarZoneDonation");
+  // Deploy Donation
+  const Donation = await hre.ethers.getContractFactory("Donation");
   const donation = await Donation.deploy(
     priceFeedAddress,
     interval,
     recipientAddress
   );
   await donation.deployed();
-  console.log(`Donation deployed to: ${donation.address}`);
+  console.log("Donation contract address:", donation.address);
 
-  // Deploy the News contract
-  const News = await hre.ethers.getContractFactory("WarNewsFeed");
+  // Deploy News
+  const News = await hre.ethers.getContractFactory("News");
   const news = await News.deploy();
   await news.deployed();
-  console.log(`News deployed to: ${news.address}`);
+  console.log("News contract address:", news.address);
 
-  // Deploy the Product contract
-  const Product = await hre.ethers.getContractFactory("ProductCatalog");
+  // Deploy Product
+  const Product = await hre.ethers.getContractFactory("Product");
   const product = await Product.deploy();
   await product.deployed();
-  console.log(`Product deployed to: ${product.address}`);
+  console.log("Product contract address:", product.address);
 
-  // Deploy the Request contract
-  const Request = await hre.ethers.getContractFactory(
-    "WarZoneAssistanceRequest"
-  );
+  // Deploy Request
+  const Request = await hre.ethers.getContractFactory("Request");
   const request = await Request.deploy();
   await request.deployed();
-  console.log(`Request deployed to: ${request.address}`);
+  console.log("Request contract address:", request.address);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
