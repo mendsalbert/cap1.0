@@ -8,11 +8,20 @@ contract WarZoneDonation {
     // Chainlink Price Feed
     AggregatorV3Interface internal priceFeed;
 
-    // Constructor to set the address of the Chainlink Price Feed
-    constructor(address _priceFeed) {
-        priceFeed = AggregatorV3Interface(_priceFeed);
-    }
+    // Last time the funds were transferred
+    uint256 public lastTransferTime;
+    // Interval for fund transfer (24 hours)
+    uint256 public interval;
+    // Recipient address for the funds
+    address payable public recipient;
 
+    // Constructor to set the address of the Chainlink Price Feed
+    constructor(address _priceFeed, uint256 _interval, address payable _recipient) {
+        priceFeed = AggregatorV3Interface(_priceFeed);
+        interval = _interval;
+        recipient = _recipient;
+        lastTransferTime = block.timestamp;
+    }
     struct Campaign {
         string name;
         string country;
