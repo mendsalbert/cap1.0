@@ -10,7 +10,7 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    //  unused configuration commented out for now
+    //  unused configuration commented out for no
     mumbai: {
       url: "https://rpc-mumbai.maticvigil.com",
       // url: "https://goerli.infura.io/v3/8b7ba5517c414450a93ec7334975a7fe",

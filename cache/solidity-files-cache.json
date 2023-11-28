@@ -255,8 +255,8 @@
       ]
     },
     "/Users/albertmends/Documents/CAP/contracts/News.sol": {
-      "lastModificationDate": 1701160899400,
-      "contentHash": "328b2e38ac73a7f2c41ec76b2712de97",
+      "lastModificationDate": 1701171708763,
+      "contentHash": "8fdcc1392d73d4147dcff065b15821b3",
       "sourceName": "contracts/News.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -282,8 +282,7 @@
         }
       },
       "imports": [
-        "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
-        "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol"
+        "@chainlink/contracts/src/v0.8/ChainlinkClient.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
