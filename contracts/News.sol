@@ -61,7 +61,7 @@ contract WarNewsFeed is ChainlinkClient, VRFConsumerBase {
         emit RandomNumberRequested(requestId);
     }
 
-    function fulfillRandomness(bytes32 _requestId, uint256 _randomness) internal override {
+    function fulfillRandomness(bytes32 _requestId, uint256 _randomness) internal  {
         randomResult = _randomness;
         emit RandomNumberReceived(_randomness);
     }
