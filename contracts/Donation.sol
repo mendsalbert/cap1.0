@@ -51,12 +51,11 @@ contract WarZoneDonation {
     event CampaignCreated(uint256 indexed campaignId, string name, uint256 targetAmount);
     event DonationReceived(uint256 indexed campaignId, address indexed donor, uint256 amount);
 
-
     //chainlink keepers
-     function checkUpkeep(bytes calldata /* checkData */) external  view returns (bool upkeepNeeded, bytes memory /* performData */) {
+    function checkUpkeep(bytes calldata /* checkData */) external view returns (bool upkeepNeeded, bytes memory /* performData */) {
         upkeepNeeded = (block.timestamp - lastTransferTime) > interval;
     }
-
+    
     function performUpkeep(bytes calldata /* performData */) external  {
         if ((block.timestamp - lastTransferTime) > interval) {
             // Transfer logic, example: transfer all funds to the recipient
@@ -130,7 +129,6 @@ contract WarZoneDonation {
             totalDonationsReceived: selectedCampaign.totalDonationsReceived
         });
     }
-
      // Modify the donate function or add a new function to handle conversion
     function getCampaignById(uint256 _campaignId) public view returns (CampaignDetails memory, uint256) {
         Campaign storage selectedCampaign = campaigns[_campaignId];
