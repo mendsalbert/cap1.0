@@ -20,7 +20,6 @@ const center = {
 };
 
 function Home() {
-  // const [currentLocation, setCurrentLocation] = useState(center);
   const [selectedFacility, setSelectedFacility] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(14);
   const [iconSize, setIconSize] = useState({ width: 30, height: 30 });
