@@ -10,7 +10,6 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    //  unused configuration commented out for no
     mumbai: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [privateKey],
