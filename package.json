@@ -50,7 +50,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
     "ethereum-waffle": "^4.0.10",
-    "ethers": "^6.4.0",
+    "ethers": "^6.9.0",
     "hardhat": "^2.19.1",
     "hardhat-gas-reporter": "^1.0.8",
     "postcss": "^8.4.27",
