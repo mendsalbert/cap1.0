@@ -6,7 +6,7 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   // Parameters for the Donation contract constructor
-  const priceFeedAddress = "0x9326BFA02ADD2366b30bacB125260Af641031331"; // The address of the Chainlink Price Feed contract
+  const priceFeedAddress = 0x9326bfa02add2366b30bacb125260af641031331; // The address of the Chainlink Price Feed contract
   const interval = 86400; // 24 hours in seconds
   const recipientAddress = "0x5B29F4A7C1715ef2f974f21216FfFb1834a33F04"; // The recipient address
 
