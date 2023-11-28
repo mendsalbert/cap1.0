@@ -6,9 +6,9 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   // Parameters for the Donation contract constructor
-  const priceFeedAddress = 0x9326bfa02add2366b30bacb125260af641031331; // The address of the Chainlink Price Feed contract
+  const priceFeedAddress = "0x9326bfa02add2366b30bacb125260af641031331"; // The address of the Chainlink Price Feed contract
   const interval = 86400; // 24 hours in seconds
-  const recipientAddress = 0x5b29f4a7c1715ef2f974f21216fffb1834a33f04; // The recipient address
+  const recipientAddress = "0x5b29f4a7c1715ef2f974f21216fffb1834a33f04"; // The recipient address
 
   // Deploy CarbonFootPrint
   const CarbonFootPrint = await hre.ethers.getContractFactory(
