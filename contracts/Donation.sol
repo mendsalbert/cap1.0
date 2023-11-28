@@ -53,11 +53,11 @@ contract WarZoneDonation {
 
 
     //chainlink keepers
-     function checkUpkeep(bytes calldata /* checkData */) external override view returns (bool upkeepNeeded, bytes memory /* performData */) {
+     function checkUpkeep(bytes calldata /* checkData */) external  view returns (bool upkeepNeeded, bytes memory /* performData */) {
         upkeepNeeded = (block.timestamp - lastTransferTime) > interval;
     }
 
-    function performUpkeep(bytes calldata /* performData */) external override {
+    function performUpkeep(bytes calldata /* performData */) external  {
         if ((block.timestamp - lastTransferTime) > interval) {
             // Transfer logic, example: transfer all funds to the recipient
             lastTransferTime = block.timestamp;
@@ -67,6 +67,7 @@ contract WarZoneDonation {
             }
         }
     }
+
      // Function to get the latest price of ETH in USDT (example)
     function getLatestPrice() public view returns (int) {
         (
