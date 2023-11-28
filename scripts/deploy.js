@@ -41,7 +41,7 @@ async function main() {
   console.log("Product contract address:", product.address);
 
   // Deploy Request
-  const Request = await hre.ethers.getContractFactory("Request");
+  const Request = await hre.ethers.getContractFactory("RequestC");
   const request = await Request.deploy();
   await request.deployed();
   console.log("Request contract address:", request.address);
