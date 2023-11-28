@@ -79,7 +79,6 @@ contract WarZoneDonation {
         return price; // Price of 1 ETH in terms of USDT
     }
 
-
     function createCampaign(string memory _name, string memory _country, string memory _description, string memory _imageCID, uint256 _targetAmount) public {
         require(_targetAmount > 0, "Target amount should be greater than zero.");
         bytes32 nameHash = keccak256(abi.encodePacked(_name));
