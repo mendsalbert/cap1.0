@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Request {
+contract RequestC {
     struct Request {
         string requestType;
         uint256 timestamp;
