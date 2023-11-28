@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "@chainlink/contracts/src/v0.8/KeeperCompatible.sol";
 
 contract WarZoneDonation {
 
@@ -104,7 +105,7 @@ contract WarZoneDonation {
     }
 
      // Modify the donate function or add a new function to handle conversion
-  function getCampaignById(uint256 _campaignId) public view returns (CampaignDetails memory, uint256) {
+    function getCampaignById(uint256 _campaignId) public view returns (CampaignDetails memory, uint256) {
         Campaign storage selectedCampaign = campaigns[_campaignId];
         require(selectedCampaign.exists, "Campaign does not exist.");
 
