@@ -68,10 +68,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 
 const wagmiClient = createConfig({
   autoConnect: true,
-  publicClient: createPublicClient({
-    chain: mumbaiApothem,
-    transport: http(),
-  }),
+  publicClient,
   webSocketPublicClient,
 });
 
