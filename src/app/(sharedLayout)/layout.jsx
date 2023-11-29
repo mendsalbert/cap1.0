@@ -21,8 +21,15 @@ import {
   darkTheme,
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+  createConfig,
+} from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
+import { createPublicClient, http } from "viem";
 
 const mumbaiApothem = {
   id: 51,
