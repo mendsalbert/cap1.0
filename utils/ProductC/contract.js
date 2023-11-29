@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import Product from "./Donation.json";
+import Product from "./Product.json";
 
 export const ProductContract = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
