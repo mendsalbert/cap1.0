@@ -42,12 +42,6 @@ const mumbaiApothem = {
   },
 
   rpcUrls: {
-    default: "https://rpc-mumbai.maticvigil.com",
-  },
-  blockExplorers: {
-    default: { name: "Matic Explorer", url: "https://mumbai.polygonscan.com" },
-  },
-  rpcUrls: {
     public: { http: ["https://rpc-mumbai.maticvigil.com"] },
     default: { http: ["https://rpc-mumbai.maticvigil.com"] },
   },
