@@ -21,6 +21,14 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
+const { provider, chains } = configureChains(
+  [xdcApothem],
+  [
+    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    publicProvider(),
+  ]
+);
+
 const containerStyle = {
   width: "100%",
   height: "100vh",
