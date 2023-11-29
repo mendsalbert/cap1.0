@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
-import Donation from "./Donation.json";
+import Request from "./RequestC.json";
 
-export const DonationContract = async () => {
+export const RequestContract = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const { ethereum } = window;
   const contractAddress = "";
@@ -9,7 +9,7 @@ export const DonationContract = async () => {
     const signer = provider.getSigner();
     const contractReader = new ethers.Contract(
       contractAddress,
-      Donation.abi,
+      Request.abi,
       signer
     );
     return contractReader;
