@@ -33,16 +33,12 @@ const mumbaiApothem = {
     name: "Mumbai-Network",
     symbol: "MATIC",
   },
+
   rpcUrls: {
-    default: {
-      http: ["https://rpc-mumbai.maticvigil.com"],
-    },
+    default: "https://rpc-mumbai.maticvigil.com",
   },
   blockExplorers: {
-    default: {
-      name: "Apothem Explorer",
-      url: "https://mumbai.polygonscan.com",
-    },
+    default: { name: "Matic Explorer", url: "https://mumbai.polygonscan.com" },
   },
   testnet: true,
 };
