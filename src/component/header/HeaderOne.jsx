@@ -26,6 +26,8 @@ function HeaderOne({ handleSidebar }) {
   };
 
   const { address } = useAccount();
+
+  console.log("address==================", address);
   return (
     <header className="header-wrapper fixed z-30 hidden w-full md:block">
       <div className="relative flex h-[108px] w-full items-center justify-between bg-white px-10 dark:bg-darkblack-600 2xl:px-[76px]">
