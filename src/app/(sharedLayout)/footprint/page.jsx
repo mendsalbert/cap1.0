@@ -8,34 +8,6 @@ import { Web3Storage } from "web3.storage";
 import { useState, useEffect, useRef } from "react";
 import { create } from "@web3-storage/w3up-client";
 
-async function setupWeb3Storage() {
-  try {
-    const client = await create();
-    const space = await client.createSpace("cap");
-    const myAccount = await client.login("mendsalbert@gmail.com");
-
-    let res;
-    do {
-      res = await myAccount.plan.get();
-      if (!res.ok) {
-        console.log("Waiting for payment plan to be selected...");
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-      }
-    } while (!res.ok);
-
-    await myAccount.provision(space.did());
-    await space.createRecovery(myAccount.did());
-    await space.save();
-    await client.setCurrentSpace(space.did());
-    console.log("Web3.Storage setup complete.");
-
-    return { client, space, myAccount }; // Return these if you need to use them after setup
-  } catch (error) {
-    console.error("Error setting up Web3.Storage:", error);
-    throw error;
-  }
-}
-
 function getAccessToken() {
   return "Y6Jlcm9vdHOC2CpYJQABcRIgsQ8uLnlxCE7wwIPywgaasa2l8bvRlMxZW2eorsuSRI_YKlglAAFxEiB2ReFC1egJIwmcfuXX8L9UxIbGwmiuB7MnES01g3Bdm2d2ZXJzaW9uAaYFAXESILEPLi55cQhO8MCD8sIGmrGtpfG70ZTMWVtnqK7LkkSPqGFzRICgAwBhdmUwLjkuMWNhdHSHomNjYW5nc3BhY2UvKmR3aXRoZnVjYW46KqJjY2FuZ3N0b3JlLypkd2l0aGZ1Y2FuOiqiY2Nhbmxwcm92aWRlci9hZGRkd2l0aGZ1Y2FuOiqiY2Nhbmh1cGxvYWQvKmR3aXRoZnVjYW46KqJjY2FuZnVjYW4vKmR3aXRoZnVjYW46KqJjY2FuZnBsYW4vKmR3aXRoZnVjYW46KqJjY2FuZnczdXAvKmR3aXRoZnVjYW46KmNhdWRZARCFJDCCAQoCggEBALhPb8dTggBjWaaZHuQtkkzm4Vn2Y8aWZCUrHTjjw8AkGO1Pbi8CpUMpOPWVlhoZsJ-5rt0H_sd6WL_HJ5GwstVn657ZBQSNvznRDjJY34Mw6urWVsBrRUQs-Zbd9-Ikz1VOYVHyYcqrm4yVuBuk1UuSqzReXckJq0ZCQz2hJF0-R1GwgrhqOkc6-oeM7cDnUKBsqzXBWXeAAR3_sCnHj9oSouvCUHlrVSwHMnLF3VIRoQly9ZDSOOY8Ie7xP7alpOCpfJQfXyPtZIhW0kK9KtulhHb8BvDvuXTpd34AJ2sCcYZlkseOLRLEoLCvmY_-VEtlXhRNxhnuEbPJ9fVtQsECAwEAAWNleHD2Y2ZjdIGibmFjY2Vzcy9jb25maXJt2CpYJQABcRIgkUSAnJ2VJ6wh60x6j8FITkEosrmqOXXTq8soeN0a51NuYWNjZXNzL3JlcXVlc3TYKlglAAFxEiD1TC0Ns20jRVLDISXtk63LuOQCCMbEaKtkUxbxVLHTNGNpc3NYHp0abWFpbHRvOmdtYWlsLmNvbTptZW5kc2FsYmVydGNwcmaAhgUBcRIgdkXhQtXoCSMJnH7l1_C_VMSGxsJorgezJxEtNYNwXZuoYXNYRO2hA0B0Pk9kdBxExW06zVSsVy2LiA86cFgGCjfZi9Q6RNQf-SSnSQk5sY3l0fKy0jDXxQYlWotLQLIgw2B55S7dzG4MYXZlMC45LjFjYXR0gaNibmKhZXByb29m2CpYJQABcRIgsQ8uLnlxCE7wwIPywgaasa2l8bvRlMxZW2eorsuSRI9jY2Fua3VjYW4vYXR0ZXN0ZHdpdGh0ZGlkOndlYjp3ZWIzLnN0b3JhZ2VjYXVkWQEQhSQwggEKAoIBAQC4T2_HU4IAY1mmmR7kLZJM5uFZ9mPGlmQlKx0448PAJBjtT24vAqVDKTj1lZYaGbCfua7dB_7Heli_xyeRsLLVZ-ue2QUEjb850Q4yWN-DMOrq1lbAa0VELPmW3ffiJM9VTmFR8mHKq5uMlbgbpNVLkqs0Xl3JCatGQkM9oSRdPkdRsIK4ajpHOvqHjO3A51CgbKs1wVl3gAEd_7Apx4_aEqLrwlB5a1UsBzJyxd1SEaEJcvWQ0jjmPCHu8T-2paTgqXyUH18j7WSIVtJCvSrbpYR2_Abw77l06Xd-ACdrAnGGZZLHji0SxKCwr5mP_lRLZV4UTcYZ7hGzyfX1bULBAgMBAAFjZXhw9mNmY3SBom5hY2Nlc3MvY29uZmlybdgqWCUAAXESIJFEgJydlSesIetMeo_BSE5BKLK5qjl106vLKHjdGudTbmFjY2Vzcy9yZXF1ZXN02CpYJQABcRIg9UwtDbNtI0VSwyEl7ZOty7jkAgjGxGirZFMW8VSx0zRjaXNzUp0ad2ViOndlYjMuc3RvcmFnZWNwcmaA";
 }
@@ -106,18 +78,6 @@ function FootPrintComponent() {
     return cid;
   }
 
-  useEffect(() => {
-    // Call the setup function when the component mounts
-    setupWeb3Storage()
-      .then(({ client, space, myAccount }) => {
-        console.log(client);
-        // Do something with client, space, and myAccount if needed
-      })
-      .catch((error) => {
-        console.log(error);
-        // Handle any setup errors
-      });
-  }, []);
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
