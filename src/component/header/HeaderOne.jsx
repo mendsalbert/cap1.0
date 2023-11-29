@@ -90,7 +90,7 @@ function HeaderOne({ handleSidebar }) {
               <div className="flex h-[36px] w-[134px] justify-center rounded-lg bg-success-300 transition duration-300 ease-in-out hover:bg-success-400">
                 <div className="flex items-center space-x-1.5">
                   <span className="text-sm font-semibold text-white">
-                    Connect
+                    Connectss
                   </span>
                 </div>
               </div>
