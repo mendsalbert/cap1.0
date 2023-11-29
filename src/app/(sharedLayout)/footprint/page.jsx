@@ -9,7 +9,7 @@ import { useState, useEffect, useRef } from "react";
 import { create } from "@web3-storage/w3up-client";
 
 function getAccessToken() {
-  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE0ZGU4NTUwMjAxMTdENDIyY0IxOTRBREJiZERlOTJGZjBkYzkxNzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjIyMDkwNzQ1NjUsIm5hbWUiOiJNb3ZlciJ9.04qLL5Jvrb2ZrrL3Mdpe-zMVmXVGuxroEAl_DwUT97E";
+  return "did:key:z4MXj1wBzi9jUstyPWF2NjYShu9qVQbKpWWbdT44ku9MHPu1izqPmgBY2Kscp6N2jrNVZ3yvUexQ7tazTxBDi2MphYbp1WjMHSfRskfmtRQRvev8ErPdj67sRWR1LdjtgBQX4uWEKhFRyoALUxPFBYbfMkDZSjUPHDkXrtEvDqdu8ds9JZccbdsWKHpmbcBQZeTtKybGas8Vt5dBzKMUk3HFKeZz9rZrur27HtGpjkBBiMTvHB6hXy5k8qq3An1aQ9h6XAtpc5JMoqwrp6yVFz94B7vsRz2RKPPhv2RpJT75RyAGFiRMw1hzVW2FKFYSEBfDo6MPpFn7WqmsGWJCUvr6iBCYgfKqtnEEruQid3qya8T6GHqjn";
 }
 
 function makeStorageClient() {
