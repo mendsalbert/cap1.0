@@ -20,7 +20,7 @@ function FootPrintComponent() {
     },
   });
 
-  const onSubmitHandler = async (event) => {
+  async function handleChange4(event) {
     console.log("====", event);
     event.preventDefault();
     const form = event.target;
@@ -43,7 +43,7 @@ function FootPrintComponent() {
     ]);
 
     form.reset();
-  };
+  }
   const [uploadedImages, setUploadedImages] = useState([]);
   const [supportimage1, setSupportImage1] = useState(``);
   const [supportimage2, setSupportImage2] = useState(``);
@@ -81,24 +81,7 @@ function FootPrintComponent() {
     console.log(value);
     setTxPending(false);
   }
-  async function handleChange4(event) {
-    const supportUploaded2 = event.target.files[0];
-    setSupportImage2(URL.createObjectURL(event.target.files[0]));
-    const client = makeStorageClient();
 
-    try {
-      const cid = await client.put([supportUploaded2]);
-      console.log("stored files with cid:", cid);
-
-      // If using web3.storage, once the file is uploaded using `put`, you can create the URL directly
-      const url = `https://${cid}.ipfs.dweb.link/${supportUploaded2.name}`;
-      setSupportImage2(url); // Update state with the new URL
-      console.log("File URL:", url);
-    } catch (e) {
-      console.error("Error uploading file:", e);
-      // Handle the error appropriately
-    }
-  }
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
