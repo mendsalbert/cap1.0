@@ -46,11 +46,26 @@ const mumbaiApothem = {
 
 const { provider, chains } = configureChains(
   [mumbaiApothem],
-  [
-    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider(),
-  ]
+  [publicProvider()]
 );
+
+const { connectors } = getDefaultWallets({
+  appName: "Sustain",
+  chains,
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+});
+
+const myTheme = merge(midnightTheme(), {
+  colors: {
+    accentColor: "#18181b",
+    accentColorForeground: "#fff",
+  },
+});
 
 const containerStyle = {
   width: "100%",
