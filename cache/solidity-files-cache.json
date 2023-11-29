@@ -800,10 +800,10 @@
         "Product"
       ]
     },
-    "/Users/albertmends/Documents/CAP/contracts/RequestC.sol": {
-      "lastModificationDate": 1701196870861,
-      "contentHash": "e92ba0d25181eeb15ae550bbbfaaa670",
-      "sourceName": "contracts/RequestC.sol",
+    "/Users/albertmends/Documents/CAP/contracts/Request.sol": {
+      "lastModificationDate": 1701254787563,
+      "contentHash": "9141e3fe52b0ba8cdc4244358ceb9ead",
+      "sourceName": "contracts/Request.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
@@ -832,7 +832,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "RequestC"
+        "Request"
       ]
     }
   }
