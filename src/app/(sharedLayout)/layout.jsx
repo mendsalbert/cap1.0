@@ -11,6 +11,65 @@ import ProtoTypes from "prop-types";
 
 import { useState } from "react";
 
+//wallet imports
+
+import merge from "lodash.merge";
+import "@rainbow-me/rainbowkit/styles.css";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+  midnightTheme,
+} from "@rainbow-me/rainbowkit";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
+
+const mumbaiApothem = {
+  id: 51,
+  name: "Mumbai (TestNet)",
+  network: "Mumbai Apothem Network (TestNet)",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Mumbai-Network",
+    symbol: "MATIC",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc-mumbai.maticvigil.com"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Apothem Explorer",
+      url: "https://mumbai.polygonscan.com",
+    },
+  },
+  testnet: true,
+};
+
+const { provider, chains } = configureChains(
+  [mumbaiApothem],
+  [publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "Sustain",
+  chains,
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+});
+
+const myTheme = merge(midnightTheme(), {
+  colors: {
+    accentColor: "#18181b",
+    accentColorForeground: "#fff",
+  },
+});
+
 function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
   const user = true;
