@@ -21,24 +21,24 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
-const xdcApothem = {
+const mumbaiApothem = {
   id: 51,
-  name: "Apothem-Network (TestNet)",
-  network: "XDC Apothem Network (TestNet)",
+  name: "Mumbai (TestNet)",
+  network: "Mumbai Apothem Network (TestNet)",
   nativeCurrency: {
     decimals: 18,
-    name: "XDC-Network",
-    symbol: "XDC",
+    name: "Mumbai-Network",
+    symbol: "MATIC",
   },
   rpcUrls: {
     default: {
-      http: ["https://erpc.apothem.network"],
+      http: ["https://rpc-mumbai.maticvigil.com"],
     },
   },
   blockExplorers: {
     default: {
       name: "Apothem Explorer",
-      url: "https://explorer.apothem.network/",
+      url: "https://mumbai.polygonscan.com",
     },
   },
   testnet: true,
