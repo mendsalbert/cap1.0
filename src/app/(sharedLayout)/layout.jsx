@@ -15,29 +15,33 @@ function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
   const user = true;
   return (
-    <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
-      <div className="relative flex w-full">
-        {user ? (
-          // <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
-          <NGO handleActive={() => setSidebar(!sidebar)} />
-        ) : (
-          // <FR handleActive={() => setSidebar(!sidebar)} />
-          <Sidebar handleActive={() => setSidebar(!sidebar)} />
-        )}
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains} theme={myTheme}>
+        <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
+          <div className="relative flex w-full">
+            {user ? (
+              // <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
+              <NGO handleActive={() => setSidebar(!sidebar)} />
+            ) : (
+              // <FR handleActive={() => setSidebar(!sidebar)} />
+              <Sidebar handleActive={() => setSidebar(!sidebar)} />
+            )}
 
-        {overlay ? overlay : <Overlay />}
-        <SidebarV2 />
-        <div
-          className={`body-wrapper flex-1 overflow-x-hidden ${
-            bg ? bg : "dark:bg-darkblack-500"
-          } `}
-        >
-          <HeaderOne handleSidebar={() => setSidebar(!sidebar)} />
-          <HeaderTwo handleSidebar={() => setSidebar(!sidebar)} />
-          {children}
+            {overlay ? overlay : <Overlay />}
+            <SidebarV2 />
+            <div
+              className={`body-wrapper flex-1 overflow-x-hidden ${
+                bg ? bg : "dark:bg-darkblack-500"
+              } `}
+            >
+              <HeaderOne handleSidebar={() => setSidebar(!sidebar)} />
+              <HeaderTwo handleSidebar={() => setSidebar(!sidebar)} />
+              {children}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 }
 
