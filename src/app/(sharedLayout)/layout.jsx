@@ -32,7 +32,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { createPublicClient, http } from "viem";
 
 const mumbaiApothem = {
-  id: 51,
+  id: 80001,
   name: "Mumbai (TestNet)",
   network: "Mumbai Apothem Network (TestNet)",
   nativeCurrency: {
