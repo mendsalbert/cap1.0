@@ -72,8 +72,6 @@ const wagmiClient = createConfig({
   connectors: connectors,
 });
 
-/
-
 const myTheme = merge(midnightTheme(), {
   colors: {
     accentColor: "#21c55d",
