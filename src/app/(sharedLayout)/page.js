@@ -45,7 +45,7 @@ const mumbaiApothem = {
 };
 
 const { provider, chains } = configureChains(
-  [xdcApothem],
+  [mumbaiApothem],
   [
     // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
     publicProvider(),
