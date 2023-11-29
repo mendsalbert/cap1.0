@@ -39,7 +39,7 @@ async function main() {
   );
   let contractJsContent = fs.readFileSync(contractJsPath, { encoding: "utf8" });
   contractJsContent = contractJsContent.replace(
-    /(const contractAddress = ')(.*)(')/,
+    /(const contractAddress = ")(.*)(")/,
     `$1${carbonFootPrint.address}$3`
   );
   fs.writeFileSync(contractJsPath, contractJsContent);
