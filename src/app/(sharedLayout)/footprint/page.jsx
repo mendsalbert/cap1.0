@@ -136,6 +136,7 @@ function FootPrintComponent() {
               type="file"
               ref={hiddenFileSupport2}
               onChange={handleChange4}
+              accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
