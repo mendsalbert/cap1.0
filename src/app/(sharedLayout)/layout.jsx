@@ -61,13 +61,10 @@ const mumbaiApothem = {
   testnet: true,
 };
 
-const {
-  chains,
-
-  publicClient,
-
-  webSocketPublicClient,
-} = configureChains([mumbaiApothem], [publicProvider()]);
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [mumbaiApothem],
+  [publicProvider()]
+);
 
 const wagmiClient = createConfig({
   autoConnect: true,
