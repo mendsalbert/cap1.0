@@ -35,7 +35,7 @@ async function main() {
   // Update the contract address in contract.js
   const contractJsPath = path.join(
     __dirname,
-    "utils/CarbonFootPrintC/contract.js"
+    "../utils/CarbonFootPrintC/contract.js"
   );
   let contractJsContent = fs.readFileSync(contractJsPath, { encoding: "utf8" });
   contractJsContent = contractJsContent.replace(
