@@ -71,10 +71,10 @@ const wagmiClient = createConfig({
 //   [publicProvider()]
 // );
 
-// const { connectors } = getDefaultWallets({
-//   appName: "Sustain",
-//   chains,
-// });
+const { connectors } = getDefaultWallets({
+  appName: "CAP",
+  chains,
+});
 
 // const wagmiClient = createClient({
 //   autoConnect: true,
