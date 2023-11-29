@@ -92,13 +92,21 @@ function HeaderOne({ handleSidebar }) {
             <Author showProfile={handlePopup} />
             {/* if connected show Author component else show connect buttton */}
             <a href="#">
-              <div className="flex h-[36px] w-[134px] justify-center rounded-lg bg-success-300 transition duration-300 ease-in-out hover:bg-success-400">
+              {/* <div className="flex h-[36px] w-[134px] justify-center rounded-lg bg-success-300 transition duration-300 ease-in-out hover:bg-success-400">
                 <div className="flex items-center space-x-1.5">
                   <span className="text-sm font-semibold text-white">
                     Connectss
                   </span>
                 </div>
-              </div>
+              </div> */}
+              <ConnectButton
+                className="mx-8"
+                accountStatus={"full"}
+                showBalance={{
+                  smallScreen: true,
+                  largeScreen: true,
+                }}
+              />
             </a>
           </div>
           {/* notification ,message, store */}
