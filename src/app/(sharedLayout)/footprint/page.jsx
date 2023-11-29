@@ -75,6 +75,7 @@ function FootPrintComponent() {
     }
     return cid;
   }
+
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
@@ -153,6 +154,7 @@ function FootPrintComponent() {
           </div>
         </div>
       </dialog>
+      {txPending && <TransactionStatus />}
     </>
   );
 }
