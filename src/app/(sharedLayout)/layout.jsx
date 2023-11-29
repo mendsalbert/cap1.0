@@ -25,7 +25,7 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
 const mumbaiApothem = {
-  id: 51,
+  id: 80001,
   name: "Mumbai (TestNet)",
   network: "Mumbai Apothem Network (TestNet)",
   nativeCurrency: {
