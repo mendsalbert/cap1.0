@@ -137,15 +137,19 @@ function FootPrintComponent() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
+          {supportimage2 && (
+            <iframe
+              className="relative m-auto mb-3"
+              src={supportimage2}
+              accept=".png,.jpg,.jpeg"
+            ></iframe>
+          )}
           {/* description */}
           <textarea
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
-          <button
-            onClick={handleClick4}
-            className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white "
-          >
+          <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
             Upload
           </button>
           {/* add */}
