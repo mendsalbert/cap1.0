@@ -85,27 +85,20 @@ function FootPrintComponent() {
     const supportUploaded2 = event.target.files[0];
     setSupportImage2(URL.createObjectURL(event.target.files[0]));
     const client = makeStorageClient();
-    const cid = await client.put([supportUploaded2]);
-    console.log("stored files with cid:", cid);
 
-    const res = await client.get(cid);
-    console.log(`Got a response! [${res.status}] ${res.statusText}`);
-    if (!res.ok) {
-      throw new Error(
-        `failed to get ${cid} - [${res.status}] ${res.statusText}`
-      );
-    }
+    try {
+      const cid = await client.put([supportUploaded2]);
+      console.log("stored files with cid:", cid);
 
-    const supports2 = await res.files();
-    setSupportImage2(`https://${cid}.ipfs.dweb.link/${supportUploaded2.name}`);
-    console.log(supportimage1);
-    console.log(supportUploaded2);
-    for (const file of supports2) {
-      console.log(`${file.cid} -- ${file.path} -- ${file.size}`);
+      // If using web3.storage, once the file is uploaded using `put`, you can create the URL directly
+      const url = `https://${cid}.ipfs.dweb.link/${supportUploaded2.name}`;
+      setSupportImage2(url); // Update state with the new URL
+      console.log("File URL:", url);
+    } catch (e) {
+      console.error("Error uploading file:", e);
+      // Handle the error appropriately
     }
-    return cid;
   }
-
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
@@ -164,7 +157,7 @@ function FootPrintComponent() {
             <input
               type="file"
               ref={hiddenFileSupport2}
-              onChange={onSubmitHandler}
+              onChange={handleChange4}
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
