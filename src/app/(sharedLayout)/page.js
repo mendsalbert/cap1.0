@@ -21,30 +21,30 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
-const { provider, chains } = configureChains(
-  const xdcApothem = {
-    id: 51,
-    name: 'Apothem-Network (TestNet)',
-    network: 'XDC Apothem Network (TestNet)',
-    nativeCurrency: {
-        decimals: 18,
-        name: 'XDC-Network',
-        symbol: 'XDC'
+const xdcApothem = {
+  id: 51,
+  name: "Apothem-Network (TestNet)",
+  network: "XDC Apothem Network (TestNet)",
+  nativeCurrency: {
+    decimals: 18,
+    name: "XDC-Network",
+    symbol: "XDC",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://erpc.apothem.network"],
     },
-    rpcUrls: {
-        default: {
-            http: ['https://erpc.apothem.network']
-        }
+  },
+  blockExplorers: {
+    default: {
+      name: "Apothem Explorer",
+      url: "https://explorer.apothem.network/",
     },
-    blockExplorers: {
-        default: {
-            name: 'Apothem Explorer',
-            url: 'https://explorer.apothem.network/'
-        }
-    },
-    testnet: true
-}
+  },
+  testnet: true,
+};
 
+const { provider, chains } = configureChains(
   [xdcApothem],
   [
     // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
