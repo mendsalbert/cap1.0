@@ -9,6 +9,10 @@ import ProfilePopup from "./ProfilePopup";
 import StorePopUp from "./StorePopUp";
 import ToggleBtn from "./ToggleBtn";
 import ModeToggler from "./ModeToggler";
+
+import { useAccount } from "wagmi";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 function HeaderOne({ handleSidebar }) {
   const [popup, setPopup] = useState({
     notification: false,
