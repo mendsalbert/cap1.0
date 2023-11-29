@@ -21,6 +21,7 @@ import {
   darkTheme,
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
+// import { chain, configureChains, createClient, WagmiConfig,  } from "wagmi";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
