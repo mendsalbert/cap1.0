@@ -27,6 +27,54 @@ function FootPrintComponent() {
   const [deadline, setdeadline] = useState("");
   const [txPending, setTxPending] = useState(false);
 
+  const handleSelect = (location) => {
+    setSelectedLocation(location);
+  };
+  const hiddenFileSupport2 = useRef(null);
+
+  const handleClick4 = () => {
+    hiddenFileSupport2.current.click();
+  };
+
+  async function onsubmitHandler() {
+    setTxPending(true);
+    let value = await createProject(
+      name,
+      country,
+      description,
+      String(location.lat),
+      String(location.lng),
+      amount,
+      deadline,
+      supportimage2
+    );
+    console.log(value);
+    setTxPending(false);
+  }
+  async function handleChange4(event) {
+    const supportUploaded2 = event.target.files[0];
+    setSupportImage2(URL.createObjectURL(event.target.files[0]));
+    const client = makeStorageClient();
+    const cid = await client.put([supportUploaded2]);
+    console.log("stored files with cid:", cid);
+
+    const res = await client.get(cid);
+    console.log(`Got a response! [${res.status}] ${res.statusText}`);
+    if (!res.ok) {
+      throw new Error(
+        `failed to get ${cid} - [${res.status}] ${res.statusText}`
+      );
+    }
+
+    const supports2 = await res.files();
+    setSupportImage2(`https://${cid}.ipfs.dweb.link/${supportUploaded2.name}`);
+    console.log(supportimage1);
+    console.log(supportUploaded2);
+    for (const file of supports2) {
+      console.log(`${file.cid} -- ${file.path} -- ${file.size}`);
+    }
+    return cid;
+  }
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
