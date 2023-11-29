@@ -8,7 +8,42 @@ import { useState, useEffect, useRef } from "react";
 
 import { create as ipfsHttpClient } from "ipfs-http-client";
 
+const projectId = process.env.REACT_APP_PROJECT_ID;
+const projectSecretKey = process.env.REACT_APP_PROJECT_KEY;
+const authorization = "Basic " + btoa(projectId + ":" + projectSecretKey);
+
 function FootPrintComponent() {
+  const ipfs = ipfsHttpClient({
+    url: "https://ipfs.infura.io:5001/api/v0",
+    headers: {
+      authorization,
+    },
+  });
+
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const files = form[0].files;
+
+    if (!files || files.length === 0) {
+      return alert("No files selected");
+    }
+
+    const file = files[0];
+    // upload files
+    const result = await ipfs.add(file);
+
+    setUploadedImages([
+      ...uploadedImages,
+      {
+        cid: result.cid,
+        path: result.path,
+      },
+    ]);
+
+    form.reset();
+  };
+  const [uploadedImages, setUploadedImages] = useState([]);
   const [supportimage1, setSupportImage1] = useState(``);
   const [supportimage2, setSupportImage2] = useState(``);
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -128,18 +163,26 @@ function FootPrintComponent() {
             <input
               type="file"
               ref={hiddenFileSupport2}
-              onChange={handleChange4}
+              onChange={onSubmitHandler}
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-          {supportimage2 && (
-            <iframe
-              className="relative m-auto mb-3"
-              src={supportimage2}
-              accept=".png,.jpg,.jpeg"
-            ></iframe>
-          )}
+          {uploadedImages.map((image, index) => (
+            <>
+              <img
+                className="image"
+                alt={`Uploaded #${index + 1}`}
+                src={"https://skywalker.infura-ipfs.io/ipfs/" + image.path}
+                style={{ maxWidth: "400px", margin: "15px" }}
+                key={image.cid.toString() + index}
+              />
+              <h4>Link to IPFS:</h4>
+              <a href={"https://skywalker.infura-ipfs.io/ipfs/" + image.path}>
+                <h3>{"https://skywalker.infura-ipfs.io/ipfs/" + image.path}</h3>
+              </a>
+            </>
+          ))}
           {/* description */}
           <textarea
             placeholder="Enter the description for this project"
