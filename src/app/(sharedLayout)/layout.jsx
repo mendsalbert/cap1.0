@@ -72,16 +72,7 @@ const wagmiClient = createConfig({
   connectors: connectors,
 });
 
-// const { provider, chains } = configureChains(
-//   [mumbaiApothem],
-//   [publicProvider()]
-// );
-
-// const wagmiClient = createClient({
-//   autoConnect: true,
-//   connectors,
-//   provider,
-// });
+/
 
 const myTheme = merge(midnightTheme(), {
   colors: {
