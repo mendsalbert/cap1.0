@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import Request from "./RequestC.json";
+import Request from "./Request.json";
 
 export const RequestContract = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
