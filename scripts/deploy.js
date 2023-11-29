@@ -20,6 +20,31 @@ async function main() {
   await carbonFootPrint.deployed();
   console.log("CarbonFootPrint contract address:", carbonFootPrint.address);
 
+  // Copy the ABI file to the desired location
+  const abiSourcePath = path.join(
+    __dirname,
+    "../artifacts/contracts/CarbonFootPrint.sol/CarbonFootPrint.json"
+  );
+  const abiDestinationPath = path.join(
+    __dirname,
+    "utils/CarbonFootPrintC/CarbonFootPrint.json"
+  );
+  fs.copyFileSync(abiSourcePath, abiDestinationPath);
+  console.log("ABI file copied!");
+
+  // Update the contract address in contract.js
+  const contractJsPath = path.join(
+    __dirname,
+    "utils/CarbonFootPrintC/contract.js"
+  );
+  let contractJsContent = fs.readFileSync(contractJsPath, { encoding: "utf8" });
+  contractJsContent = contractJsContent.replace(
+    /(const contractAddress = ')(.*)(')/,
+    `$1${carbonFootPrint.address}$3`
+  );
+  fs.writeFileSync(contractJsPath, contractJsContent);
+  console.log("Contract address updated in contract.js!");
+
   // Deploy Donation
   const Donation = await hre.ethers.getContractFactory("Donation");
   const donation = await Donation.deploy(
