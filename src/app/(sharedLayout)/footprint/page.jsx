@@ -155,7 +155,8 @@ function FootPrintComponent() {
           </div>
         </div>
       </dialog>
-      {txPending && <TransactionStatus />}
+      {/* {txPending && <TransactionStatus />} */}
+      {<TransactionStatus />}
     </>
   );
 }
