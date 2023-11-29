@@ -90,7 +90,7 @@ const wagmiClient = createConfig({
 
 const myTheme = merge(midnightTheme(), {
   colors: {
-    accentColor: "#18181b",
+    accentColor: "#21c55d",
     accentColorForeground: "#fff",
   },
 });
@@ -100,7 +100,7 @@ function Layout({ bg, overlay, children }) {
   const user = true;
   return (
     <WagmiConfig config={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider chains={chains} theme={myTheme}>
         <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
           <div className="relative flex w-full">
             {user ? (
