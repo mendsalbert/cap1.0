@@ -42,7 +42,7 @@
     "swiper": "^10.1.0",
     "viem": "^1.19.9",
     "wagmi": "^1.4.7",
-    "web3.storage": "^4.5.5"
+    "web3.storage": "4.5.4"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
