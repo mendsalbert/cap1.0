@@ -6,7 +6,26 @@ import { GooglePlacesAutocomplete } from "react-google-autocomplete";
 import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { Web3Storage } from "web3.storage";
 
+function getAccessToken() {
+  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE0ZGU4NTUwMjAxMTdENDIyY0IxOTRBREJiZERlOTJGZjBkYzkxNzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjIyMDkwNzQ1NjUsIm5hbWUiOiJNb3ZlciJ9.04qLL5Jvrb2ZrrL3Mdpe-zMVmXVGuxroEAl_DwUT97E";
+}
+
+function makeStorageClient() {
+  return new Web3Storage({ token: getAccessToken() });
+}
+
 function FootPrintComponent() {
+  const [supportimage1, setSupportImage1] = useState(``);
+  const [supportimage2, setSupportImage2] = useState(``);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [location, setlocation] = useState({});
+
+  const [name, setname] = useState("");
+  const [country, setcountry] = useState("");
+  const [description, setdescription] = useState("");
+  const [amount, setamount] = useState("");
+  const [deadline, setdeadline] = useState("");
+  const [txPending, setTxPending] = useState(false);
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
