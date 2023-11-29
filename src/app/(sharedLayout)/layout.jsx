@@ -70,7 +70,7 @@ function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
   const user = true;
   return (
-    <WagmiConfig client={wagmiClient}>
+    <WagmiConfig config={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={myTheme}>
         <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
           <div className="relative flex w-full">
