@@ -60,9 +60,15 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
+const { connectors } = getDefaultWallets({
+  appName: "CAP",
+  chains,
+});
+
 const wagmiClient = createConfig({
   autoConnect: true,
   publicClient,
+  connectors,
   webSocketPublicClient,
 });
 
@@ -70,11 +76,6 @@ const wagmiClient = createConfig({
 //   [mumbaiApothem],
 //   [publicProvider()]
 // );
-
-const { connectors } = getDefaultWallets({
-  appName: "CAP",
-  chains,
-});
 
 // const wagmiClient = createClient({
 //   autoConnect: true,
