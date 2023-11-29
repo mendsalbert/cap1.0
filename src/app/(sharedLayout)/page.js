@@ -8,65 +8,6 @@ import {
   Circle,
 } from "@react-google-maps/api";
 
-//wallet imports
-
-import merge from "lodash.merge";
-import "@rainbow-me/rainbowkit/styles.css";
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  darkTheme,
-  midnightTheme,
-} from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { publicProvider } from "wagmi/providers/public";
-
-const mumbaiApothem = {
-  id: 51,
-  name: "Mumbai (TestNet)",
-  network: "Mumbai Apothem Network (TestNet)",
-  nativeCurrency: {
-    decimals: 18,
-    name: "Mumbai-Network",
-    symbol: "MATIC",
-  },
-  rpcUrls: {
-    default: {
-      http: ["https://rpc-mumbai.maticvigil.com"],
-    },
-  },
-  blockExplorers: {
-    default: {
-      name: "Apothem Explorer",
-      url: "https://mumbai.polygonscan.com",
-    },
-  },
-  testnet: true,
-};
-
-const { provider, chains } = configureChains(
-  [mumbaiApothem],
-  [publicProvider()]
-);
-
-const { connectors } = getDefaultWallets({
-  appName: "Sustain",
-  chains,
-});
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-});
-
-const myTheme = merge(midnightTheme(), {
-  colors: {
-    accentColor: "#18181b",
-    accentColorForeground: "#fff",
-  },
-});
-
 const containerStyle = {
   width: "100%",
   height: "100vh",
