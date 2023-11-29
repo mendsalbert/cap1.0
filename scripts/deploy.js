@@ -27,7 +27,7 @@ async function main() {
   );
   const abiDestinationPath = path.join(
     __dirname,
-    "utils/CarbonFootPrintC/CarbonFootPrint.json"
+    "../utils/CarbonFootPrintC/CarbonFootPrint.json"
   );
   fs.copyFileSync(abiSourcePath, abiDestinationPath);
   console.log("ABI file copied!");
