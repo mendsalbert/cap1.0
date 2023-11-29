@@ -7,7 +7,19 @@ import {
   InfoWindow,
   Circle,
 } from "@react-google-maps/api";
-import { IconAmbulance } from "@tabler/icons-react";
+
+//wallet imports
+
+import merge from "lodash.merge";
+import "@rainbow-me/rainbowkit/styles.css";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+  midnightTheme,
+} from "@rainbow-me/rainbowkit";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
 
 const containerStyle = {
   width: "100%",
