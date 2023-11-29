@@ -7,7 +7,8 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 import { Web3Storage } from "web3.storage";
 import { useState, useEffect, useRef } from "react";
 // import TransactionStatus from "@/component/Transaction/TransactionStatus";
-import TransactionStatus from "../../../component/TransactionStatus";
+// import TransactionStatus from "../../../component/TransactionStatus";
+import { TransactionStatus } from "../../../component/TransactionStatus";
 function getAccessToken() {
   return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE0ZGU4NTUwMjAxMTdENDIyY0IxOTRBREJiZERlOTJGZjBkYzkxNzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjIyMDkwNzQ1NjUsIm5hbWUiOiJNb3ZlciJ9.04qLL5Jvrb2ZrrL3Mdpe-zMVmXVGuxroEAl_DwUT97E";
 }
