@@ -9,7 +9,7 @@ export const ProductContract = async () => {
     const signer = provider.getSigner();
     const contractReader = new ethers.Contract(
       contractAddress,
-      Donation.abi,
+      Product.abi,
       signer
     );
     return contractReader;
