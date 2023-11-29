@@ -24,62 +24,32 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
-// const mumbaiApothem = {
-//   id: 51,
-//   name: "Mumbai (TestNet)",
-//   network: "Mumbai Apothem Network (TestNet)",
-//   nativeCurrency: {
-//     decimals: 18,
-//     name: "Mumbai-Network",
-//     symbol: "MATIC",
-//   },
-//   rpcUrls: {
-//     default: "https://rpc-mumbai.maticvigil.com",
-//   },
-//   blockExplorers: {
-//     default: { name: "Matic Explorer", url: "https://mumbai.polygonscan.com" },
-//   },
-//   testnet: true,
-// };
-
-// const { provider, chains } = configureChains(
-//   // [mumbaiApothem],
-//   [publicProvider()]
-// );
-
-const xdcApothem = {
+const mumbaiApothem = {
   id: 51,
-  name: "Apothem-Network (TestNet)",
-  network: "XDC Apothem Network (TestNet)",
+  name: "Mumbai (TestNet)",
+  network: "Mumbai Apothem Network (TestNet)",
   nativeCurrency: {
     decimals: 18,
-    name: "XDC-Network",
-    symbol: "XDC",
+    name: "Mumbai-Network",
+    symbol: "MATIC",
   },
+
   rpcUrls: {
-    default: {
-      http: ["https://erpc.apothem.network"],
-    },
+    default: "https://rpc-mumbai.maticvigil.com",
   },
   blockExplorers: {
-    default: {
-      name: "Apothem Explorer",
-      url: "https://explorer.apothem.network/",
-    },
+    default: { name: "Matic Explorer", url: "https://mumbai.polygonscan.com" },
   },
   testnet: true,
 };
 
 const { provider, chains } = configureChains(
-  [xdcApothem],
-  [
-    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider(),
-  ]
+  [mumbaiApothem],
+  [publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "CAP",
+  appName: "Sustain",
   chains,
 });
 
