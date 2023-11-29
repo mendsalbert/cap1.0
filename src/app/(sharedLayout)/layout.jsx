@@ -35,7 +35,7 @@ const mumbaiApothem = {
   },
   rpcUrls: {
     default: {
-      http: ["https://erpc.apothem.network"],
+      https: ["https://rpc-mumbai.maticvigil.com"],
     },
   },
   blockExplorers: {
