@@ -51,12 +51,49 @@ export async function donateToCarbonFootPrintProject(projectId, amount) {
   }
 }
 
-// Reuse the existing utility functions from your queries.js or define them if not already available
-function toWei(amount) {
-  return ethers.utils.parseUnits(amount.toString(), "ether");
+export async function getCampaign(projectId) {
+  try {
+    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const data = await contractObj.getProjectById(projectId);
+    return data;
+  } catch (e) {
+    console.log(e);
+    return parseErrorMsg(e);
+  }
+}
+
+export async function getCampaigns() {
+  try {
+    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const data = await contractObj.getAllProjects();
+    return data;
+  } catch (e) {
+    console.log(e);
+    return parseErrorMsg(e);
+  }
+}
+
+export async function getCampaignByName(name) {
+  try {
+    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const projectId = await contractObj.getProjectIdByName(name);
+    if (projectId.toNumber() === 0) {
+      throw new Error("Project does not exist.");
+    }
+    const data = await contractObj.getProjectById(projectId);
+    return data;
+  } catch (e) {
+    console.log(e);
+    return parseErrorMsg(e);
+  }
 }
 
 function parseErrorMsg(e) {
   const json = JSON.parse(JSON.stringify(e));
   return json?.reason || json?.error?.message || "An unknown error occurred";
+}
+
+// Reuse the existing utility functions from your queries.js or define them if not already available
+function toWei(amount) {
+  return ethers.utils.parseUnits(amount.toString(), "ether");
 }
