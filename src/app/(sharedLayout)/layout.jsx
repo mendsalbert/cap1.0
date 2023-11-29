@@ -61,21 +61,35 @@ const mumbaiApothem = {
   testnet: true,
 };
 
-const { provider, chains } = configureChains(
-  [mumbaiApothem],
-  [publicProvider()]
-);
-
-const { connectors } = getDefaultWallets({
-  appName: "Sustain",
+const {
   chains,
+
+  publicClient,
+
+  webSocketPublicClient,
+} = configureChains([mumbaiApothem], [publicProvider()]);
+
+const wagmiClient = createConfig({
+  autoConnect: true,
+  publicClient,
+  webSocketPublicClient,
 });
 
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-});
+// const { provider, chains } = configureChains(
+//   [mumbaiApothem],
+//   [publicProvider()]
+// );
+
+// const { connectors } = getDefaultWallets({
+//   appName: "Sustain",
+//   chains,
+// });
+
+// const wagmiClient = createClient({
+//   autoConnect: true,
+//   connectors,
+//   provider,
+// });
 
 const myTheme = merge(midnightTheme(), {
   colors: {
