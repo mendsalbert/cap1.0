@@ -2,6 +2,9 @@
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
+import { GooglePlacesAutocomplete } from "react-google-autocomplete";
+import ReactGoogleAutocomplete from "react-google-autocomplete";
+import { Web3Storage } from "web3.storage";
 
 function FootPrintComponent() {
   return (
