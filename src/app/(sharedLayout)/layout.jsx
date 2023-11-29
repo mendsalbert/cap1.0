@@ -21,17 +21,11 @@ import {
   darkTheme,
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
-// import { chain, configureChains, createClient, WagmiConfig,  } from "wagmi";
-// import { createConfig, WagmiConfig } from 'wagmi'
-
-// import { }  from "wagmi";
-import { configureChains, createConfig, WagmiConfig } from "@wagmi/core";
-import { publicProvider } from "@wagmi/core/providers/public";
-
-// import { publicProvider } from "wagmi/providers/public";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
 
 const mumbaiApothem = {
-  id: 80001,
+  id: 51,
   name: "Mumbai (TestNet)",
   network: "Mumbai Apothem Network (TestNet)",
   nativeCurrency: {
@@ -55,10 +49,7 @@ const mumbaiApothem = {
 
 const { provider, chains } = configureChains(
   [mumbaiApothem],
-  [
-    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider(),
-  ]
+  [publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
@@ -66,7 +57,7 @@ const { connectors } = getDefaultWallets({
   chains,
 });
 
-const wagmiClient = createConfig({
+const wagmiClient = createClient({
   autoConnect: true,
   connectors,
   provider,
@@ -83,7 +74,7 @@ function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
   const user = true;
   return (
-    <WagmiConfig config={wagmiClient}>
+    <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={myTheme}>
         <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
           <div className="relative flex w-full">
