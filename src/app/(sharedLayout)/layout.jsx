@@ -49,7 +49,10 @@ const mumbaiApothem = {
 
 const { provider, chains } = configureChains(
   [mumbaiApothem],
-  [publicProvider()]
+  [
+    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    publicProvider(),
+  ]
 );
 
 const { connectors } = getDefaultWallets({
