@@ -54,7 +54,7 @@ async function main() {
   // Uncomment if News contract is ready to be deployed
   // await deployContract("News");
   await deployContract("Product");
-  await deployContract("Request"); // Assuming the contract name is RequestC
+  await deployContract("Request");
 }
 
 main()
