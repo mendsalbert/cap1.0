@@ -21,6 +21,7 @@ function FootPrintComponent() {
   });
 
   const onSubmitHandler = async (event) => {
+    console.log("====", event);
     event.preventDefault();
     const form = event.target;
     const files = form[0].files;
