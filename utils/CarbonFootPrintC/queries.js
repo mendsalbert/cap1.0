@@ -1,5 +1,5 @@
 import { BigNumber, ethers } from "ethers";
-import { contract } from "./contract";
+import { CarboonFootPrintContract } from "./contract";
 import { toEth, toWei, parseErrorMsg } from "./ether-utils";
 
 export async function createCarbonFootPrintProject(
@@ -13,7 +13,7 @@ export async function createCarbonFootPrintProject(
   imageCID
 ) {
   try {
-    const contractObj = await contract(); // Make sure this is the correct contract object for CarbonFootPrint
+    const contractObj = await CarboonFootPrintContract(); // Make sure this is the correct contract object for CarbonFootPrint
     const unixTime = Math.floor(new Date(deadline).getTime() / 1000);
 
     const data = await contractObj.createProject(
@@ -38,7 +38,7 @@ export async function createCarbonFootPrintProject(
 export async function donateToCarbonFootPrintProject(projectId, amount) {
   try {
     const amountInWei = ethers.utils.parseEther(amount.toString());
-    const contractObj = await contract(); // Make sure this is the correct contract object for CarbonFootPrint
+    const contractObj = await CarboonFootPrintContract(); // Make sure this is the correct contract object for CarbonFootPrint
 
     const data = await contractObj.donate(projectId, {
       value: amountInWei,
@@ -53,7 +53,7 @@ export async function donateToCarbonFootPrintProject(projectId, amount) {
 
 export async function getCampaign(projectId) {
   try {
-    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const contractObj = await CarboonFootPrintContract(); // Ensure this is the CarbonFootPrint contract instance
     const data = await contractObj.getProjectById(projectId);
     return data;
   } catch (e) {
@@ -64,7 +64,7 @@ export async function getCampaign(projectId) {
 
 export async function getCampaigns() {
   try {
-    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const contractObj = await CarboonFootPrintContract(); // Ensure this is the CarbonFootPrint contract instance
     const data = await contractObj.getAllProjects();
     return data;
   } catch (e) {
@@ -75,7 +75,7 @@ export async function getCampaigns() {
 
 export async function getCampaignByName(name) {
   try {
-    const contractObj = await contract(); // Ensure this is the CarbonFootPrint contract instance
+    const contractObj = await CarboonFootPrintContract(); // Ensure this is the CarbonFootPrint contract instance
     const projectId = await contractObj.getProjectIdByName(name);
     if (projectId.toNumber() === 0) {
       throw new Error("Project does not exist.");
