@@ -21,29 +21,42 @@ function FootPrintComponent() {
   });
 
   async function handleChange4(event) {
-    console.log("====", event);
+    // Prevent default form submission behavior
     event.preventDefault();
-    const form = event.target;
-    const files = form[0].files;
 
+    // Access the file from the input directly
+    const files = event.target.files;
+
+    // Check if files are selected
     if (!files || files.length === 0) {
       return alert("No files selected");
     }
 
+    // Get the first file from the FileList
     const file = files[0];
-    // upload files
-    const result = await ipfs.add(file);
 
-    setUploadedImages([
-      ...uploadedImages,
-      {
-        cid: result.cid,
-        path: result.path,
-      },
-    ]);
+    try {
+      // Upload the file using IPFS
+      const result = await ipfs.add(file);
+      console.log("IPFS result:", result);
 
-    form.reset();
+      // Update the state with the new uploaded image details
+      setUploadedImages((prevImages) => [
+        ...prevImages,
+        {
+          cid: result.cid.toString(),
+          path: result.path,
+        },
+      ]);
+
+      // Create an object URL to display the image preview
+      setSupportImage2(URL.createObjectURL(file));
+    } catch (error) {
+      console.error("Error uploading file:", error);
+      alert("Failed to upload the file");
+    }
   }
+
   const [uploadedImages, setUploadedImages] = useState([]);
   const [supportimage1, setSupportImage1] = useState(``);
   const [supportimage2, setSupportImage2] = useState(``);
