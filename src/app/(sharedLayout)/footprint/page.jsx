@@ -6,15 +6,8 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { Web3Storage } from "web3.storage";
 import { useState, useEffect, useRef } from "react";
-import { create } from "@web3-storage/w3up-client";
 
-function getAccessToken() {
-  return "4MXj1wBzi9jUstyPWF2NjYShu9qVQbKpWWbdT44ku9MHPu1izqPmgBY2Kscp6N2jrNVZ3yvUexQ7tazTxBDi2MphYbp1WjMHSfRskfmtRQRvev8ErPdj67sRWR1LdjtgBQX4uWEKhFRyoALUxPFBYbfMkDZSjUPHDkXrtEvDqdu8ds9JZccbdsWKHpmbcBQZeTtKybGas8Vt5dBzKMUk3HFKeZz9rZrur27HtGpjkBBiMTvHB6hXy5k8qq3An1aQ9h6XAtpc5JMoqwrp6yVFz94B7vsRz2RKPPhv2RpJT75RyAGFiRMw1hzVW2FKFYSEBfDo6MPpFn7WqmsGWJCUvr6iBCYgfKqtnEEruQid3qya8T6GHqjn";
-}
-
-function makeStorageClient() {
-  return new Web3Storage({ token: getAccessToken() });
-}
+import { create as ipfsHttpClient } from "ipfs-http-client";
 
 function FootPrintComponent() {
   const [supportimage1, setSupportImage1] = useState(``);
