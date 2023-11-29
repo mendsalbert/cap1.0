@@ -88,12 +88,12 @@ export async function getCampaignByName(name) {
   }
 }
 
-function parseErrorMsg(e) {
-  const json = JSON.parse(JSON.stringify(e));
-  return json?.reason || json?.error?.message || "An unknown error occurred";
-}
-
 // Reuse the existing utility functions from your queries.js or define them if not already available
 function toWei(amount) {
   return ethers.utils.parseUnits(amount.toString(), "ether");
+}
+
+function parseErrorMsg(e) {
+  const json = JSON.parse(JSON.stringify(e));
+  return json?.reason || json?.error?.message || "An unknown error occurred";
 }
