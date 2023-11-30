@@ -43,7 +43,6 @@ function FootPrintComponent() {
     const allCamps = await getCampaigns();
     // console.log(allCamps);
     setallpost(allCamps);
-    setallpost();
   }, []);
 
   return (
