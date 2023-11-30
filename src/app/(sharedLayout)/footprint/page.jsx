@@ -128,7 +128,23 @@ function FootPrintComponent() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-
+          <div className="flex-btns">
+            <button onClick={loadRecent} className="btn btn-light">
+              Load recent
+            </button>
+            <button
+              disabled={uploading}
+              onClick={() => inputFile.current.click()}
+              className="btn"
+            >
+              {uploading ? "Uploading..." : "Upload"}
+            </button>
+          </div>
+          {cid && (
+            <div className="file-list">
+              <Files cid={cid} />
+            </div>
+          )}
           <textarea
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
