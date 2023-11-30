@@ -66,7 +66,7 @@ function FootPrintComponent() {
             </select>
           </div>
           {/* target amount - regioin using google map search */}
-          <div className="space-x-6 py-2 flex flex-row">
+          <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
               placeholder="eg 5TH"
