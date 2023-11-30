@@ -142,7 +142,7 @@ function FootPrintComponent() {
             </button>
           </div>
           {cid && (
-            <div className="file-list">
+            <div className="">
               <Files cid={cid} />
             </div>
           )}
