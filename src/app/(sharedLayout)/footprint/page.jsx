@@ -79,7 +79,6 @@ function FootPrintComponent() {
                   value,
                   onChange: setValue,
                 }}
-                // onSelect={handleSelect}
                 // onPlaceSelected={(place) =>
                 //   setlocation({
                 //     lat: place.geometry.location.lat(),
