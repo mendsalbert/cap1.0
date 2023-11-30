@@ -4,9 +4,9 @@ import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import { GooglePlacesAutocomplete } from "react-google-autocomplete";
-import ReactGoogleAutocomplete from "react-google-autocomplete";
+// import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
-// import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function FootPrintComponent() {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -73,18 +73,18 @@ function FootPrintComponent() {
               className="input input-bordered input-md w-11/12  dark:bg-darkblack-500"
             />
             <div className="w-full">
-              <ReactGoogleAutocomplete
+              <GooglePlacesAutocomplete
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
-                // selectProps={{
-                //   value,
-                //   onChange: setValue,
-                // }}
-                onPlaceSelected={(place) =>
-                  setlocation({
-                    lat: place.geometry.location.lat(),
-                    lng: place.geometry.location.lng(),
-                  })
-                }
+                selectProps={{
+                  value,
+                  onChange: setValue,
+                }}
+                // onPlaceSelected={(place) =>
+                //   setlocation({
+                //     lat: place.geometry.location.lat(),
+                //     lng: place.geometry.location.lng(),
+                //   })
+                // }
               />
             </div>
             {/* <select className="select select-bordered w-full  dark:bg-darkblack-500">
