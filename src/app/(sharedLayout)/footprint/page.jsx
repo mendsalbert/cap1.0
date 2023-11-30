@@ -19,7 +19,7 @@ function FootPrintComponent() {
   const [description, setdescription] = useState("");
   const [deadline, setdeadline] = useState("");
   const [amount, setamount] = useState("");
-  const [allpost, setallpost] = useState([]);
+  const [campaigns, setcampaigns] = useState([]);
 
   // console.log("location", value.label);
 
@@ -41,7 +41,7 @@ function FootPrintComponent() {
 
   useEffect(async () => {
     const allCamps = await getCampaigns();
-    setallpost(allCamps);
+    setcampaigns(allCamps);
   }, []);
 
   return (
@@ -56,7 +56,7 @@ function FootPrintComponent() {
       </button>
       {/* LIST OF FOOTPRINT */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        {footprints?.map((footprint) => (
+        {campaigns?.map((footprint) => (
           <FootPrint key={footprint.id} footprint={footprint} />
         ))}
       </div>
