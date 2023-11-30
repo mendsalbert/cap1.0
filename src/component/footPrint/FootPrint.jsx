@@ -57,10 +57,10 @@ function FootPrint({ footprint }) {
               <div className="flex flex-row justify-between">
                 <div>
                   <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-                    {title}
+                    {/* {title} */}
                   </h3>
                   <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                    {category}
+                    {/* {category} */}
                   </span>
                 </div>
                 <div
