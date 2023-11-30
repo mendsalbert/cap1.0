@@ -39,16 +39,21 @@ function FootPrintComponent() {
             <input
               type="text"
               placeholder="Name"
+              name={title}
+              onChange={(e) => {
+                settitle(e.target.value);
+              }}
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
-            <select className="select select-bordered w-full  dark:bg-darkblack-500">
-              <option disabled selected>
-                War
-              </option>
-              <option>Food</option>
-              <option>Normal Orange</option>
-              <option>Normal Tomato</option>
-            </select>
+            <input
+              type="text"
+              placeholder="Name"
+              name={title}
+              onChange={(e) => {
+                settitle(e.target.value);
+              }}
+              className="input input-bordered input-md w-full dark:bg-darkblack-500"
+            />
           </div>
           {/* target amount - regioin using google map search */}
           <div className="space-x-4 py-2 flex flex-row">
