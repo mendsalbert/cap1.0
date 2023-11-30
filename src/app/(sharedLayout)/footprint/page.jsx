@@ -3,8 +3,8 @@ import Files from "@/component/Files";
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
-// import { GooglePlacesAutocomplete } from "react-google-autocomplete";
-// import ReactGoogleAutocomplete from "react-google-autocomplete";
+import { GooglePlacesAutocomplete } from "react-google-autocomplete";
+import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 
 function FootPrintComponent() {
@@ -23,47 +23,6 @@ function FootPrintComponent() {
 
   const handleSelect = (location) => {
     setSelectedLocation(location);
-  };
-
-  const [file, setFile] = useState("");
-  const [cid, setCid] = useState("");
-  const [uploading, setUploading] = useState(false);
-
-  const inputFile = useRef(null);
-
-  const uploadFile = async (fileToUpload) => {
-    try {
-      setUploading(true);
-      const formData = new FormData();
-      formData.append("file", fileToUpload, { filename: fileToUpload.name });
-      const res = await fetch("/api/files", {
-        method: "POST",
-        body: formData,
-      });
-      const ipfsHash = await res.text();
-      setCid(ipfsHash);
-      setUploading(false);
-    } catch (e) {
-      console.log(e);
-      setUploading(false);
-      alert("Trouble uploading file");
-    }
-  };
-
-  const handleChange = (e) => {
-    setFile(e.target.files[0]);
-    uploadFile(e.target.files[0]);
-  };
-
-  const loadRecent = async () => {
-    try {
-      const res = await fetch("/api/files");
-      const json = await res.json();
-      setCid(json.ipfs_pin_hash);
-    } catch (e) {
-      console.log(e);
-      alert("trouble loading files");
-    }
   };
 
   return (
@@ -122,30 +81,12 @@ function FootPrintComponent() {
           {/* file input */}
           <div className="form-control w-full py-2">
             <input
-              type="file"
-              ref={inputFile}
-              onChange={handleChange}
+              type="text"
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-          <div className="">
-            <button onClick={loadRecent} className="">
-              Load recent
-            </button>
-            <button
-              disabled={uploading}
-              onClick={() => inputFile.current.click()}
-              className="btn"
-            >
-              {uploading ? "Uploading..." : "Upload"}
-            </button>
-          </div>
-          {cid && (
-            <div className="">
-              <Files cid={cid} />
-            </div>
-          )}
+
           <textarea
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
