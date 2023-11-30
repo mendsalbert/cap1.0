@@ -98,9 +98,9 @@ function FootPrintComponent() {
           <div className="form-control w-full py-2">
             <input
               type="datetime-local"
-              name={image}
+              name={deadline}
               onChange={(e) => {
-                setimage(e.target.value);
+                setdeadline(e.target.value);
               }}
               placeholder="Insert image url"
               accept=".png,.jpg,.jpeg"
