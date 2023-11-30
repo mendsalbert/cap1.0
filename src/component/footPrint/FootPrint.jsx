@@ -17,7 +17,7 @@ function FootPrint({ footprint }) {
   return (
     <>
       <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
-        <div className="shrink-0 rounded-full relative h-32">
+        <div className="shrink-0 rounded-full relative ">
           <img
             priority={true}
             src={footprint?.imageCID}
