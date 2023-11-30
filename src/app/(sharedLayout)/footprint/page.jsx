@@ -22,14 +22,14 @@ function FootPrintComponent() {
   async function onsubmitHandler() {
     setTxPending(true);
     let value = await createProject(
-      name,
+      title,
       country,
       description,
-      String(location.lat),
-      String(location.lng),
+      "lat",
+      "lon",
       amount,
       deadline,
-      supportimage2
+      image
     );
     console.log(value);
     setTxPending(false);
