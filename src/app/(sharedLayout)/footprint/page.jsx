@@ -12,7 +12,7 @@ function FootPrintComponent() {
   const [value, setValue] = useState(null);
   const [title, settitle] = useState(null);
   const [country, setcountry] = useState(null);
-
+  const [image, setimage] = useState(null);
   // console.log("location", value.label);
 
   return (
