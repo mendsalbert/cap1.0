@@ -85,22 +85,7 @@ function FootPrintComponent() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-          {uploadedImages.map((image, index) => (
-            <>
-              <img
-                className="image"
-                alt={`Uploaded #${index + 1}`}
-                src={"https://skywalker.infura-ipfs.io/ipfs/" + image.path}
-                style={{ maxWidth: "400px", margin: "15px" }}
-                key={image.cid.toString() + index}
-              />
-              <h4>Link to IPFS:</h4>
-              <a href={"https://skywalker.infura-ipfs.io/ipfs/" + image.path}>
-                <h3>{"https://skywalker.infura-ipfs.io/ipfs/" + image.path}</h3>
-              </a>
-            </>
-          ))}
-          {/* description */}
+
           <textarea
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
