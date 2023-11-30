@@ -22,6 +22,7 @@ function FootPrintComponent() {
   const [txPending, setTxPending] = useState(false);
 
   const handleSelect = (location) => {
+    console.log(location);
     setSelectedLocation(location);
   };
 
