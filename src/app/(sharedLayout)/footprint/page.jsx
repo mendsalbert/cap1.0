@@ -41,7 +41,6 @@ function FootPrintComponent() {
 
   useEffect(async () => {
     const allCamps = await getCampaigns();
-    // console.log(allCamps);
     setallpost(allCamps);
   }, []);
 
