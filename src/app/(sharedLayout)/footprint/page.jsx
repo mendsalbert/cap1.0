@@ -15,6 +15,7 @@ function FootPrintComponent() {
   const [image, setimage] = useState(null);
   const [description, setdescription] = useState("");
   const [deadline, setdeadline] = useState("");
+  const [amount, setamount] = useState("");
 
   // console.log("location", value.label);
 
@@ -64,6 +65,7 @@ function FootPrintComponent() {
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
+              name={amount}
               placeholder="Targeted carbon offset 10 CO2e"
               className="input input-bordered input-md w-11/12  dark:bg-darkblack-500"
             />
