@@ -4,7 +4,7 @@ import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 import { GooglePlacesAutocomplete } from "react-google-autocomplete";
-import ReactGoogleAutocomplete from "react-google-autocomplete";
+// import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 
 function FootPrintComponent() {
@@ -71,7 +71,8 @@ function FootPrintComponent() {
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
             <div>
-              <ReactGoogleAutocomplete
+              <GooglePlacesAutocomplete
+              ap
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                 onSelect={handleSelect}
                 onPlaceSelected={(place) =>
