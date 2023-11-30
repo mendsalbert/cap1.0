@@ -19,6 +19,7 @@ function FootPrintComponent() {
   const [description, setdescription] = useState("");
   const [deadline, setdeadline] = useState("");
   const [amount, setamount] = useState("");
+  const [allpost, setallpost] = useState([]);
 
   // console.log("location", value.label);
 
@@ -40,8 +41,9 @@ function FootPrintComponent() {
 
   useEffect(async () => {
     const allCamps = await getCampaigns();
-
     console.log(allCamps);
+    setallpost(allCamps);
+    setallpost();
   }, []);
 
   return (
