@@ -9,8 +9,6 @@ import { useState, useEffect, useRef } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function FootPrintComponent() {
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [location, setlocation] = useState({});
   const [value, setValue] = useState(null);
 
   console.log("location", value.label);
