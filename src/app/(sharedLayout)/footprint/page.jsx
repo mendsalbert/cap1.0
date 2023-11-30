@@ -129,8 +129,8 @@ function FootPrintComponent() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-          <div className="flex-btns">
-            <button onClick={loadRecent} className="btn btn-light">
+          <div className="">
+            <button onClick={loadRecent} className="">
               Load recent
             </button>
             <button
