@@ -31,7 +31,7 @@ function FootPrint({ footprint }) {
               {footprint.name}
             </h3>
             <span className="text-lg text-bgray-600 dark:text-bgray-50">
-              {/* {category} */}
+              {footprint.description}
             </span>
           </div>
         </div>
