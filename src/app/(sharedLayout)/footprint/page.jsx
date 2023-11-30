@@ -47,10 +47,10 @@ function FootPrintComponent() {
             />
             <input
               type="text"
-              placeholder="Name"
-              name={title}
+              placeholder="country"
+              name={country}
               onChange={(e) => {
-                settitle(e.target.value);
+                setcountry(e.target.value);
               }}
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
