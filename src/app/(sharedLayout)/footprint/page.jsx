@@ -70,7 +70,7 @@ function FootPrintComponent() {
             <input
               type="number"
               placeholder="eg 5TH"
-              className="input input-bordered input-md w-9/12  dark:bg-darkblack-500"
+              className="input input-bordered input-md w-10/12  dark:bg-darkblack-500"
             />
             <div className="w-full">
               <GooglePlacesAutocomplete
