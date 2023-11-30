@@ -14,6 +14,7 @@ function FootPrintComponent() {
   const [supportimage2, setSupportImage2] = useState(``);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [location, setlocation] = useState({});
+  const [value, setValue] = useState(null);
 
   const [name, setname] = useState("");
   const [country, setcountry] = useState("");
@@ -71,9 +72,13 @@ function FootPrintComponent() {
               placeholder="eg 5TH"
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
-            <div className="w-full h-full">
+            <div className="w-full">
               <GooglePlacesAutocomplete
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
+                selectProps={{
+                  value,
+                  onChange: setValue,
+                }}
                 // onSelect={handleSelect}
                 // onPlaceSelected={(place) =>
                 //   setlocation({
