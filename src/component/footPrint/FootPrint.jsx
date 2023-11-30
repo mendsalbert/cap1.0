@@ -72,7 +72,7 @@ function FootPrint({ footprint }) {
                 </div>
               </div>
               <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-                {text}
+                {/* {text} */}
               </p>
 
               <div className="flex dark:text-white flex-row space-x-7 text-center items-center">
