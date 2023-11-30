@@ -1,6 +1,5 @@
 import { BigNumber, ethers } from "ethers";
 import { CarboonFootPrintContract } from "./contract";
-// import { , toWei, parseErrorMsg } from "./ether-utils";
 
 export async function createCarbonFootPrintProject(
   name,
