@@ -10,6 +10,8 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function FootPrintComponent() {
   const [value, setValue] = useState(null);
+  const [title, settitle] = useState(null);
+  const [country, setcountry] = useState(null);
 
   // console.log("location", value.label);
 
