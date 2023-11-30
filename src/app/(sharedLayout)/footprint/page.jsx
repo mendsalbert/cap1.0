@@ -1,3 +1,4 @@
+"use client";
 import Files from "@/component/Files";
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
