@@ -13,6 +13,9 @@ function FootPrintComponent() {
   const [title, settitle] = useState(null);
   const [country, setcountry] = useState(null);
   const [image, setimage] = useState(null);
+  const [description, setdescription] = useState("");
+  const [deadline, setdeadline] = useState("");
+
   // console.log("location", value.label);
 
   return (
@@ -89,6 +92,10 @@ function FootPrintComponent() {
           </div>
 
           <textarea
+            value={description}
+            onChange={(e) => {
+              setdescription(e.target.value);
+            }}
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
