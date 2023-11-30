@@ -61,7 +61,7 @@ function FootPrintComponent() {
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
-              placeholder="Donation Target eg 5TH"
+              placeholder="Targeted carbon offset (40000.00)"
               className="input input-bordered input-md w-11/12  dark:bg-darkblack-500"
             />
             <div className="w-full">
