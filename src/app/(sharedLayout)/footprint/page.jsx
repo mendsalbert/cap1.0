@@ -45,7 +45,6 @@ function FootPrintComponent() {
     setallpost(allCamps);
   }, []);
 
-  console.log(allpost);
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
