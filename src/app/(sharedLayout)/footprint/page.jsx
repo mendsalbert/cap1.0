@@ -95,6 +95,18 @@ function FootPrintComponent() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
+          <div className="form-control w-full py-2">
+            <input
+              type="datetime-local"
+              name={image}
+              onChange={(e) => {
+                setimage(e.target.value);
+              }}
+              placeholder="Insert image url"
+              accept=".png,.jpg,.jpeg"
+              className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
+            />
+          </div>
 
           <textarea
             value={description}
