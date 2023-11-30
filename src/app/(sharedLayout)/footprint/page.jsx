@@ -54,13 +54,13 @@ function FootPrintComponent() {
         <IconCirclePlus />
         <span>Add Campaign</span>
       </button>
-      {/*  */}
+      {/* ====LIST OF FOOTPRINT */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
         {footprints?.map((footprint) => (
           <FootPrint key={footprint.id} footprint={footprint} />
         ))}
       </div>
-      {/*  */}
+      {/*  LIST OF FOOTPRINT*/}
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-6/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg my-3">
