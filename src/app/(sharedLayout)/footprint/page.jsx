@@ -72,7 +72,7 @@ function FootPrintComponent() {
             />
             <div>
               <ReactGoogleAutocomplete
-                apiKey="AIzaSyBBBcC7nb_9zSAjhYJf4Q2-BCZGVO8p26Y"
+                apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                 onSelect={handleSelect}
                 // onPlaceSelected={(place) =>
                 //   setlocation({
