@@ -72,7 +72,7 @@ function FootPrintComponent() {
               placeholder="eg 5TH"
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
-            <div className="w-full">
+            <div className="">
               <GooglePlacesAutocomplete
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                 selectProps={{
