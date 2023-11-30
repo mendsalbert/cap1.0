@@ -66,6 +66,9 @@ function FootPrintComponent() {
             <input
               type="number"
               name={amount}
+              onChange={(e) => {
+                setamount(e.target.value);
+              }}
               placeholder="Targeted carbon offset 10 CO2e"
               className="input input-bordered input-md w-11/12  dark:bg-darkblack-500"
             />
