@@ -12,6 +12,7 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 
 function FootPrint({ footprint }) {
+  console.log(footprint);
   const { img, title, category, text, status } = footprint;
   return (
     <>
