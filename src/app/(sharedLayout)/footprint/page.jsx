@@ -20,7 +20,7 @@ function FootPrintComponent() {
   // console.log("location", value.label);
 
   async function onsubmitHandler() {
-    setTxPending(true);
+    // setTxPending(true);
     let value = await createProject(
       title,
       country,
@@ -32,7 +32,7 @@ function FootPrintComponent() {
       image
     );
     console.log(value);
-    setTxPending(false);
+    // setTxPending(false);
   }
 
   return (
