@@ -8,7 +8,7 @@ export default function Files(props) {
   return (
     <div className="">
       <p>Your IPFS CID:</p>
-      <p>{props.cid}</p>
+      {/* <p>{props.cid}</p> */}
       <a
         href={`${GATEWAY_URL}/ipfs/${props.cid}?pinataGatewayToken=${process.env.NEXT_PUBLIC_GATEWAY_TOKEN}`}
         rel="noopener noreferrer"
