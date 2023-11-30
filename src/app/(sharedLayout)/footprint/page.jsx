@@ -7,7 +7,7 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
-
+import { createCarbonFootPrintProject } from "../../../../utils/CarbonFootPrintC/queries";
 function FootPrintComponent() {
   const [value, setValue] = useState(null);
   const [title, settitle] = useState(null);
@@ -21,7 +21,7 @@ function FootPrintComponent() {
 
   async function onsubmitHandler() {
     // setTxPending(true);
-    let value = await createProject(
+    let value = await createCarbonFootPrintProject(
       title,
       country,
       description,
