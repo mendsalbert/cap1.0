@@ -20,8 +20,7 @@ function FootPrint({ footprint }) {
         <div className="shrink-0 rounded-full relative">
           <img
             priority={true}
-            // src={img.src}
-            // src={img.src}
+            src={footprint?.imageCID}
             className="w-full rounded-md"
             alt="Stack Overflow"
           />
