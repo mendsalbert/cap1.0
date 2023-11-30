@@ -6,56 +6,11 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 
-import { create as ipfsHttpClient } from "ipfs-http-client";
-
-const projectId = process.env.REACT_APP_PROJECT_ID;
-const projectSecretKey = process.env.REACT_APP_PROJECT_KEY;
-const authorization = "Basic " + btoa(projectId + ":" + projectSecretKey);
 
 function FootPrintComponent() {
-  const ipfs = ipfsHttpClient({
-    url: "https://ipfs.infura.io:5001/api/v0",
-    headers: {
-      authorization,
-    },
-  });
+ 
 
-  async function handleChange4(event) {
-    // Prevent default form submission behavior
-    event.preventDefault();
 
-    // Access the file from the input directly
-    const files = event.target.files;
-
-    // Check if files are selected
-    if (!files || files.length === 0) {
-      return alert("No files selected");
-    }
-
-    // Get the first file from the FileList
-    const file = files[0];
-
-    try {
-      // Upload the file using IPFS
-      const result = await ipfs.add(file);
-      console.log("IPFS result:", result);
-
-      // Update the state with the new uploaded image details
-      setUploadedImages((prevImages) => [
-        ...prevImages,
-        {
-          cid: result.cid.toString(),
-          path: result.path,
-        },
-      ]);
-
-      // Create an object URL to display the image preview
-      setSupportImage2(URL.createObjectURL(file));
-    } catch (error) {
-      console.error("Error uploading file:", error);
-      alert("Failed to upload the file");
-    }
-  }
 
   const [uploadedImages, setUploadedImages] = useState([]);
   const [supportimage1, setSupportImage1] = useState(``);
@@ -73,27 +28,6 @@ function FootPrintComponent() {
   const handleSelect = (location) => {
     setSelectedLocation(location);
   };
-  const hiddenFileSupport2 = useRef(null);
-
-  const handleClick4 = () => {
-    hiddenFileSupport2.current.click();
-  };
-
-  async function onsubmitHandler() {
-    setTxPending(true);
-    let value = await createProject(
-      name,
-      country,
-      description,
-      String(location.lat),
-      String(location.lng),
-      amount,
-      deadline,
-      supportimage2
-    );
-    console.log(value);
-    setTxPending(false);
-  }
 
   return (
     <>
@@ -152,8 +86,8 @@ function FootPrintComponent() {
           <div className="form-control w-full py-2">
             <input
               type="file"
-              ref={hiddenFileSupport2}
-              onChange={handleChange4}
+             
+              onChange={}
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
