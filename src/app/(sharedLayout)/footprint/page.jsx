@@ -6,12 +6,7 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 
-
 function FootPrintComponent() {
- 
-
-
-
   const [uploadedImages, setUploadedImages] = useState([]);
   const [supportimage1, setSupportImage1] = useState(``);
   const [supportimage2, setSupportImage2] = useState(``);
@@ -86,8 +81,6 @@ function FootPrintComponent() {
           <div className="form-control w-full py-2">
             <input
               type="file"
-             
-              onChange={}
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
