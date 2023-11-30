@@ -56,8 +56,8 @@ function FootPrintComponent() {
       </button>
       {/* LIST OF FOOTPRINT */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        {[]?.map((footprint) => (
-          <FootPrint footprint={footprint} />
+        {footprints?.map((footprint) => (
+          <FootPrint key={footprint.id} footprint={footprint} />
         ))}
       </div>
       {/*  LIST OF FOOTPRINT */}
