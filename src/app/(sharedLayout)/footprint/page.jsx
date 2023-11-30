@@ -85,7 +85,7 @@ function FootPrintComponent() {
                     lng: place.geometry.location.lng(),
                   })
                 }
-              
+              />
             </div>
             {/* <select className="select select-bordered w-full  dark:bg-darkblack-500">
               <option disabled selected>
