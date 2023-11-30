@@ -7,7 +7,10 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
-import { createCarbonFootPrintProject } from "../../../../utils/CarbonFootPrintC/queries";
+import {
+  createCarbonFootPrintProject,
+  getCampaigns,
+} from "../../../../utils/CarbonFootPrintC/queries";
 function FootPrintComponent() {
   const [value, setValue] = useState(null);
   const [title, settitle] = useState(null);
@@ -34,6 +37,11 @@ function FootPrintComponent() {
     console.log(value);
     // setTxPending(false);
   }
+
+  useEffect(async () => {
+    const allCamps = await getCampaigns();
+    console.log(allCamps);
+  }, []);
 
   return (
     <>
