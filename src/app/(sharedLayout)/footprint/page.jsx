@@ -72,7 +72,6 @@ function FootPrintComponent() {
             />
             <div>
               <GooglePlacesAutocomplete
-              ap
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                 onSelect={handleSelect}
                 onPlaceSelected={(place) =>
