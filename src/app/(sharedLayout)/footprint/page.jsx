@@ -19,6 +19,22 @@ function FootPrintComponent() {
 
   // console.log("location", value.label);
 
+  async function onsubmitHandler() {
+    setTxPending(true);
+    let value = await createProject(
+      name,
+      country,
+      description,
+      String(location.lat),
+      String(location.lng),
+      amount,
+      deadline,
+      supportimage2
+    );
+    console.log(value);
+    setTxPending(false);
+  }
+
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
@@ -116,7 +132,12 @@ function FootPrintComponent() {
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
-          <button className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white ">
+          <button
+            onClick={() => {
+              onsubmitHandler();
+            }}
+            className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white "
+          >
             Upload
           </button>
           {/* add */}
