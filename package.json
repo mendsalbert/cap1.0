@@ -42,6 +42,7 @@
     "react-dom": "18.2.0",
     "react-google-autocomplete": "^2.7.3",
     "react-google-maps": "^9.4.5",
+    "react-google-places-autocomplete": "^4.0.1",
     "react-quill": "^2.0.0",
     "swiper": "^10.1.0",
     "viem": "^1.19.9",

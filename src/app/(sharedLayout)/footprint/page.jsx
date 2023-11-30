@@ -3,9 +3,10 @@ import Files from "@/component/Files";
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
-import { GooglePlacesAutocomplete } from "react-google-autocomplete";
+// import { GooglePlacesAutocomplete } from "react-google-autocomplete";
 // import ReactGoogleAutocomplete from "react-google-autocomplete";
 import { useState, useEffect, useRef } from "react";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function FootPrintComponent() {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -73,13 +74,13 @@ function FootPrintComponent() {
             <div>
               <GooglePlacesAutocomplete
                 apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
-                onSelect={handleSelect}
-                onPlaceSelected={(place) =>
-                  setlocation({
-                    lat: place.geometry.location.lat(),
-                    lng: place.geometry.location.lng(),
-                  })
-                }
+                // onSelect={handleSelect}
+                // onPlaceSelected={(place) =>
+                //   setlocation({
+                //     lat: place.geometry.location.lat(),
+                //     lng: place.geometry.location.lng(),
+                //   })
+                // }
                 // hepeps reached out to me yesterday the company i was working with no, says they want
                 // developers for their next project i biz them say how much aa they are saying 2000 for 3 months wey I say naa ano go join.
                 // right now my focus is on looking for remote job outside ghana. and I dont want be feeding on investment money for long so I was saying if you hear that your company needs a front end developer remote make I know okay
