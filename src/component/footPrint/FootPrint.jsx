@@ -21,7 +21,7 @@ function FootPrint({ footprint }) {
           <img
             priority={true}
             src={footprint?.imageCID}
-            className="w-full rounded-md h-52"
+            className="w-full rounded-md h-56"
             alt="Stack Overflow"
           />
         </div>
