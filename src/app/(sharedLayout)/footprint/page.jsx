@@ -11,7 +11,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 function FootPrintComponent() {
   const [value, setValue] = useState(null);
 
-  console.log("location", value.label);
+  // console.log("location", value.label);
 
   return (
     <>
