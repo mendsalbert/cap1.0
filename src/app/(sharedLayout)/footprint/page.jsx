@@ -22,7 +22,7 @@ function FootPrintComponent() {
   const [amount, setamount] = useState("");
   const [deadline, setdeadline] = useState("");
   const [txPending, setTxPending] = useState(false);
-  console.log("location", value);
+  console.log("location", value.label);
   const handleSelect = (location) => {
     console.log(location);
     setSelectedLocation(location);
