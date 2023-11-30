@@ -24,6 +24,47 @@ function FootPrintComponent() {
     setSelectedLocation(location);
   };
 
+  const [file, setFile] = useState("");
+  const [cid, setCid] = useState("");
+  const [uploading, setUploading] = useState(false);
+
+  const inputFile = useRef(null);
+
+  const uploadFile = async (fileToUpload) => {
+    try {
+      setUploading(true);
+      const formData = new FormData();
+      formData.append("file", fileToUpload, { filename: fileToUpload.name });
+      const res = await fetch("/api/files", {
+        method: "POST",
+        body: formData,
+      });
+      const ipfsHash = await res.text();
+      setCid(ipfsHash);
+      setUploading(false);
+    } catch (e) {
+      console.log(e);
+      setUploading(false);
+      alert("Trouble uploading file");
+    }
+  };
+
+  const handleChange = (e) => {
+    setFile(e.target.files[0]);
+    uploadFile(e.target.files[0]);
+  };
+
+  const loadRecent = async () => {
+    try {
+      const res = await fetch("/api/files");
+      const json = await res.json();
+      setCid(json.ipfs_pin_hash);
+    } catch (e) {
+      console.log(e);
+      alert("trouble loading files");
+    }
+  };
+
   return (
     <>
       {/* TODO: this must be showend to the admin alone */}
@@ -81,6 +122,8 @@ function FootPrintComponent() {
           <div className="form-control w-full py-2">
             <input
               type="file"
+              ref={inputFile}
+              onChange={handleChange}
               accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
