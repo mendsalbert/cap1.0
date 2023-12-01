@@ -79,6 +79,7 @@ function FootPrint({ footprint }) {
                 <span className="text-center">
                   <span>
                     <IconClock />
+                    32/23/23
                   </span>
                   <p> </p>
                 </span>
