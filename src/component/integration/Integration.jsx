@@ -8,8 +8,7 @@ import {
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 
-function Integration({ integration }) {
-  const { img, title, category, text, status } = integration;
+function Integration({ donations }) {
   return (
     <>
       <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
