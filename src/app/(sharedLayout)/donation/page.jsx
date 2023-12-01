@@ -46,9 +46,9 @@ function MyWallet() {
             <input
               type="text"
               placeholder="Name"
-              name={name}
+              name={country}
               onChange={(e) => {
-                setname(e.target.value);
+                setcountry(e.target.value);
               }}
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
