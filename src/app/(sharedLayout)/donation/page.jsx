@@ -5,11 +5,6 @@ import { IconCirclePlus, IconX } from "@tabler/icons-react";
 function MyWallet() {
   return (
     <>
-      {/* <sectio className="2xl:w-[424px]">
-        <AddBalance />
-        <Wallet />
-      </section> */}
-      {/* TODO: this must be showend to the admin alone */}
       <button
         onClick={() => document.getElementById("my_modal_4").showModal()}
         className="bg-darkblack-600 text-white py-1.5  flex flex-row items-center space-x-2 px-2 rounded-full mb-2"
