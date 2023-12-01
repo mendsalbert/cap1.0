@@ -15,7 +15,6 @@ import date from "date-and-time";
 
 function FootPrint({ footprint }) {
   console.log(footprint);
-
   // const { img, title, category, text, status } = footprint;
   return (
     <>
@@ -82,7 +81,7 @@ function FootPrint({ footprint }) {
                   <span>
                     <IconClock />
                   </span>
-                  <p>{date.format(new Date(), "YYYY/MM/DD")}</p>
+                  <p>{footprint?.deadline?.toString()}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <span>
