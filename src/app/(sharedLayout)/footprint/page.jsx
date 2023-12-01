@@ -21,7 +21,7 @@ function FootPrintComponent() {
   const [amount, setamount] = useState("");
   const [campaigns, setcampaigns] = useState([]);
 
-  const [txPending, setTxPending] = useState(true);
+  const [txPending, setTxPending] = useState(false);
 
   async function onsubmitHandler() {
     alert(txPending);
