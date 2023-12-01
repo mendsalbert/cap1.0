@@ -23,27 +23,52 @@ function FootPrintComponent() {
 
   const [txPending, setTxPending] = useState(false);
 
-  async function onsubmitHandler() {
-    setTxPending(true);
-    alert(txPending);
-    document?.getElementById("my_modal_9")?.showModal();
-    let value = await createCarbonFootPrintProject(
-      title,
-      country,
-      description,
-      "lat",
-      "lon",
-      amount,
-      deadline,
-      image
-    );
-    console.log(value);
-    setTxPending(false);
-  }
+  // async function onsubmitHandler() {
+  //   setTxPending(true);
+  //   alert(txPending);
+  //   document?.getElementById("my_modal_9")?.showModal();
+  //   let value = await createCarbonFootPrintProject(
+  //     title,
+  //     country,
+  //     description,
+  //     "lat",
+  //     "lon",
+  //     amount,
+  //     deadline,
+  //     image
+  //   );
+  //   console.log(value);
+  //   setTxPending(false);
+  // }
 
   async function onsubmitHandler() {
     setTxPending(true); // This will trigger a re-render
   }
+
+  useEffect(() => {
+    if (txPending) {
+      document?.getElementById("my_modal_9")?.showModal();
+      // You might want to move your async logic here or make sure that it properly handles the lifecycle
+      createCarbonFootPrintProject(
+        title,
+        country,
+        description,
+        "lat",
+        "lon",
+        amount,
+        deadline,
+        image
+      )
+        .then((value) => {
+          console.log(value);
+          setTxPending(false); // Update the state to reflect the transaction is no longer pending
+        })
+        .catch((error) => {
+          console.error("Error during the transaction:", error);
+          setTxPending(false); // Also set to false in case of error
+        });
+    }
+  }, [txPending]);
   useEffect(async () => {
     const allCamps = await getCampaigns();
     setcampaigns(allCamps);
