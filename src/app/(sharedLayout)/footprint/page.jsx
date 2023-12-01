@@ -62,9 +62,7 @@ function FootPrintComponent() {
       </button>
       {/* LIST OF FOOTPRINT */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        {/* {campaigns?.map((footprint) => ( */}
         <FootPrint footprints={campaigns} />
-        {/* ))} */}
       </div>
       {/*  LIST OF FOOTPRINT */}
       <dialog id="my_modal_4" className="modal">
