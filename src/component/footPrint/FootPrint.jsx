@@ -195,7 +195,6 @@ function FootPrint({ footprints }) {
                 <button
                   onClick={async () => {
                     let value = await donateToCarbonFootPrintProject(id, 5);
-                    console.log(value);
                   }}
                   className=" rounded-full btn btn-outline btn-warning"
                 >
