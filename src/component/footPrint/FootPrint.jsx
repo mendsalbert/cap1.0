@@ -59,7 +59,6 @@ function FootPrint({ footprints }) {
 
   async function onaddDonation() {
     setTxPending(true);
-
     let value = await donateToCarbonFootPrintProject(id, amount);
     document?.getElementById("my_modal_9")?.showModal();
     console.log(value);
