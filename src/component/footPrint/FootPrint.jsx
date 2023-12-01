@@ -143,7 +143,7 @@ function FootPrint({ footprints }) {
                     <IconTargetArrow />
                   </span>
                   <p>
-                    4,000 CO<sub>2</sub>e
+                    {targetCarbonOffset.toString()} CO<sub>2</sub>e
                   </p>
                 </span>
                 <span className="flex flex-col items-center ">
