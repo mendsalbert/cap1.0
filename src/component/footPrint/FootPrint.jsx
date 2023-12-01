@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 import date from "date-and-time";
-
+import { useState } from "react";
 function FootPrint({ footprint }) {
   const dateString = new Date(
     footprint?.deadline?.toString() * 1000
