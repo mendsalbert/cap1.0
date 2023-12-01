@@ -8,7 +8,8 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getCampaign } from "../../../utils/DonationC/queries";
 
 function Integration({ donations }) {
   const [name, setname] = useState(null);
@@ -36,6 +37,13 @@ function Integration({ donations }) {
     setamountRecieved(recieved);
     console.log("id", id);
   };
+
+  useEffect(async () => {
+    const donation = await getCampaign(0);
+    // setcampaigns(allCamps);
+    console.log("donation", donation);
+  }, []);
+
   return (
     <>
       {donations?.map((donation, index) => {
