@@ -27,9 +27,6 @@ function Integration({ donations }) {
     setimageCID(imageCID);
     setdeadline(deadline);
     setid(id);
-    setcarbonOffsetRemoved(carbonOffsetRemoved);
-    settargetCarbonOffset(targetCarbonOffset);
-    settotalDonationsReceived(totalDonationsReceived);
 
     console.log("id", id);
   };
