@@ -68,12 +68,22 @@ function MyWallet() {
           {/* file input */}
           <div className="form-control w-full py-2">
             <input
-              type="file"
+              type="text"
+              name={image}
+              onChange={(e) => {
+                setimage(e.target.value);
+              }}
+              placeholder="Insert image url"
+              accept=".png,.jpg,.jpeg"
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
           {/* description */}
           <textarea
+            value={description}
+            onChange={(e) => {
+              setdescription(e.target.value);
+            }}
             placeholder="Enter the description for this project"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
