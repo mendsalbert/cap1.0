@@ -22,7 +22,7 @@ function FootPrint({ campaigns }) {
   // const { img, title, category, text, status } = footprint;
   return (
     <>
-      {campaigns.map((footprint) => {
+      {campaigns?.map((footprint) => {
         return (
           <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
             <div className="shrink-0 rounded-full relative ">
