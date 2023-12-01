@@ -112,7 +112,7 @@ function FootPrint({ footprints }) {
                     {name}
                   </h3>
                   <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                    {/* {footprint.description} */}
+                    {description}
                   </span>
                 </div>
                 <div
