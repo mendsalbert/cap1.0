@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 import date from "date-and-time";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 function FootPrint({ footprint }) {
   const dateString = new Date(
     footprint?.deadline?.toString() * 1000
@@ -25,10 +25,6 @@ function FootPrint({ footprint }) {
     alert(name);
     setname(name);
   };
-
-  useEffect(() => {
-    setName(footprint.name);
-  }, [footprint.name]);
 
   // const { img, title, category, text, status } = footprint;
   return (
