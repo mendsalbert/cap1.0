@@ -16,7 +16,8 @@ function Integration({ donations }) {
   const [description, setdescription] = useState(null);
   const [imageCID, setimageCID] = useState(null);
   const [id, setid] = useState(null);
-
+  const [target, settarget] = useState(null);
+  const [amountRecieved, setamountRecieved] = useState(second);
   const setCurrentState = (name, country, description, imageCID, id) => {
     setname(name);
     setcountry(country);
