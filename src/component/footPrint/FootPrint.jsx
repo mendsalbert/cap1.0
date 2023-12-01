@@ -13,9 +13,12 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 import date from "date-and-time";
 import { useState } from "react";
+import { donateToCarbonFootPrintProject } from "../../../utils/CarbonFootPrintC/queries";
 function FootPrint({ footprints }) {
   console.log(footprints);
   // const dateString = "";
+
+  const [amount, setAmount] = useState(0);
 
   const [name, setname] = useState(null);
   const [country, setcountry] = useState(null);
@@ -52,6 +55,13 @@ function FootPrint({ footprints }) {
   const dateString = new Date(deadline?.toString() * 1000).toLocaleDateString(
     "en-GB"
   );
+
+  async function onaddDonation() {
+    // setTxPending(true);
+    let value = await donateToCarbonFootPrintProject(id, amount);
+    console.log(value);
+    // setTxPending(false);
+  }
   // const { img, title, category, text, status } = footprint;
   return (
     <>
@@ -179,11 +189,15 @@ function FootPrint({ footprints }) {
               </div>
               <input
                 type="text"
+                value={amount}
+                onChange={(event) => setAmount(event.target.value)}
                 placeholder="Or Enter amount of units "
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
               <button
-                onClick={() => {}}
+                onClick={() => {
+                  onaddDonation();
+                }}
                 className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
               >
                 Support
