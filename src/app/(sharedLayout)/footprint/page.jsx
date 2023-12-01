@@ -3,7 +3,6 @@ import Files from "@/component/Files";
 import FootPrint from "@/component/footPrint/FootPrint";
 import footprints from "@/data/footprint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
-
 import { useState, useEffect, useRef } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import {
