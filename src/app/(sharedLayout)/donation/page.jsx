@@ -3,6 +3,7 @@ import Integration from "@/component/integration/Integration";
 import integrations from "@/data/intigration";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
+import { createCampaign } from "../../../../utils/DonationC/queries";
 
 function MyWallet() {
   const [name, setname] = useState(null);
@@ -10,6 +11,22 @@ function MyWallet() {
   const [description, setdescription] = useState("");
   const [image, setimage] = useState(null);
   const [targetAmount, settargetAmount] = useState(null);
+
+  const [txPending, setTxPending] = useState(false);
+
+  async function onsubmitHandler() {
+    setTxPending(true);
+    let value = await createCampaign(
+      name,
+      country,
+      description,
+      image,
+
+      targetAmount
+    );
+    console.log(value);
+    setTxPending(false);
+  }
 
   return (
     <>
