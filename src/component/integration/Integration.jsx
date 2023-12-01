@@ -62,13 +62,13 @@ function Integration({ donations }) {
             <button
               aria-label="none"
               onClick={() => {
-                setCurrentState(
-                  footprint.name,
-                  footprint.country,
-                  footprint.description,
-                  footprint?.imageCID,
-                  i
-                );
+                // setCurrentState(
+                //   footprint.name,
+                //   footprint.country,
+                //   footprint.description,
+                //   footprint?.imageCID,
+                //   i
+                // );
                 document.getElementById("my_modal_1").showModal();
               }}
               className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
