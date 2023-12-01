@@ -183,7 +183,13 @@ function FootPrint({ footprints }) {
                 >
                   1 ETH
                 </button>
-                <button className="rounded-full btn btn-outline btn-success">
+                <button
+                  onClick={async () => {
+                    let value = await donateToCarbonFootPrintProject(id, 1);
+                    console.log(value);
+                  }}
+                  className="rounded-full btn btn-outline btn-success"
+                >
                   2 ETH
                 </button>
                 <button className=" rounded-full btn btn-outline btn-warning">
