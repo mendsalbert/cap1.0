@@ -9,7 +9,7 @@ function MyWallet() {
   const [country, setcountry] = useState(null);
   const [description, setdescription] = useState("");
   const [image, setimage] = useState(null);
-  const [targetAmount, settargetAmount] = useState(second);
+  const [targetAmount, settargetAmount] = useState(null);
 
   return (
     <>
