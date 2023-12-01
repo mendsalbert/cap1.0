@@ -76,7 +76,7 @@ function FootPrint({ footprint }) {
               </p>
 
               <div className="flex dark:text-white flex-row space-x-7 text-center items-center">
-                <span className="text-center">
+                <span className="flex flex-col text-center">
                   <span>
                     <IconClock />
                   </span>
