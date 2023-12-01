@@ -19,6 +19,7 @@ function FootPrint({ footprints }) {
   // const dateString = "";
 
   const [amount, setAmount] = useState();
+  const [txPending, setTxPending] = useState(false);
 
   const [name, setname] = useState(null);
   const [country, setcountry] = useState(null);
@@ -57,10 +58,10 @@ function FootPrint({ footprints }) {
   );
 
   async function onaddDonation() {
-    // setTxPending(true);
+    setTxPending(true);
     let value = await donateToCarbonFootPrintProject(id, amount);
     console.log(value);
-    // setTxPending(false);
+    setTxPending(false);
   }
   // const { img, title, category, text, status } = footprint;
   return (
