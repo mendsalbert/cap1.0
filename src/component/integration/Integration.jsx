@@ -17,14 +17,23 @@ function Integration({ donations }) {
   const [imageCID, setimageCID] = useState(null);
   const [id, setid] = useState(null);
   const [target, settarget] = useState(null);
-  const [amountRecieved, setamountRecieved] = useState(second);
-  const setCurrentState = (name, country, description, imageCID, id) => {
+  const [amountRecieved, setamountRecieved] = useState(null);
+  const setCurrentState = (
+    name,
+    country,
+    description,
+    imageCID,
+    id,
+    target,
+    recieved
+  ) => {
     setname(name);
     setcountry(country);
     setdescription(description);
     setimageCID(imageCID);
     setid(id);
-
+    settarget(target);
+    setamountRecieved(recieved);
     console.log("id", id);
   };
   return (
