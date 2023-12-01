@@ -8,6 +8,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
+import { useState } from "react";
 
 function Integration({ donations }) {
   const [name, setname] = useState(null);
