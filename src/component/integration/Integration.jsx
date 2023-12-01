@@ -11,6 +11,7 @@ import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { getCampaign } from "../../../utils/DonationC/queries";
 import axios from "axios";
+
 function Integration({ donations }) {
   const [name, setname] = useState(null);
   const [country, setcountry] = useState(null);
