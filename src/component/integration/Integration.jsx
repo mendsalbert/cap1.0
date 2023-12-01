@@ -9,6 +9,7 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 
 function Integration({ donations }) {
+  console.log("donations", donations);
   return (
     <>
       <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
