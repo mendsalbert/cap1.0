@@ -29,7 +29,6 @@ function Integration({ donations }) {
           "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
         );
         setEthToUsdRate(response.data.ethereum.usd);
-        console.log("ethToUsdRate", ethToUsdRate);
       } catch (error) {
         console.error("Error fetching ETH to USD rate: ", error);
       }
@@ -37,6 +36,7 @@ function Integration({ donations }) {
 
     fetchEthToUsdRate();
   }, []);
+  console.log("ethToUsdRate", ethToUsdRate);
 
   const weiToUsd = (wei) => {
     if (!ethToUsdRate) return 0;
