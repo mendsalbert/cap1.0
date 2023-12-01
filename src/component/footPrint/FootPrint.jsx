@@ -174,7 +174,14 @@ function FootPrint({ footprints }) {
                 </span>
               </div>
               <div className="flex flex-row justify-between space-x-3 my-3">
-                <button className="rounded-full btn btn-outline btn-info">
+                <button 
+                onClick={()=>{
+
+                  let value = await donateToCarbonFootPrintProject(id, amount);
+                  console.log(value);
+                }
+              }
+                className="rounded-full btn btn-outline btn-info">
                   50 units
                 </button>
                 <button className="rounded-full btn btn-outline btn-success">
