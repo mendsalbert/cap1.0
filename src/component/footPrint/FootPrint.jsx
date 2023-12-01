@@ -246,7 +246,7 @@ function FootPrint({ footprints }) {
             {txPending ? (
               <div className="flex flex-col items-start">
                 <span className="loading loading-spinner text-accent"></span>
-                Confirm transaction and wait for a minute
+                Confirm transaction
               </div>
             ) : (
               "Transaction completed"
