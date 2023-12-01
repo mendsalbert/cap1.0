@@ -40,7 +40,7 @@ function FootPrint({ footprints }) {
     setname(name);
     setcountry(country);
     setdescription(description);
-    setimage(imageCID);
+    setimageCID(imageCID);
     setdeadline(deadline);
     setid(id);
     setcarbonOffsetRemoved(carbonOffsetRemoved);
