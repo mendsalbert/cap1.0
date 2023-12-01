@@ -134,8 +134,8 @@ function FootPrint({ footprints }) {
                   <span>
                     <IconClock />
                   </span>
-                  <p>{dateString}</p>
-                  {/* <p>{footprint?.deadline?.toString()}</p> */}
+                  {/* <p>{dateString}</p> */}
+                  <p>{deadline?.toString()}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <span>
