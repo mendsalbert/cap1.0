@@ -118,12 +118,12 @@ function Integration({ donations }) {
               </p>
 
               <div className="flex dark:text-white flex-row space-x-7 text-center items-center">
-                <span className="text-center">
+                {/* <span className="text-center">
                   <span>
                     <IconUser />
                   </span>
                   <p>102K</p>
-                </span>
+                </span> */}
                 <span className="flex flex-col items-center ">
                   <span>
                     <IconTargetArrow />
