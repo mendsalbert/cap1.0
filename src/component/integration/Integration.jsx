@@ -43,7 +43,7 @@ function Integration({ donations }) {
     const ether = wei / 1e18;
     return (ether * ethToUsdRate).toFixed(2);
   };
-  console.log("ethToUsdRate", weiToUsd);
+  console.log("ethToUsdRate", weiToUsd(50000000));
 
   const setCurrentState = (
     name,
