@@ -7,6 +7,7 @@ import {
   createCarbonFootPrintProject,
   getCampaigns,
 } from "../../../../utils/CarbonFootPrintC/queries";
+
 function FootPrintComponent() {
   const [value, setValue] = useState(null);
   const [title, settitle] = useState(null);
