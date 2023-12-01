@@ -21,7 +21,9 @@ function FootPrint({ footprint }) {
   console.log(footprint);
 
   const [name, setname] = useState(null);
-  const setCurrentState = () => {};
+  const setCurrentState = (name) => {
+    setname();
+  };
   // const { img, title, category, text, status } = footprint;
   return (
     <>
@@ -52,7 +54,7 @@ function FootPrint({ footprint }) {
           aria-label="none"
           onClick={() => {
             document.getElementById("my_modal_1").showModal();
-            setCurrentState();
+            setCurrentState(footprint.name);
           }}
           className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
         >
