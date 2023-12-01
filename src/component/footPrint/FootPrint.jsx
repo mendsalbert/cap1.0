@@ -243,10 +243,14 @@ function FootPrint({ footprints }) {
         <div className="modal-box">
           <h3 className="font-bold text-lg">Transaction Processing!</h3>
           <p className="py-4">
-            <div>
-              <span className="loading loading-spinner text-accent"></span>
-              Confirm transaction and wait for a minute
-            </div>
+            {txPending ? (
+              <div>
+                <span className="loading loading-spinner text-accent"></span>
+                Confirm transaction and wait for a minute
+              </div>
+            ) : (
+              "Transaction completed"
+            )}
           </p>
           <div className="modal-action">
             <form method="dialog">
