@@ -69,6 +69,7 @@ function FootPrintComponent() {
         });
     }
   }, [txPending]);
+
   useEffect(async () => {
     const allCamps = await getCampaigns();
     setcampaigns(allCamps);
