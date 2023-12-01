@@ -182,7 +182,10 @@ function FootPrint({ footprints }) {
                 placeholder="Or Enter amount of units "
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
-              <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
+              <button
+                onClick={() => {}}
+                className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
+              >
                 Support
               </button>
             </div>
