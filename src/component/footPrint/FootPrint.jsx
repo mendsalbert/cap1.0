@@ -160,7 +160,7 @@ function FootPrint({ footprints }) {
                   <IconAtom2Filled />
                   <p>
                     {" "}
-                    {carbonOffsetRemoved?.toString()} CO<sub>2</sub>e
+                    {totalDonationsReceived?.toString()} CO<sub>2</sub>e
                   </p>
                 </span>
                 <span className="flex flex-col items-center ">
