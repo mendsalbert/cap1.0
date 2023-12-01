@@ -13,48 +13,53 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 import date from "date-and-time";
 import { useState } from "react";
-function FootPrint({ footprint }) {
-  const dateString = new Date(
-    footprint?.deadline?.toString() * 1000
-  ).toLocaleDateString("en-GB");
+function FootPrint({ campaigns }) {
+  const dateString = "";
+  // const dateString = new Date(
+  //   footprint?.deadline?.toString() * 1000
+  // ).toLocaleDateString("en-GB");
 
   // const { img, title, category, text, status } = footprint;
   return (
     <>
-      <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
-        <div className="shrink-0 rounded-full relative ">
-          <img
-            priority={true}
-            src={footprint?.imageCID}
-            className="w-full rounded-md h-56"
-            alt="Stack Overflow"
-          />
-        </div>
-        <div className="flex space-x-5">
-          <div>
-            <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-              {footprint.name}
-            </h3>
-            <span className="text-lg text-bgray-600 dark:text-bgray-50">
-              {footprint.description}
-            </span>
-          </div>
-        </div>
-        <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-          {/* {text}å */}
-        </p>
+      {campaigns.map((footprint) => {
+        return (
+          <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
+            <div className="shrink-0 rounded-full relative ">
+              <img
+                priority={true}
+                src={footprint?.imageCID}
+                className="w-full rounded-md h-56"
+                alt="Stack Overflow"
+              />
+            </div>
+            <div className="flex space-x-5">
+              <div>
+                <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
+                  {footprint.name}
+                </h3>
+                <span className="text-lg text-bgray-600 dark:text-bgray-50">
+                  {footprint.description}
+                </span>
+              </div>
+            </div>
+            <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
+              {/* {text}å */}
+            </p>
 
-        <button
-          aria-label="none"
-          onClick={() => {
-            document.getElementById("my_modal_1").showModal();
-            setCurrentState(footprint.name);
-          }}
-          className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
-        >
-          Support
-        </button>
-      </div>
+            <button
+              aria-label="none"
+              onClick={() => {
+                document.getElementById("my_modal_1").showModal();
+                setCurrentState(footprint.name);
+              }}
+              className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
+            >
+              Support
+            </button>
+          </div>
+        );
+      })}
 
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
