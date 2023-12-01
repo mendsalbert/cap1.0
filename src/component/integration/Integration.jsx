@@ -3,6 +3,7 @@ import {
   IconCash,
   IconTargetArrow,
   IconUser,
+  IconWorld,
   IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
@@ -18,7 +19,7 @@ function Integration({ donations }) {
             <div className="shrink-0 rounded-full relative">
               <span className="bg-white bottom-3 left-2 text-sm absolute rounded-xl py-[1px] px-3 shadow-md">
                 <span className="flex flex-row">
-                  <IconUser size={18} />
+                  <IconWorld size={18} />
                   {donation?.country}
                 </span>
               </span>
