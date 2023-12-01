@@ -63,11 +63,13 @@ function Integration({ donations }) {
               aria-label="none"
               onClick={() => {
                 setCurrentState(
-                  footprint.name,
-                  footprint.country,
-                  footprint.description,
-                  footprint?.imageCID,
-                  index
+                  donation.name,
+                  donation.country,
+                  donation.description,
+                  donation?.imageCID,
+                  index,
+                  donation.targetAmount,
+                  donation.totalDonationsReceived
                 );
                 document.getElementById("my_modal_1").showModal();
               }}
