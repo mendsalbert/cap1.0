@@ -10,6 +10,12 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 
 function Integration({ donations }) {
+  const [name, setname] = useState(null);
+  const [country, setcountry] = useState(null);
+  const [description, setdescription] = useState(null);
+  const [imageCID, setimageCID] = useState(null);
+  const [id, setid] = useState(null);
+
   const setCurrentState = (name, country, description, imageCID, id) => {
     setname(name);
     setcountry(country);
