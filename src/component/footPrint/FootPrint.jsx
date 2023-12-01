@@ -53,6 +53,7 @@ function FootPrint({ footprints }) {
     console.log("name", name);
     console.log("donationRecienved", totalDonationsReceived?.toString());
     console.log("carboonremoved", carbonOffsetRemoved?.toString());
+    console.log(id);
   };
   const dateString = new Date(deadline?.toString() * 1000).toLocaleDateString(
     "en-GB"
