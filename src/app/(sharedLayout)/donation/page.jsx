@@ -47,7 +47,7 @@ function MyWallet() {
       </button>
       {/* LIST OF DANTIONS */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        <Integration integration={integration} />
+        <Integration integration={campaigns} />
       </div>
       {/* LIST OF DONATIONS */}
       <dialog id="my_modal_4" className="modal">
