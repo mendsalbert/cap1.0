@@ -15,6 +15,7 @@ import date from "date-and-time";
 
 function FootPrint({ footprint }) {
   console.log(footprint);
+  console.log(new Date());
   // const { img, title, category, text, status } = footprint;
   return (
     <>
