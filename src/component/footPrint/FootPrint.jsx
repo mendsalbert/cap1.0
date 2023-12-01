@@ -20,6 +20,14 @@ function FootPrint({ footprints }) {
   //   footprint?.deadline?.toString() * 1000
   // ).toLocaleDateString("en-GB");
   const [name, setname] = useState(null);
+  const [country, setcountry] = useState(null);
+  const [description, setdescription] = useState(null);
+  const [imageCID, setimageCID] = useState(null);
+  const [deadline, setdeadline] = useState(null);
+  const [id, setid] = useState(null);
+  const [carbonOffsetRemoved, setcarbonOffsetRemoved] = useState(null);
+  const [targetCarbonOffset, settargetCarbonOffset] = useState(null);
+  const [totalDonationsReceived, settotalDonationsReceived] = useState(null);
   const setCurrentState = (
     name,
     country,
@@ -32,6 +40,9 @@ function FootPrint({ footprints }) {
     totalDonationsReceived
   ) => {
     setname(name);
+    setcountry(country);
+    setdescription(description);
+    setimage(imageCID);
   };
   // const { img, title, category, text, status } = footprint;
   return (
