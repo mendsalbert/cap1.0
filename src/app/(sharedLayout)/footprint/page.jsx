@@ -26,7 +26,6 @@ function FootPrintComponent() {
   async function onsubmitHandler() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
-
     let value = await createCarbonFootPrintProject(
       title,
       country,
