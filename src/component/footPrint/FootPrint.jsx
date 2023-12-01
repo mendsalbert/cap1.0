@@ -18,14 +18,6 @@ function FootPrint({ footprint }) {
     footprint?.deadline?.toString() * 1000
   ).toLocaleDateString("en-GB");
 
-  console.log(footprint);
-
-  const [name, setname] = useState(null);
-  const setCurrentState = (name) => {
-    alert(name);
-    setname(name);
-  };
-
   // const { img, title, category, text, status } = footprint;
   return (
     <>
