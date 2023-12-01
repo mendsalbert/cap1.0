@@ -60,14 +60,6 @@ function MyWallet() {
               placeholder="eg 5TH"
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
-            <select className="select select-bordered w-full  dark:bg-darkblack-500">
-              <option disabled selected>
-                Isreal
-              </option>
-              <option>Gaza</option>
-              <option>Palenstine</option>
-              <option>Normal Tomato</option>
-            </select>
           </div>
           {/* file input */}
           <div className="form-control w-full py-2">
