@@ -58,6 +58,10 @@ function MyWallet() {
             <input
               type="number"
               placeholder="eg 5TH"
+              name={targetAmount}
+              onChange={(e) => {
+                settargetAmount(e.target.value);
+              }}
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
           </div>
