@@ -153,22 +153,22 @@ function FootPrint({ footprints }) {
                     <IconTargetArrow />
                   </span>
                   <p>
-                    {targetCarbonOffset.toString()} CO<sub>2</sub>e
+                    {targetCarbonOffset?.toString()} CO<sub>2</sub>e
                   </p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconAtom2Filled />
                   <p>
                     {" "}
-                    {carbonOffsetRemoved.toString()} CO<sub>2</sub>e
+                    {carbonOffsetRemoved?.toString()} CO<sub>2</sub>e
                   </p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconAtom2 />
                   <p>
                     {" "}
-                    {Number(targetCarbonOffset.toString()) -
-                      Number(carbonOffsetRemoved.toString())}{" "}
+                    {Number(targetCarbonOffset?.toString()) -
+                      Number(carbonOffsetRemoved?.toString())}{" "}
                     CO<sub>2</sub>e{" "}
                   </p>
                 </span>
