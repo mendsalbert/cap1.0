@@ -102,7 +102,7 @@ function FootPrint({ footprints }) {
                   footprint.description,
                   footprint?.imageCID,
                   footprint.deadline,
-                  i + 1,
+                  i,
                   footprint.carbonOffsetRemoved,
                   footprint.targetCarbonOffset,
                   footprint.totalDonationsReceived
