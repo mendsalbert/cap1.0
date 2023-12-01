@@ -81,9 +81,7 @@ function FootPrint({ footprint }) {
                   <span>
                     <IconClock />
                   </span>
-                  <p>
-                    {date.format(footprint?.deadline?.toString(), "YYYY/MM/DD")}
-                  </p>
+                  <p>{date.format(new Date(), "YYYY/MM/DD")}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <span>
