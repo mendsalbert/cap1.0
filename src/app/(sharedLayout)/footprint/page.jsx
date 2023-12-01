@@ -1,7 +1,7 @@
 "use client";
 import FootPrint from "@/component/footPrint/FootPrint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import {
   createCarbonFootPrintProject,
