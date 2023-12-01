@@ -157,7 +157,9 @@ function FootPrint({ footprints }) {
                   <IconAtom2 />
                   <p>
                     {" "}
-                    1,000 CO<sub>2</sub>e{" "}
+                    {Number(targetCarbonOffset.toString()) -
+                      Number(carbonOffsetRemoved.toString())}{" "}
+                    CO<sub>2</sub>e{" "}
                   </p>
                 </span>
               </div>
