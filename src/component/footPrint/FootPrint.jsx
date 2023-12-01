@@ -59,6 +59,7 @@ function FootPrint({ footprints }) {
 
   async function onaddDonation() {
     setTxPending(true);
+    document.getElementById("my_modal_9").showModal();
     let value = await donateToCarbonFootPrintProject(id, amount);
     console.log(value);
     setTxPending(false);
@@ -235,7 +236,6 @@ function FootPrint({ footprints }) {
               />
               <button
                 onClick={() => {
-                  document.getElementById("my_modal_1").showModal();
                   onaddDonation();
                 }}
                 className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
