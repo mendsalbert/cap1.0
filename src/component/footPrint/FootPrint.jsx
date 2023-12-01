@@ -22,6 +22,7 @@ function FootPrint({ footprint }) {
 
   const [name, setname] = useState(null);
   const setCurrentState = (name) => {
+    alert(name);
     setname(name);
   };
   // const { img, title, category, text, status } = footprint;
