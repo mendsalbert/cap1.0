@@ -21,7 +21,7 @@ function Integration({ donations }) {
           </span>
           <img
             priority={true}
-            src={img.src}
+            // src={img.src}
             className="w-full rounded-md"
             alt="Stack Overflow"
           />
@@ -29,10 +29,10 @@ function Integration({ donations }) {
         <div className="flex space-x-5">
           <div>
             <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-              {title}
+              {/* {title} */}
             </h3>
             <span className="text-lg text-bgray-600 dark:text-bgray-50">
-              {category}
+              {/* {category} */}
             </span>
           </div>
         </div>
