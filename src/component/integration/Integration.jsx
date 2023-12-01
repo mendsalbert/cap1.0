@@ -74,7 +74,6 @@ function Integration({ donations }) {
                   footprint.country,
                   footprint.description,
                   footprint?.imageCID,
-
                   i
                 );
                 document.getElementById("my_modal_1").showModal();
