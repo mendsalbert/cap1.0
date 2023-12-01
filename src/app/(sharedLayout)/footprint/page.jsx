@@ -23,52 +23,27 @@ function FootPrintComponent() {
 
   const [txPending, setTxPending] = useState(false);
 
-  // async function onsubmitHandler() {
-  //   setTxPending(true);
-  //   alert(txPending);
-  //   document?.getElementById("my_modal_9")?.showModal();
-  //   let value = await createCarbonFootPrintProject(
-  //     title,
-  //     country,
-  //     description,
-  //     "lat",
-  //     "lon",
-  //     amount,
-  //     deadline,
-  //     image
-  //   );
-  //   console.log(value);
-  //   setTxPending(false);
-  // }
-
   async function onsubmitHandler() {
-    setTxPending(true); // This will trigger a re-render
+    setTxPending(true);
+    alert(txPending);
+    document?.getElementById("my_modal_9")?.showModal();
+    let value = await createCarbonFootPrintProject(
+      title,
+      country,
+      description,
+      "lat",
+      "lon",
+      amount,
+      deadline,
+      image
+    );
+    console.log(value);
+    setTxPending(false);
   }
 
-  useEffect(() => {
-    if (txPending) {
-      document?.getElementById("my_modal_9")?.showModal();
-      // You might want to move your async logic here or make sure that it properly handles the lifecycle
-      createCarbonFootPrintProject(
-        title,
-        country,
-        description,
-        "lat",
-        "lon",
-        amount,
-        deadline,
-        image
-      )
-        .then((value) => {
-          console.log(value);
-          setTxPending(false); // Update the state to reflect the transaction is no longer pending
-        })
-        .catch((error) => {
-          console.error("Error during the transaction:", error);
-          setTxPending(false); // Also set to false in case of error
-        });
-    }
-  }, [txPending]);
+  async function onsubmitHandler() {
+    setTxPending(true);
+  }
 
   useEffect(async () => {
     const allCamps = await getCampaigns();
@@ -196,7 +171,7 @@ function FootPrintComponent() {
         <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg">Transaction Processing!</h3>
           <p className="py-4">
-            {true ? (
+            {txPending ? (
               <div className="flex flex-col items-start">
                 <span className="loading loading-spinner text-accent"></span>
                 Confirm transaction
