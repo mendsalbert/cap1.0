@@ -16,7 +16,7 @@ import date from "date-and-time";
 function FootPrint({ footprint }) {
   const dateString = new Date(
     footprint?.deadline?.toString() * 1000
-  ).toLocaleDateString("en-GB"); // Outputs: "03/12/2023"
+  ).toLocaleDateString("en-GB");
 
   console.log(footprint);
   // const { img, title, category, text, status } = footprint;
@@ -47,7 +47,10 @@ function FootPrint({ footprint }) {
 
         <button
           aria-label="none"
-          onClick={() => document.getElementById("my_modal_1").showModal()}
+          onClick={() => {
+            document.getElementById("my_modal_1").showModal();
+            setCurrentState();
+          }}
           className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
         >
           Support
