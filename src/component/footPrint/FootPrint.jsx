@@ -51,6 +51,8 @@ function FootPrint({ footprints }) {
     settotalDonationsReceived(totalDonationsReceived);
     console.log("deadline", deadline?.toString());
     console.log("name", name);
+    console.log("donationRecienved", totalDonationsReceived?.toString());
+    console.log("carboonremoved", carbonOffsetRemoved?.toString());
   };
   const dateString = new Date(deadline?.toString() * 1000).toLocaleDateString(
     "en-GB"
