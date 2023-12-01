@@ -39,7 +39,7 @@ function FootPrint({ footprint }) {
         <div className="flex space-x-5">
           <div>
             <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-              {footprint.name}
+              {name}
             </h3>
             <span className="text-lg text-bgray-600 dark:text-bgray-50">
               {footprint.description}
