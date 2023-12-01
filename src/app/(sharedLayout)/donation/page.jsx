@@ -21,7 +21,6 @@ function MyWallet() {
       country,
       description,
       image,
-
       targetAmount
     );
     console.log(value);
