@@ -32,7 +32,7 @@ function MyWallet() {
   }
 
   useEffect(async () => {
-    const allCamps = await getCampaigns();
+    const allCamps = await getAllCampaigns();
     setcampaigns(allCamps);
   }, []);
 
