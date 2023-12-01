@@ -66,19 +66,6 @@ function FootPrint({ footprints }) {
 
   //pending transaction modal
 
-  <dialog id="my_modal_9" className="modal">
-    <div className="modal-box">
-      <h3 className="font-bold text-lg">Hello!</h3>
-      <p className="py-4">Press ESC key or click the button below to close</p>
-      <div className="modal-action">
-        <form method="dialog">
-          {/* if there is a button in form, it will close the modal */}
-          <button className="btn">Close</button>
-        </form>
-      </div>
-    </div>
-  </dialog>;
-
   return (
     <>
       {footprints?.map((footprint, i) => {
@@ -129,7 +116,6 @@ function FootPrint({ footprints }) {
           </div>
         );
       })}
-
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
           <div className="flex p-2 space-x-5">
@@ -253,6 +239,21 @@ function FootPrint({ footprints }) {
           </div>
         </div>
       </dialog>
+      <dialog id="my_modal_9" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Hello!</h3>
+          <p className="py-4">
+            Press ESC key or click the button below to close
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      ;
     </>
   );
 }
