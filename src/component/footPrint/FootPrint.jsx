@@ -60,7 +60,7 @@ function FootPrint({ footprints }) {
 
   async function onaddDonation() {
     // setTxPending(true);
-    let value = await donateToCarbonFootPrintProject(0, amount);
+    let value = await donateToCarbonFootPrintProject(1, amount);
     console.log(value);
     // setTxPending(false);
   }
