@@ -19,6 +19,29 @@ function Integration({ donations }) {
   const [id, setid] = useState(null);
   const [target, settarget] = useState(null);
   const [amountRecieved, setamountRecieved] = useState(null);
+
+  const [ethToUsdRate, setEthToUsdRate] = useState(null);
+  useEffect(() => {
+    const fetchEthToUsdRate = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+        );
+        setEthToUsdRate(response.data.ethereum.usd);
+      } catch (error) {
+        console.error("Error fetching ETH to USD rate: ", error);
+      }
+    };
+
+    fetchEthToUsdRate();
+  }, []);
+
+  const weiToUsd = (wei) => {
+    if (!ethToUsdRate) return 0;
+    const ether = wei / 1e18;
+    return (ether * ethToUsdRate).toFixed(2);
+  };
+
   const setCurrentState = (
     name,
     country,
@@ -136,7 +159,8 @@ function Integration({ donations }) {
                   <span>
                     <IconTargetArrow />
                   </span>
-                  <p>${target?.toString()}</p>
+                  {/* <p>${target?.toString()}</p> */}
+                  <p>${weiToUsd(target?.toString())}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconCash />

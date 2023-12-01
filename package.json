@@ -24,6 +24,7 @@
     "@tabler/icons-react": "^2.40.0",
     "@web3-storage/w3up-client": "^11.2.0",
     "aos": "^2.3.4",
+    "axios": "^1.6.2",
     "chart.js": "^4.3.2",
     "daisyui": "^4.4.4",
     "date-and-time": "^3.0.3",
