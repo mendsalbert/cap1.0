@@ -50,6 +50,7 @@ function FootPrint({ footprints }) {
   const dateString = new Date(deadline.toString() * 1000).toLocaleDateString(
     "en-GB"
   );
+  console.log(deadline);
   // const { img, title, category, text, status } = footprint;
   return (
     <>
