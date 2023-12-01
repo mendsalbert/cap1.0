@@ -240,7 +240,7 @@ function FootPrint({ footprints }) {
         </div>
       </dialog>
       <dialog id="my_modal_9" className="modal">
-        <div className="modal-box dark:bg-[#1d1e23]">
+        <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg">Transaction Processing!</h3>
           <p className="py-4">
             {txPending ? (
