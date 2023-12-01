@@ -26,10 +26,6 @@ function FootPrint({ footprint }) {
     setname(name);
   };
 
-  useEffect(() => {
-    setName(footprint.name);
-  }, [footprint.name]);
-
   console.log(name);
   // const { img, title, category, text, status } = footprint;
   return (
