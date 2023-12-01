@@ -38,7 +38,7 @@ function Integration({ donations }) {
           </div>
         </div>
         <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-          {text}
+          {/* {text} */}
         </p>
 
         <button
