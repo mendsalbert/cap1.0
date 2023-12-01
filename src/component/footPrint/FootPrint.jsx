@@ -14,6 +14,7 @@ import ProtoTypes from "prop-types";
 import date from "date-and-time";
 import { useState } from "react";
 function FootPrint({ footprints }) {
+  console.log(footprints);
   const dateString = "";
   // const dateString = new Date(
   //   footprint?.deadline?.toString() * 1000
