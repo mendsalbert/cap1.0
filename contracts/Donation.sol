@@ -113,7 +113,7 @@ contract Donation {
 
         emit DonationReceived(_campaignId, msg.sender, msg.value);
     }
-
+ 
     function getCampaignByIdUSD(uint256 _campaignId) public view returns (CampaignDetails memory) {
         Campaign storage selectedCampaign = campaigns[_campaignId];
         require(selectedCampaign.exists, "Campaign does not exist.");
@@ -144,6 +144,7 @@ contract Donation {
             totalDonationsReceived: selectedCampaign.totalDonationsReceived
         }), usdValue);
     }
+
 
     function getAllCampaigns() public view returns (CampaignDetails[] memory) {
         CampaignDetails[] memory allCampaigns = new CampaignDetails[](totalCampaignsCreated);
