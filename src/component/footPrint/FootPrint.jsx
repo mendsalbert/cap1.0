@@ -13,7 +13,7 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 import date from "date-and-time";
 import { useState } from "react";
-function FootPrint({ campaigns }) {
+function FootPrint({ footprints }) {
   const dateString = "";
   // const dateString = new Date(
   //   footprint?.deadline?.toString() * 1000
@@ -22,7 +22,7 @@ function FootPrint({ campaigns }) {
   // const { img, title, category, text, status } = footprint;
   return (
     <>
-      {campaigns?.map((footprint) => {
+      {footprints?.map((footprint) => {
         return (
           <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
             <div className="shrink-0 rounded-full relative ">
