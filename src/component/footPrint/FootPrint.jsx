@@ -4,7 +4,6 @@ import {
   IconAtom2,
   IconAtom2Filled,
   IconCash,
-  IconClock,
   IconTargetArrow,
   IconUser,
   IconX,
@@ -76,11 +75,11 @@ function FootPrint({ footprint }) {
               </p>
 
               <div className="flex dark:text-white flex-row space-x-7 text-center items-center">
-                <span className="flex flex-col text-center">
+                <span className="text-center">
                   <span>
-                    <IconClock />
+                    <IconUser />
                   </span>
-                  <p> 32/23/23</p>
+                  <p>102K</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <span>
