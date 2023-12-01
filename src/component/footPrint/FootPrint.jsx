@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
-import date from 'date-and-time';
+import date from "date-and-time";
 
 function FootPrint({ footprint }) {
   console.log(footprint);
@@ -81,9 +81,9 @@ function FootPrint({ footprint }) {
                   <span>
                     <IconClock />
                   </span>
-                  <p>{
-                  date.format( footprint?.deadline?.toString(), 'YYYY/MM/DD')
-                </p>
+                  <p>
+                    {date.format(footprint?.deadline?.toString(), "YYYY/MM/DD")}
+                  </p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <span>
