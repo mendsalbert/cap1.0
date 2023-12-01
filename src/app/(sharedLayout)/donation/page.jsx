@@ -31,6 +31,11 @@ function MyWallet() {
     setTxPending(false);
   }
 
+  useEffect(async () => {
+    const allCamps = await getCampaigns();
+    setcampaigns(allCamps);
+  }, []);
+
   return (
     <>
       <button
