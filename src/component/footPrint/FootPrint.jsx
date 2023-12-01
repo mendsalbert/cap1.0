@@ -43,6 +43,11 @@ function FootPrint({ footprints }) {
     setcountry(country);
     setdescription(description);
     setimage(imageCID);
+    setdeadline(deadline);
+    setid(id);
+    setcarbonOffsetRemoved(carbonOffsetRemoved);
+    settargetCarbonOffset(targetCarbonOffset);
+    settotalDonationsReceived(totalDonationsReceived);
   };
   // const { img, title, category, text, status } = footprint;
   return (
