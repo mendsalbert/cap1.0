@@ -36,7 +36,7 @@ function Integration({ donations }) {
                   {donation.name}
                 </h3>
                 <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                  {donation.category}
+                  {donation.country}
                 </span>
               </div>
             </div>
