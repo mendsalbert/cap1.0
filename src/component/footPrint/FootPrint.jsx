@@ -26,14 +26,14 @@ function FootPrint({ footprints }) {
     description,
     imageCID,
     deadline,
-    id
+    
   ) => {
     setname(name);
   };
   // const { img, title, category, text, status } = footprint;
   return (
     <>
-      {footprints?.map((footprint) => {
+      {footprints?.map((footprint, i) => {
         return (
           <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
             <div className="shrink-0 rounded-full relative ">
@@ -68,6 +68,7 @@ function FootPrint({ footprints }) {
                   footprint.description,
                   footprint?.imageCID,
                   footprint.deadline,
+i+1
                   footprint.carbonOffsetRemoved,
                   footprint.targetCarbonOffset,
                   footprint.totalDonationsReceived
