@@ -39,7 +39,7 @@ function Integration({ donations }) {
   };
 
   useEffect(async () => {
-    const donation = await getCampaign("0");
+    const donation = await getCampaign(1);
     // setcampaigns(allCamps);
     console.log("donation", donation);
   }, []);
