@@ -37,6 +37,10 @@ function MyWallet() {
             <input
               type="text"
               placeholder="Name"
+              name={name}
+              onChange={(e) => {
+                setname(e.target.value);
+              }}
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
             <select className="select select-bordered w-full  dark:bg-darkblack-500">
