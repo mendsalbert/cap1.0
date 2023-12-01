@@ -19,7 +19,7 @@ function Integration({ donations }) {
               <span className="bg-white bottom-3 left-2 text-sm absolute rounded-xl py-[1px] px-3 shadow-md">
                 <span className="flex flex-row">
                   <IconUser size={18} />
-                  20K
+                  {donation?.country}
                 </span>
               </span>
               <img
