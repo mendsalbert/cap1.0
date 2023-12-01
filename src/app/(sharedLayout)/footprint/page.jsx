@@ -1,5 +1,4 @@
 "use client";
-import Files from "@/component/Files";
 import FootPrint from "@/component/footPrint/FootPrint";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 import { useState, useEffect, useRef } from "react";
