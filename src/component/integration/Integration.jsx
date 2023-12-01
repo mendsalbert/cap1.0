@@ -18,7 +18,7 @@ function Integration({ donations }) {
           <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
             <div className="shrink-0 rounded-full relative">
               <span className="bg-white bottom-3 left-2 text-sm absolute rounded-xl py-[1px] px-3 shadow-md">
-                <span className="flex flex-row">
+                <span className="flex flex-row items-center">
                   <IconWorld size={18} />
                   {donation?.country}
                 </span>
