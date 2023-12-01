@@ -33,10 +33,10 @@ function Integration({ donations }) {
             <div className="flex space-x-5">
               <div>
                 <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-                  {/* {title} */}
+                  {donation.name}
                 </h3>
                 <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                  {/* {category} */}
+                  {donation.category}
                 </span>
               </div>
             </div>
