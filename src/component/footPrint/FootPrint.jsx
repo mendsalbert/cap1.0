@@ -20,7 +20,17 @@ function FootPrint({ footprints }) {
   //   footprint?.deadline?.toString() * 1000
   // ).toLocaleDateString("en-GB");
   const [name, setname] = useState(null);
-  const setCurrentState = (name, country, description, imageCID, deadline) => {
+  const setCurrentState = (
+    name,
+    country,
+    description,
+    imageCID,
+    deadline,
+    id,
+    carbonOffsetRemoved,
+    targetCarbonOffset,
+    totalDonationsReceived
+  ) => {
     setname(name);
   };
   // const { img, title, category, text, status } = footprint;
