@@ -14,11 +14,7 @@ import ProtoTypes from "prop-types";
 import date from "date-and-time";
 
 function FootPrint({ footprint }) {
-  const dateString = new Date(1701624000 * 1000).toLocaleDateString("en-US", {
-    year: "2-digit",
-    month: "numeric",
-    day: "numeric",
-  });
+  new Date(1701624000 * 1000).toLocaleDateString("en-GB"); // Outputs: "03/12/2023"
 
   console.log(footprint);
   // const { img, title, category, text, status } = footprint;
