@@ -244,7 +244,7 @@ function FootPrint({ footprints }) {
           <h3 className="font-bold text-lg">Transaction Processing!</h3>
           <p className="py-4">
             {txPending ? (
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <span className="loading loading-spinner text-accent"></span>
                 Confirm transaction and wait for a minute
               </div>
