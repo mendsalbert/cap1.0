@@ -222,7 +222,7 @@ function FootPrint({ footprints }) {
               <button
                 onClick={() => {
                   document?.getElementById("my_modal_9")?.showModal();
-                  // onaddDonation();
+                  onaddDonation();
                 }}
                 className=" btn bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
               >
