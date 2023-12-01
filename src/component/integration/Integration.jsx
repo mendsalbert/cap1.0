@@ -39,9 +39,9 @@ function Integration({ donations }) {
   console.log("ethToUsdRate", ethToUsdRate);
 
   const weiToUsd = (wei) => {
-    // if (!ethToUsdRate) return 0;
+    console.log("ethToUsdRate", ethToUsdRate);
+    if (!ethToUsdRate) return 0;
     const ether = wei / 1e18;
-    console.log("ethToUsdRate", ether);
     return (ether * ethToUsdRate).toFixed(2);
   };
   console.log("ethToUsdRate", weiToUsd(50000000));
