@@ -21,10 +21,10 @@ function FootPrintComponent() {
   const [amount, setamount] = useState("");
   const [campaigns, setcampaigns] = useState([]);
 
-  // console.log("location", value.label);
+  const [txPending, setTxPending] = useState(false);
 
   async function onsubmitHandler() {
-    // setTxPending(true);
+    setTxPending(true);
     let value = await createCarbonFootPrintProject(
       title,
       country,
@@ -36,7 +36,7 @@ function FootPrintComponent() {
       image
     );
     console.log(value);
-    // setTxPending(false);
+    setTxPending(false);
   }
 
   useEffect(async () => {
