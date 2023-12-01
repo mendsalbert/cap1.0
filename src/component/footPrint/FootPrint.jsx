@@ -83,7 +83,6 @@ function FootPrint({ footprints }) {
             <button
               aria-label="none"
               onClick={() => {
-                document.getElementById("my_modal_1").showModal();
                 setCurrentState(
                   footprint.name,
                   footprint.country,
@@ -95,6 +94,7 @@ function FootPrint({ footprints }) {
                   footprint.targetCarbonOffset,
                   footprint.totalDonationsReceived
                 );
+                document.getElementById("my_modal_1").showModal();
               }}
               className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
             >
