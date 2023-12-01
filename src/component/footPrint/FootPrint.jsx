@@ -9,9 +9,7 @@ import {
   IconUser,
   IconX,
 } from "@tabler/icons-react";
-import Image from "next/image";
 import ProtoTypes from "prop-types";
-import date from "date-and-time";
 import { useState } from "react";
 import { donateToCarbonFootPrintProject } from "../../../utils/CarbonFootPrintC/queries";
 function FootPrint({ footprints }) {
