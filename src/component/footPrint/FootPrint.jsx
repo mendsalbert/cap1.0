@@ -18,7 +18,7 @@ function FootPrint({ footprints }) {
   console.log(footprints);
   // const dateString = "";
 
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
 
   const [name, setname] = useState(null);
   const [country, setcountry] = useState(null);
