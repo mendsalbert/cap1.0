@@ -15,7 +15,6 @@ function Integration({ donations }) {
     setcountry(country);
     setdescription(description);
     setimageCID(imageCID);
-    setdeadline(deadline);
     setid(id);
 
     console.log("id", id);
