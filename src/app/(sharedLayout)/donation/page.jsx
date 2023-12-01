@@ -2,7 +2,15 @@
 import Integration from "@/component/integration/Integration";
 import integrations from "@/data/intigration";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
+import { useState, useEffect } from "react";
+
 function MyWallet() {
+  const [name, setname] = useState(null);
+  const [country, setcountry] = useState(null);
+  const [description, setdescription] = useState("");
+  const [image, setimage] = useState(null);
+  const [targetAmount, settargetAmount] = useState(second);
+
   return (
     <>
       <button
