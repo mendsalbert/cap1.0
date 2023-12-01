@@ -185,7 +185,7 @@ function FootPrint({ footprints }) {
                 </button>
                 <button
                   onClick={async () => {
-                    let value = await donateToCarbonFootPrintProject(id, 1);
+                    let value = await donateToCarbonFootPrintProject(id, 2);
                     console.log(value);
                   }}
                   className="rounded-full btn btn-outline btn-success"
@@ -194,14 +194,20 @@ function FootPrint({ footprints }) {
                 </button>
                 <button
                   onClick={async () => {
-                    let value = await donateToCarbonFootPrintProject(id, 1);
+                    let value = await donateToCarbonFootPrintProject(id, 5);
                     console.log(value);
                   }}
                   className=" rounded-full btn btn-outline btn-warning"
                 >
                   5 ETH
                 </button>
-                <button className=" rounded-full btn btn-outline btn-error">
+                <button
+                  onClick={async () => {
+                    let value = await donateToCarbonFootPrintProject(id, 10);
+                    console.log(value);
+                  }}
+                  className=" rounded-full btn btn-outline btn-error"
+                >
                   10 ETH
                 </button>
               </div>
