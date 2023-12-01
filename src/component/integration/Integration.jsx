@@ -12,43 +12,47 @@ function Integration({ donations }) {
   console.log("donations", donations);
   return (
     <>
-      <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
-        <div className="shrink-0 rounded-full relative">
-          <span className="bg-white bottom-3 left-2 text-sm absolute rounded-xl py-[1px] px-3 shadow-md">
-            <span className="flex flex-row">
-              <IconUser size={18} />
-              20K
-            </span>
-          </span>
-          <img
-            priority={true}
-            src={donation?.imageCID}
-            className="w-full rounded-md"
-            alt="Stack Overflow"
-          />
-        </div>
-        <div className="flex space-x-5">
-          <div>
-            <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-              {/* {title} */}
-            </h3>
-            <span className="text-lg text-bgray-600 dark:text-bgray-50">
-              {/* {category} */}
-            </span>
-          </div>
-        </div>
-        <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-          {/* {text} */}
-        </p>
+      {donations?.map((donation, index) => {
+        return (
+          <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
+            <div className="shrink-0 rounded-full relative">
+              <span className="bg-white bottom-3 left-2 text-sm absolute rounded-xl py-[1px] px-3 shadow-md">
+                <span className="flex flex-row">
+                  <IconUser size={18} />
+                  20K
+                </span>
+              </span>
+              <img
+                priority={true}
+                src={donation?.imageCID}
+                className="w-full rounded-md"
+                alt="Stack Overflow"
+              />
+            </div>
+            <div className="flex space-x-5">
+              <div>
+                <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
+                  {/* {title} */}
+                </h3>
+                <span className="text-lg text-bgray-600 dark:text-bgray-50">
+                  {/* {category} */}
+                </span>
+              </div>
+            </div>
+            <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
+              {/* {text} */}
+            </p>
 
-        <button
-          aria-label="none"
-          onClick={() => document.getElementById("my_modal_1").showModal()}
-          className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
-        >
-          Donate
-        </button>
-      </div>
+            <button
+              aria-label="none"
+              onClick={() => document.getElementById("my_modal_1").showModal()}
+              className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
+            >
+              Donate
+            </button>
+          </div>
+        );
+      })}
 
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23] relative">
