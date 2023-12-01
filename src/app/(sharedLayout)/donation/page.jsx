@@ -36,7 +36,7 @@ function MyWallet() {
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="title"
               name={name}
               onChange={(e) => {
                 setname(e.target.value);
