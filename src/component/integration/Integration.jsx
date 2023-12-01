@@ -87,10 +87,10 @@ function Integration({ donations }) {
               <div className="flex flex-row justify-between">
                 <div>
                   <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-                    {/* {title} */}
+                    {name}
                   </h3>
                   <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                    {/* {category} */}
+                    {country}
                   </span>
                 </div>
                 <div
