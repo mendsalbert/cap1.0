@@ -128,7 +128,7 @@ function Integration({ donations }) {
                   <span>
                     <IconTargetArrow />
                   </span>
-                  <p>$50,000</p>
+                  <p>${target.toString()}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconCash />
