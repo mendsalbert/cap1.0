@@ -19,6 +19,9 @@ function FootPrint({ footprint }) {
   ).toLocaleDateString("en-GB");
 
   console.log(footprint);
+
+  const [name, setname] = useState(null);
+  const setCurrentState = () => {};
   // const { img, title, category, text, status } = footprint;
   return (
     <>
