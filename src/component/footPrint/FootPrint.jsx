@@ -47,7 +47,7 @@ function FootPrint({ footprints }) {
     settargetCarbonOffset(targetCarbonOffset);
     settotalDonationsReceived(totalDonationsReceived);
     console.log("deadline", deadline?.toString());
-    console.log("deadline");
+    console.log("name", name);
   };
   const dateString = new Date(deadline?.toString() * 1000).toLocaleDateString(
     "en-GB"
