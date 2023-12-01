@@ -45,13 +45,11 @@ function MyWallet() {
         <IconCirclePlus />
         <span>Add Donation</span>
       </button>
-
+      {/* LIST OF DANTIONS */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        {integrations?.map((integration) => (
-          <Integration key={integration.id} integration={integration} />
-        ))}
+        <Integration integration={integration} />
       </div>
-
+      {/* LIST OF DONATIONS */}
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-6/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg my-3">
