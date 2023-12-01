@@ -41,6 +41,9 @@ function FootPrintComponent() {
     setTxPending(false);
   }
 
+  async function onsubmitHandler() {
+    setTxPending(true); // This will trigger a re-render
+  }
   useEffect(async () => {
     const allCamps = await getCampaigns();
     setcampaigns(allCamps);
