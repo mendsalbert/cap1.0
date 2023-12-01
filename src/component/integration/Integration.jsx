@@ -136,7 +136,7 @@ function Integration({ donations }) {
                   <span>
                     <IconTargetArrow />
                   </span>
-                  <p>${target.toString()}</p>
+                  <p>${target?.toString()}</p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconCash />
