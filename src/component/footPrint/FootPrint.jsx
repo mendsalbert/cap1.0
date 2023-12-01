@@ -25,6 +25,8 @@ function FootPrint({ footprint }) {
     alert(name);
     setname(name);
   };
+
+  console.log(name);
   // const { img, title, category, text, status } = footprint;
   return (
     <>
