@@ -15,9 +15,6 @@ import date from "date-and-time";
 import { useState } from "react";
 import { donateToCarbonFootPrintProject } from "../../../utils/CarbonFootPrintC/queries";
 function FootPrint({ footprints }) {
-  console.log(footprints);
-  // const dateString = "";
-
   const [amount, setAmount] = useState();
   const [txPending, setTxPending] = useState(false);
 
@@ -64,8 +61,6 @@ function FootPrint({ footprints }) {
     console.log(value);
     setTxPending(false);
   }
-
-  //pending transaction modal
 
   return (
     <>
