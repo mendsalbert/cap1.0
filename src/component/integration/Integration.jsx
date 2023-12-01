@@ -22,7 +22,7 @@ function Integration({ donations }) {
           </span>
           <img
             priority={true}
-            // src={img.src}
+            src={donation?.imageCID}
             className="w-full rounded-md"
             alt="Stack Overflow"
           />
