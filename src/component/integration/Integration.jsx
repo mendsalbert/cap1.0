@@ -16,10 +16,7 @@ function Integration({ donations }) {
     description,
     imageCID,
     deadline,
-    id,
-    carbonOffsetRemoved,
-    targetCarbonOffset,
-    totalDonationsReceived
+    id
   ) => {
     setname(name);
     setcountry(country);
