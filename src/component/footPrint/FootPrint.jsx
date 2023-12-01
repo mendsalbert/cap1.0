@@ -20,7 +20,14 @@ function FootPrint({ footprints }) {
   //   footprint?.deadline?.toString() * 1000
   // ).toLocaleDateString("en-GB");
   const [name, setname] = useState(null);
-  const setCurrentState = (name) => {
+  const setCurrentState = (
+    name,
+    country,
+    description,
+    imageCID,
+    deadline,
+    id
+  ) => {
     setname(name);
   };
   // const { img, title, category, text, status } = footprint;
@@ -55,7 +62,16 @@ function FootPrint({ footprints }) {
               aria-label="none"
               onClick={() => {
                 document.getElementById("my_modal_1").showModal();
-                setCurrentState(footprint.name);
+                setCurrentState(
+                  footprint.name,
+                  footprint.country,
+                  footprint.description,
+                  footprint?.imageCID,
+                  footprint.deadline,
+                  footprint.carbonOffsetRemoved,
+                  footprint.targetCarbonOffset,
+                  footprint.totalDonationsReceived
+                );
               }}
               className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
             >
