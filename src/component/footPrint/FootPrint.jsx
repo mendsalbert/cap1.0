@@ -176,24 +176,21 @@ function FootPrint({ footprints }) {
               <div className="flex flex-row justify-between space-x-3 my-3">
                 <button
                   onClick={async () => {
-                    let value = await donateToCarbonFootPrintProject(
-                      id,
-                      amount
-                    );
+                    let value = await donateToCarbonFootPrintProject(id, 1);
                     console.log(value);
                   }}
                   className="rounded-full btn btn-outline btn-info"
                 >
-                  50 units
+                  1 ETH
                 </button>
                 <button className="rounded-full btn btn-outline btn-success">
-                  100 units
+                  2 ETH
                 </button>
                 <button className=" rounded-full btn btn-outline btn-warning">
-                  200 units
+                  5 ETH
                 </button>
                 <button className=" rounded-full btn btn-outline btn-error">
-                  500 units
+                  10 ETH
                 </button>
               </div>
               <input
