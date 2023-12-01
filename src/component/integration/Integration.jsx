@@ -10,7 +10,29 @@ import Image from "next/image";
 import ProtoTypes from "prop-types";
 
 function Integration({ donations }) {
-  console.log("donations", donations);
+  const setCurrentState = (
+    name,
+    country,
+    description,
+    imageCID,
+    deadline,
+    id,
+    carbonOffsetRemoved,
+    targetCarbonOffset,
+    totalDonationsReceived
+  ) => {
+    setname(name);
+    setcountry(country);
+    setdescription(description);
+    setimageCID(imageCID);
+    setdeadline(deadline);
+    setid(id);
+    setcarbonOffsetRemoved(carbonOffsetRemoved);
+    settargetCarbonOffset(targetCarbonOffset);
+    settotalDonationsReceived(totalDonationsReceived);
+
+    console.log("id", id);
+  };
   return (
     <>
       {donations?.map((donation, index) => {
@@ -46,7 +68,17 @@ function Integration({ donations }) {
 
             <button
               aria-label="none"
-              onClick={() => document.getElementById("my_modal_1").showModal()}
+              onClick={() => {
+                setCurrentState(
+                  footprint.name,
+                  footprint.country,
+                  footprint.description,
+                  footprint?.imageCID,
+
+                  i
+                );
+                document.getElementById("my_modal_1").showModal();
+              }}
               className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
             >
               Donate
