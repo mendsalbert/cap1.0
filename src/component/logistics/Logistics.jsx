@@ -5,6 +5,7 @@ import Link from "next/link";
 import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import { supplyProduct } from "../../../utils/ProductC/queries";
 
 function Logistics({ products }) {
   const [name, setname] = useState(null);
