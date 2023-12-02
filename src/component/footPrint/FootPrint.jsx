@@ -13,7 +13,7 @@ import ProtoTypes from "prop-types";
 import { useState } from "react";
 import { donateToCarbonFootPrintProject } from "../../../utils/CarbonFootPrintC/queries";
 function FootPrint({ footprints }) {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(null);
   const [txPending, setTxPending] = useState(false);
 
   const [name, setname] = useState(null);
