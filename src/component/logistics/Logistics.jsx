@@ -152,7 +152,6 @@ function Logistics({ products }) {
                   apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                   selectProps={{
                     value,
-                    // onChange: setValue,
                     onChange: (selection) => {
                       // Assuming `selection` is an object that contains a `label` field
                       const label = selection ? selection.label : "";
