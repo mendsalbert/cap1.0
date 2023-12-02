@@ -46,7 +46,7 @@ function Logistics({ products }) {
     setTxPending(false);
   }
 
-  console.log(parseInt(quantity?.toString()));
+  console.log(parseInt(quantity?.toString()) > 1);
   return (
     <>
       {products.map((product, index) => (
