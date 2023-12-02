@@ -7,7 +7,7 @@ function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [requests, setrequest] = useState([]);
   useEffect(async () => {
-    const requests = await viewAllRequests();
+    const requests = (await viewAllRequests()) || [];
     setrequest(requests);
   }, []);
 
