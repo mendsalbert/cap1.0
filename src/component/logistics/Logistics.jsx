@@ -135,7 +135,7 @@ function Logistics({ products }) {
                 placeholder="Or Enter quantity to supply"
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
-              <div className="w-full my-2">
+              <div className="w-full mt-3">
                 <GooglePlacesAutocomplete
                   apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                   selectProps={{
