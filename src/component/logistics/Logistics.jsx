@@ -120,7 +120,7 @@ function Logistics({ products }) {
                     {name}
                   </h3>
                   <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                    {quantity + "Product in stock"}
+                    {quantity + " " + "Product in stock"}
                   </span>
                 </div>
               </div>
