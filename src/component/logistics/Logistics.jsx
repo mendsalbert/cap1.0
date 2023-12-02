@@ -205,7 +205,7 @@ function Logistics({ products }) {
       </dialog>
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
-      {/* 
+
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box flex flex-row justify-center w-9/12 max-w-3xl ">
           <ul className="timeline mt-10">
@@ -295,7 +295,7 @@ function Logistics({ products }) {
             </form>
           </div>
         </div>
-      </dialog> */}
+      </dialog>
 
       <dialog id="my_modal_9" className="modal">
         <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
