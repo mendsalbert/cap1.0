@@ -46,6 +46,8 @@ function Logistics({ products }) {
     setTxPending(false);
   }
 
+  console.log(quantity);
+
   return (
     <>
       {products.map((product, index) => (
