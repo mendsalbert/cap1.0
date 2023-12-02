@@ -8,6 +8,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { supplyProduct } from "../../../utils/ProductC/queries";
 
 function Logistics({ products }) {
+  const [amount, setAmount] = useState();
   const [name, setname] = useState(null);
   const [quantity, setquantity] = useState(null);
   const [description, setdescription] = useState(null);
@@ -141,6 +142,8 @@ function Logistics({ products }) {
               </div>
               <input
                 type="text"
+                value={amount}
+                onChange={(event) => setAmount(event.target.value)}
                 placeholder="Or Enter quantity to supply"
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
