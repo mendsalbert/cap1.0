@@ -140,11 +140,13 @@ function Integration({ donations }) {
             <div className="w-96 h-96 overflow-hidden rounded-lg">
               {" "}
               {/* Adjust the width and height as needed */}
-              <img
-                src={imageCID}
-                className="object-cover w-full h-full"
-                alt="Campaign Image"
-              />
+              <div className="flex-1 overflow-hidden rounded-lg">
+                <img
+                  src={imageCID}
+                  className="object-cover w-full h-full"
+                  alt="Campaign Image"
+                />
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
@@ -236,6 +238,7 @@ function Integration({ donations }) {
           </div>
         </div>
       </dialog>
+
       <dialog id="my_modal_9" className="modal">
         <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
           <h3 className="font-bold text-lg">Transaction Processing!</h3>
