@@ -88,7 +88,6 @@ function MyWallet() {
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
           </div>
-          {/* target amount - regioin using google map search */}
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="number"
@@ -100,7 +99,6 @@ function MyWallet() {
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
           </div>
-          {/* file input */}
           <div className="form-control w-full py-2">
             <input
               type="text"
@@ -113,7 +111,6 @@ function MyWallet() {
               className="file-input file-input-bordered w-full  dark:bg-darkblack-500"
             />
           </div>
-          {/* description */}
           <textarea
             value={description}
             onChange={(e) => {
@@ -130,7 +127,6 @@ function MyWallet() {
           >
             Upload
           </button>
-          {/* add */}
           <div className="modal-action absolute -top-3 right-4">
             <form method="dialog">
               <button className="">
