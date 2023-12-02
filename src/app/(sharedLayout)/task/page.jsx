@@ -7,7 +7,6 @@ import {
 } from "../../../../utils/RequestC/queries";
 
 function Task() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [txPending, setTxPending] = useState(false);
 
   const [requests, setrequest] = useState([]);
