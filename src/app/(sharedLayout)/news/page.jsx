@@ -30,7 +30,7 @@ function News() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % data.length);
+      setActiveIndex((current) => (current + 1) % newsData.length);
     }, 3600); // Change slide every second
     return () => clearInterval(interval);
   }, []);
