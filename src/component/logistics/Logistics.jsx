@@ -1,22 +1,10 @@
 "use client";
-import {
-  IconAtom,
-  IconAtom2,
-  IconAtom2Filled,
-  IconCash,
-  IconCheckupList,
-  IconCircleCheck,
-  IconClock,
-  IconShip,
-  IconTargetArrow,
-  IconTruckDelivery,
-  IconUser,
-  IconX,
-} from "@tabler/icons-react";
+import { IconShip, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function Logistics({ products }) {
   const [name, setname] = useState(null);
