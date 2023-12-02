@@ -59,7 +59,7 @@ function SendMassage() {
     <div className="chat-container relative w-full h-screen">
       <div className="messages-container overflow-auto p-4 flex flex-col-reverse">
         {/* Ref for auto-scrolling */}
-        <div ref={endOfMessagesRef} />
+        <div ref={endOfMessagesRef} className="relative" />
         {messages
           .slice()
           .reverse()
