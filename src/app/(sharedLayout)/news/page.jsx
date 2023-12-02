@@ -35,6 +35,7 @@ function News() {
     return () => clearInterval(interval);
   }, [newsData.length]);
 
+  console.log(newsData);
   // alert(newsData.length);
   return (
     <>
