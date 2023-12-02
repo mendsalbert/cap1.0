@@ -152,7 +152,14 @@ function Logistics({ products }) {
                   apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
                   selectProps={{
                     value,
-                    onChange: setValue,
+                    // onChange: setValue,
+                    onChange: (selection) => {
+                      // Assuming `selection` is an object that contains a `label` field
+                      const label = selection ? selection.label : "";
+                      // Now you can set the label to state or handle it as needed
+                      setValue(selection); // Save the entire selection object or just the value
+                      console.log(label); // Do something with the label
+                    },
                     styles: {
                       control: (base) => ({
                         ...base,
