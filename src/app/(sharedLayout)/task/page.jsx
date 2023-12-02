@@ -5,13 +5,13 @@ import { viewAllRequests } from "../../../../utils/RequestC/queries";
 
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [request, setrequest] = useState(null);
+  const [requests, setrequest] = useState(null);
   useEffect(async () => {
     const requests = await viewAllRequests();
     setrequest(requests);
   }, []);
 
-  console.log("request", request);
+  console.log("request", requests);
 
   return (
     <>
@@ -29,7 +29,7 @@ function Task() {
               <tr></tr>
             </thead>
             <tbody>
-              {request?.map((request, item) => (
+              {requests?.map((request, item) => (
                 <tr>
                   <td>
                     <div className="flex items-center gap-3">
@@ -42,7 +42,11 @@ function Task() {
                     </div>
                   </td>
 
-                  <td>Purple</td>
+                  <td>
+                    {new Date(request?.toString() * 1000).toLocaleDateString(
+                      "en-GB"
+                    )}
+                  </td>
                   <th>
                     <button className="btn btn-ghost btn-xs">details</button>
                   </th>
