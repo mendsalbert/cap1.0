@@ -73,7 +73,7 @@ function News() {
           className="whitespace-nowrap transition-transform duration-500 ease-linear"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {newsData.map((news, index) => (
+          {newsData?.map((news, index) => (
             <div
               key={index}
               className="inline-block w-full h-full"
