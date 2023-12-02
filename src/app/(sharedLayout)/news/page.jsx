@@ -84,14 +84,7 @@ function News() {
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
-                <th></th>
-              </tr>
-            </thead>
+            <thead></thead>
             <tbody>
               {/* row 1 */}
               {newsData.map((news, index) => (
