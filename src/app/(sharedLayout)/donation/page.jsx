@@ -68,7 +68,6 @@ function MyWallet() {
           <h3 className="font-bold text-lg my-3">
             Fill in the details to add a donation
           </h3>
-          {/* name, category */}
           <div className="space-x-4 py-2 flex flex-row">
             <input
               type="text"
