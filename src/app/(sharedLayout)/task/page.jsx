@@ -61,11 +61,6 @@ function Task() {
             <tbody>
               {/* row 1 */}
               <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
                 <td>
                   <div className="flex items-center gap-3">
                     <div className="avatar">
