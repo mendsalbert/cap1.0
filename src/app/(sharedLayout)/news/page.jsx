@@ -123,7 +123,7 @@ function News() {
                   <td>{news.publishedAt}</td>
                   <th>
                     <button className="btn btn-ghost btn-xs">
-                      <Link href={news.url} />
+                      <Link href={news.url}>Link</Link>
                     </button>
                   </th>
                 </tr>
