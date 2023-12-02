@@ -20,6 +20,7 @@ function Integration({ donations }) {
   const [id, setid] = useState(null);
   const [target, settarget] = useState(null);
   const [amountRecieved, setamountRecieved] = useState(null);
+  const [txPending, setTxPending] = useState(false);
 
   const [ethToUsdRate, setEthToUsdRate] = useState(null);
   useEffect(() => {
