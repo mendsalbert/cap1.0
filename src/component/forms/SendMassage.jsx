@@ -104,6 +104,26 @@ function SendMassage() {
         }}
         required
       />
+      <input
+        name="message"
+        cols={30}
+        rows={10}
+        placeholder="Type your message..."
+        value={userPrompt}
+        onChange={(e) => {
+          setUserPrompt(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            generateContent();
+          }
+        }}
+        required
+        type="text"
+        placeholder="Type here"
+        className="input input-bordered w-full max-w-xs"
+      />
       <button
         onClick={generateContent}
         disabled={isLoading}
