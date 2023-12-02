@@ -31,7 +31,7 @@ function SendMassage() {
         max_tokens: 120,
       });
 
-      const aiResponse = completion.data.choices[0].text.trim();
+      const aiResponse = completion.data.choices[0].text;
       setMessages((prevMessages) => [
         ...prevMessages,
         { sender: "ai", text: aiResponse },
