@@ -25,7 +25,6 @@ function LogisticsComponent() {
     setproducts(allProducts);
   }, []);
 
-  console.log(products);
   return (
     <>
       {/* must be seen by only NGOs */}
@@ -37,9 +36,11 @@ function LogisticsComponent() {
         <span>Add Product</span>
       </button>
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
+        {/* LIST OF PRODUCTS */}
         {logistics?.map((logistic) => (
           <Logistics key={logistic.id} logistic={logistic} />
         ))}
+        {/* LIST OF PRODUCTS */}
       </div>
 
       <dialog id="my_modal_4" className="modal">
