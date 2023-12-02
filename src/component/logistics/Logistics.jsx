@@ -37,9 +37,9 @@ function Logistics({ products }) {
                 {product.name}
               </h3>
               <div className="flex flex-row space-x-1 cursor-pointer">
-                {/* <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
-              {category}
-            </span> */}
+                <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
+                  {category}
+                </span>
                 {product?.quantity?.toString() > 1 ? (
                   <span></span>
                 ) : (
@@ -70,7 +70,7 @@ function Logistics({ products }) {
         </div>
       ))}
 
-      {/* <dialog id="my_modal_1" className="modal ">
+      <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
           <div className="flex p-2 space-x-5">
             <img src="/blood.jpeg" width={500} className="rounded-lg" />
@@ -130,7 +130,7 @@ function Logistics({ products }) {
             </form>
           </div>
         </div>
-      </dialog> */}
+      </dialog>
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       {/* 
