@@ -66,8 +66,7 @@ function SendMassage() {
           .map((message, index) => (
             <>
               {message?.sender != "user" ? (
-                // <p className="absolute left-11 top-10">
-                <p className="absolute left-11 top-10">
+                <p className="">
                   <Image
                     priority={true}
                     height={40}
