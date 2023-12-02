@@ -105,10 +105,10 @@ function Home() {
     setSelectedFacility(facility.id);
   };
 
-  async function onRequest(requestType) {
+  async function onRequest(requestType, requestLocation) {
     setTxPending(true);
     alert(txPending);
-    let value = await createRequest(requestType, "isreal", "urgent");
+    let value = await createRequest(requestType, requestLocation, "urgent");
     console.log(value);
     setTxPending(false);
   }
@@ -199,7 +199,7 @@ function Home() {
                       <img src={facility.icon} alt={facility.info} />
                       <span
                         onClick={() => {
-                          onRequest(facility.type);
+                          onRequest(facility.type, facility.location);
                         }}
                         className="bg-green-500 px-3 py-0.5 rounded-lg text-white cursor-pointer"
                       >
