@@ -19,6 +19,33 @@ import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
 
 function Logistics({ products }) {
+  const [name, setname] = useState(null);
+  const [quantity, setquantity] = useState(null);
+  const [description, setdescription] = useState(null);
+  const [imageCID, setimageCID] = useState(null);
+  const [id, setid] = useState(null);
+  const [dateAdded, setdateAdded] = useState(null);
+  const [exist, setexist] = useState(null);
+  const [txPending, setTxPending] = useState(false);
+
+  const setCurrentState = (
+    name,
+    quantity,
+    description,
+    imageCID,
+    index,
+    dateAdded,
+    exists
+  ) => {
+    setname(name);
+    setquantity(quantity);
+    setdescription(description);
+    setimageCID(imageCID);
+    setid(index);
+    setdateAdded(dateAdded);
+    setexist(exists);
+    console.log("id", id);
+  };
   return (
     <>
       {products.map((product, index) => (
@@ -62,7 +89,18 @@ function Logistics({ products }) {
 
           <button
             aria-label="none"
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={() => {
+              setCurrentState(
+                product.name,
+                product.quantity,
+                product.description,
+                product?.imageCID,
+                index,
+                product.dateAdded,
+                product.exists
+              );
+              document.getElementById("my_modal_1").showModal();
+            }}
             className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
           >
             Supply
