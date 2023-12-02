@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { viewAllRequests } from "../../../../utils/RequestC/queries";
+
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % data.length);
-    }, 1200); // Change slide every second
-    return () => clearInterval(interval);
+  const [request, setrequest] = useState(null);
+  useEffect(async () => {
+    const requests = await viewAllRequests();
+    setrequest(requests);
   }, []);
 
+  console.log(request);
   return (
     <>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
