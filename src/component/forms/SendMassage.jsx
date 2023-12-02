@@ -63,6 +63,7 @@ function SendMassage() {
           .reverse()
           .map((message, index) => (
             <div key={index} className={`message ${message.sender}`}>
+              <p>fdsfdf</p>
               <p className="message-content">{message.text}</p>
             </div>
           ))}
