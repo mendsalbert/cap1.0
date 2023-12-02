@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import Conversion from "../message/Conversion";
 import moe from "/public/static/images/message/moe.png";
-
+import Image from "next/image";
 function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
   const [isLoading, setisLoading] = useState(false);
