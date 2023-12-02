@@ -51,7 +51,12 @@ function Task() {
                       </div>
                     </div>
                   </td>
-                  <td>fsdff</td>
+                  <td>
+                    {request?.isFulfilled
+                      ? "Task performed"
+                      : "Task Not Performed"}
+                    fsdff
+                  </td>
                   <td>
                     {new Date(
                       request?.timestamp?.toString() * 1000
