@@ -40,7 +40,7 @@ function Logistics({ products }) {
               {category}
             </span> */}
                 {product?.quantity > 1 ? (
-                  <span></span> // Replace with appropriate content or keep empty if needed
+                  <span></span>
                 ) : (
                   <span
                     onClick={() =>
