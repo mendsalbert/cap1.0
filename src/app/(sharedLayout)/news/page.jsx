@@ -33,9 +33,7 @@ function News() {
       setActiveIndex((current) => (current + 1) % newsData.length);
     }, 3600); // Change slide every second
     return () => clearInterval(interval);
-  }, []);
-
-  console.log("newsData", newsData);
+  }, [newsData.length]);
 
   // alert(newsData.length);
   return (
