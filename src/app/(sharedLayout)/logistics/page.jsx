@@ -10,7 +10,7 @@ function LogisticsComponent() {
   const [description, setdescription] = useState("");
   const [image, setimage] = useState(null);
   const [quantity, setquantity] = useState(null);
-  const [products, setproducts] = useState(null);
+  const [products, setproducts] = useState([]);
   const [txPending, setTxPending] = useState(false);
 
   async function onsubmitHandler() {
