@@ -72,7 +72,7 @@ function SendMassage() {
                     height={40}
                     width={40}
                     src={"/moe.png"}
-                    // className="shrink-0"
+                    className="rounded-full"
                     alt=""
                   />
                 </p>
