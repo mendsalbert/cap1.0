@@ -24,6 +24,7 @@ function Integration({ donations }) {
   const [target, settarget] = useState(null);
   const [amountRecieved, setamountRecieved] = useState(null);
   const [txPending, setTxPending] = useState(false);
+  const [amount, setAmount] = useState();
 
   const [ethToUsdRate, setEthToUsdRate] = useState(null);
   useEffect(() => {
@@ -203,7 +204,9 @@ function Integration({ donations }) {
               </div>
               <input
                 type="text"
-                placeholder="Enter amount"
+                placeholder="Enter amount to donate"
+                value={amount}
+                onChange={(event) => setAmount(event.target.value)}
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
               <button
