@@ -121,10 +121,10 @@ function FR({ handleActive }) {
                             <span className="text-xl">AI</span>
                           </div>
                         </div>
-                        <span className="bg-pink-600 text-sm p-2 w-5 h-4 ml-2 text-center text-white rounded-full">
+                        {/* <span className="bg-pink-600 text-sm p-2 w-5 h-4 ml-2 text-center text-white rounded-full">
                           {" "}
                           {requests?.length}{" "}
-                        </span>
+                        </span> */}
                       </span>
                     </div>
                   </div>
