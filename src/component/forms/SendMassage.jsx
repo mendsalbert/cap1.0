@@ -86,32 +86,34 @@ function SendMassage() {
           ))}
       </div>
 
-      <input
-        name="message"
-        cols={30}
-        rows={10}
-        placeholder="Type your message..."
-        value={userPrompt}
-        onChange={(e) => {
-          setUserPrompt(e.target.value);
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            generateContent();
-          }
-        }}
-        required
-        type="text"
-        className="input input-bordered w-full max-w-xs"
-      />
-      <button
-        onClick={generateContent}
-        disabled={isLoading}
-        className="bg-success-400 rounded-lg flex items-center justify-center px-4 py-2.5 font-semibold text-sm gap-1.5 text-white"
-      >
-        {isLoading ? "Generating..." : "Send"}
-      </button>
+      <div>
+        <input
+          name="message"
+          cols={30}
+          rows={10}
+          placeholder="Type your message..."
+          value={userPrompt}
+          onChange={(e) => {
+            setUserPrompt(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              generateContent();
+            }
+          }}
+          required
+          type="text"
+          className="input input-bordered w-full max-w-x"
+        />
+        <button
+          onClick={generateContent}
+          disabled={isLoading}
+          className="bg-success-400 rounded-lg flex items-center justify-center px-4 py-2.5 font-semibold text-sm gap-1.5 text-white"
+        >
+          {isLoading ? "Generating..." : "Send"}
+        </button>
+      </div>
     </div>
   );
 }
