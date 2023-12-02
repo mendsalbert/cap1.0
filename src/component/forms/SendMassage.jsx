@@ -63,7 +63,7 @@ function SendMassage() {
           .reverse()
           .map((message, index) => (
             <>
-              <p>fdsfdf</p>
+              {message?.sender != "user" ? <p>fdsfdf</p> : ""}
               <div key={index} className={`message ${message.sender}`}>
                 <p className="message-content">{message.text}</p>
               </div>
