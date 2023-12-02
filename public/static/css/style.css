@@ -775,7 +775,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
 .message.ai {
   align-self: flex-start;
   border-radius: 20px;
-  background-color: #f0f0f0; /* Light gray background for the AI messages */
+  background-color: #edf2f6; /* Light gray background for the AI messages */
 }
 
 .messages-container {
