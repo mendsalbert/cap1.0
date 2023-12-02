@@ -54,8 +54,22 @@ function SendMassage() {
         />
         <span className="input_error-message" id="textareaMessage" />
       </div>
+
+      {res && (
+        <p
+          htmlFor="name"
+          className="tw-mb-8 tw-ring-2 tw-rounded-2xl tw-ring-gray-400 tw-p-3"
+        >
+          {res && res}{" "}
+        </p>
+      )}
       <div className="flex justify-end mt-4">
         <button
+          onClick={() => {
+            //   console.log(process.env.OPEN_AI_KEY);
+            generateContent();
+            //   onUpdateUserDataHandler();
+          }}
           aria-label="none"
           name="button"
           className="bg-success-400 rounded-lg flex items-center justify-center px-4 py-2.5 font-semibold text-sm gap-1.5 text-white"
