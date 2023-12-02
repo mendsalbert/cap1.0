@@ -63,7 +63,7 @@ function News() {
   }, []);
 
   console.log("newsData", newsData);
-  console.log("newsData");
+
   // alert(newsData.length);
   return (
     <>
