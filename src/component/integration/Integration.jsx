@@ -69,12 +69,6 @@ function Integration({ donations }) {
     console.log("id", id);
   };
 
-  useEffect(async () => {
-    const donation = await getCampaign(0);
-    // setcampaigns(allCamps);
-    console.log("donation", donation);
-  }, []);
-
   async function onaddDonation() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
