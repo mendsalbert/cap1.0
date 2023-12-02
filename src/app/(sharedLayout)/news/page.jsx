@@ -71,7 +71,7 @@ function News() {
                     <div className="max-w-2xl">
                       <h2 className="text-lg truncate ">{news?.description}</h2>
                     </div>
-                    <p className="text-sm ">{news?.source?.name}</p>
+                    <p className="text-sm ">{news?.source?.author}</p>
                   </div>
                 </div>
               </div>
@@ -81,7 +81,9 @@ function News() {
       </div>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
         {/* <ListTab pageSize={9} newsData={newsData} /> */}
-
+        {
+          //publishedAt,author,url
+        }
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
@@ -113,8 +115,6 @@ function News() {
                     </div>
                   </td>
                   <td>
-                    Zemlak, Daniel and Leannon
-                    <br />
                     <span className="badge badge-ghost badge-sm">
                       Desktop Support Technician
                     </span>
