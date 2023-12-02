@@ -69,8 +69,6 @@ function Logistics({ products }) {
                   In stock{" "}
                 </span>
                 {parseInt(product?.quantity?.toString()) > 1 ? (
-                  <span></span>
-                ) : (
                   <span
                     onClick={() =>
                       document.getElementById("my_modal_2").showModal()
@@ -80,6 +78,8 @@ function Logistics({ products }) {
                     <IconShip size={20} />
                     Track
                   </span>
+                ) : (
+                  <span></span>
                 )}
               </div>
             </div>
