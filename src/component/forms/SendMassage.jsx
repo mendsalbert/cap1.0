@@ -69,8 +69,8 @@ function SendMassage() {
                 <p>
                   <Image
                     priority={true}
-                    height={20}
-                    width={20}
+                    height={40}
+                    width={40}
                     src={"/moe.png"}
                     // className="shrink-0"
                     alt=""
