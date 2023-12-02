@@ -73,32 +73,31 @@ function News() {
           className="whitespace-nowrap transition-transform duration-500 ease-linear"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {newsData?.map((news, index) => ({
-return(
-    <div
-  key={index}
-  className="inline-block w-full h-full"
-  style={{ transitionDelay: `${index * 0.2}s` }} // Staggered transition delay for each item
->
-  <div className="flex flex-row items-start space-x-4 p-4 m-2 bg-white text-gray-700 dark:text-white dark:bg-[#1d1e23] rounded-xl shadow-lg ">
-    <div>
-      <img
-        src={news?.source?.urlToImage}
-        width={200}
-        height={200}
-        className="rounded-xl"
-      />
-    </div>
-    <div>
-      {/* <p className="text-2xl font-bold">{item.value}</p>
+          {newsData?.map((news, index) => {
+            return (
+              <div
+                key={index}
+                className="inline-block w-full h-full"
+                style={{ transitionDelay: `${index * 0.2}s` }} // Staggered transition delay for each item
+              >
+                <div className="flex flex-row items-start space-x-4 p-4 m-2 bg-white text-gray-700 dark:text-white dark:bg-[#1d1e23] rounded-xl shadow-lg ">
+                  <div>
+                    <img
+                      src={news?.source?.urlToImage}
+                      width={200}
+                      height={200}
+                      className="rounded-xl"
+                    />
+                  </div>
+                  <div>
+                    {/* <p className="text-2xl font-bold">{item.value}</p>
       <h2 className="text-lg">{item.title}</h2>
       <p className="text-sm">{item.change}</p> */}
-    </div>
-  </div>
-</div>)
-          }
-          
-          ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
