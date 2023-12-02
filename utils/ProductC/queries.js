@@ -46,6 +46,28 @@ export async function getAllProducts() {
   }
 }
 
+export async function supplyProduct(productId, quantity, supplyLocation) {
+  try {
+    const contractObj = await ProductContract(); // Ensure this is the correct contract object for Product
+    const quantityAsNumber = ethers.utils.parseUnits(
+      quantity.toString(),
+      "wei"
+    );
+
+    const data = await contractObj.supply(
+      productId,
+      quantityAsNumber,
+      supplyLocation
+    );
+
+    const receipt = await data.wait();
+    return receipt;
+  } catch (e) {
+    console.log(e);
+    return parseErrorMsg(e);
+  }
+}
+
 export async function getProductIdByName(name) {
   try {
     const contractObj = await ProductContract(); // Ensure this is the Product contract instance
