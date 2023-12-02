@@ -86,7 +86,7 @@ function SendMassage() {
           ))}
       </div>
 
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center space-x-2">
         <input
           name="message"
           cols={30}
