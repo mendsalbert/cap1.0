@@ -108,7 +108,11 @@ function Home() {
   async function onRequest(requestType, requestLocation) {
     setTxPending(true);
     let value = await createRequest(requestType, requestLocation, "urgent");
+    alert(
+      "Your Request has been sent successfully,An agent will get to you in a moment"
+    );
     console.log(value);
+
     setTxPending(false);
   }
 
