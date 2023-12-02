@@ -1,16 +1,25 @@
-import { useState } from "react";
+import { useRef, useEffect } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
   const [isLoading, setisLoading] = useState(false);
-  const [messages, setMessages] = useState([]); // Store conversation messages here
+  const [messages, setMessages] = useState([]);
+  const endOfMessagesRef = useRef(null); // Ref for the end of the messages
   const configuration = new Configuration({
     organization: "org-iW0tOES3m75oHB2cx9IxyB8I",
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   });
-
   const openai = new OpenAIApi(configuration);
+
+  const scrollToBottom = () => {
+    endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Scroll to bottom every time messages update
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const generateContent = async () => {
     if (!userPrompt.trim()) return; // Prevent sending empty messages
@@ -45,13 +54,18 @@ function SendMassage() {
   };
 
   return (
-    <div className="lg:absolute bottom-10 pt-20 lg:px-11 px-5 lg:mb-0 mb-5 w-full">
-      <div className="chat-container">
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
-            <p className="message-content">{message.text}</p>
-          </div>
-        ))}
+    <div className="chat-container relative w-full h-screen">
+      <div className="messages-container overflow-auto p-4 flex flex-col-reverse">
+        {/* Ref for auto-scrolling */}
+        <div ref={endOfMessagesRef} />
+        {messages
+          .slice()
+          .reverse()
+          .map((message, index) => (
+            <div key={index} className={`message ${message.sender}`}>
+              <p className="message-content">{message.text}</p>
+            </div>
+          ))}
       </div>
       <textarea
         id="message"
