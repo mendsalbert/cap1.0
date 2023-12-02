@@ -41,7 +41,7 @@ function Logistics({ products }) {
   async function onsupplyproduct() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
-    let value = await supplyProduct(id, amount, value);
+    await supplyProduct(id, amount, value);
     setTxPending(false);
   }
 
