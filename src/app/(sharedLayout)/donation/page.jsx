@@ -32,7 +32,6 @@ function MyWallet() {
     setdescription("");
     setimage("");
     settargetAmount("");
-    document.getElementById("my_modal_4").closeModal();
     console.log(value);
     setTxPending(false);
   }
