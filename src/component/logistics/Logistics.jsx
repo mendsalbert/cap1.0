@@ -46,8 +46,6 @@ function Logistics({ products }) {
     setTxPending(false);
   }
 
-  console.log("number", product?.quantity?.toString());
-
   return (
     <>
       {products.map((product, index) => (
@@ -69,7 +67,7 @@ function Logistics({ products }) {
                 <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
                   In stock{" "}
                 </span>
-                {Number(product?.quantity?.toString()) > 1 ? (
+                {parseInt(product?.quantity?.toString()) > 1 ? (
                   <span></span>
                 ) : (
                   <span
