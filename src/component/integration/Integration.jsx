@@ -71,6 +71,7 @@ function Integration({ donations }) {
     console.log("donation", donation);
   }, []);
 
+  console.log(amountRecieved.toString());
   return (
     <>
       {donations?.map((donation, index) => {
