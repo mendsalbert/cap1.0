@@ -70,7 +70,7 @@ function Integration({ donations }) {
   };
 
   useEffect(async () => {
-    const donation = await donateToCampaign(0);
+    const donation = await getCampaign(0);
     // setcampaigns(allCamps);
     console.log("donation", donation);
   }, []);
@@ -78,7 +78,7 @@ function Integration({ donations }) {
   async function onaddDonation() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
-    let value = await donateToCarbonFootPrintProject(0, amount);
+    let value = await donateToCampaign(id, amount);
     console.log(value);
     setTxPending(false);
   }
