@@ -3,6 +3,7 @@ import Logistics from "@/component/logistics/Logistics";
 import logistics from "@/data/logistics";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
+import { addProduct, getAllProducts } from "../../../../utils/ProductC/queries";
 
 function LogisticsComponent() {
   const [name, setname] = useState(null);
@@ -14,13 +15,7 @@ function LogisticsComponent() {
 
   async function onsubmitHandler() {
     setTxPending(true);
-    let value = await createCampaign(
-      name,
-      country,
-      description,
-      image,
-      targetAmount
-    );
+    let value = await addProduct(name, quantity, description, image);
     console.log(value);
     setTxPending(false);
   }
