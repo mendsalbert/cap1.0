@@ -56,17 +56,7 @@ function Task() {
           <table className="table">
             {/* head */}
             <thead>
-              <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
-                <th></th>
-              </tr>
+              <tr></tr>
             </thead>
             <tbody>
               {/* row 1 */}
