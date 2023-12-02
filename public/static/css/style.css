@@ -769,6 +769,8 @@ button.fc-button.fc-button-primary.fc-prev-button {
 /* Add this to your styles.css file or within a <style> tag */
 .message.user {
   align-self: flex-end;
+  padding: 13px;
+  border-radius: 20px;
   background-color: #daf4ff; /* Light blue background for the user messages */
 }
 
