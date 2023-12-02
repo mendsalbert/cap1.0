@@ -91,7 +91,7 @@ function News() {
                     />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">fdsfdf</p>
+                    <p className="text-2xl font-bold">{news?.title}</p>
                     <h2 className="text-lg">{news?.title}</h2>
                     <p className="text-sm">{news?.title}</p>
                   </div>
