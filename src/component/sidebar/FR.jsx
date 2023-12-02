@@ -116,7 +116,7 @@ function FR({ handleActive }) {
                       </span>
                       <span className="item-text text-lg  font-medium leading-none">
                         Tasks
-                        <span className="bg-pink-600 text-sm w-4 h-4 ml-2 text-white rounded-full">
+                        <span className="bg-pink-600 text-sm w-5 h-5 text-white rounded-full">
                           {" "}
                           {requests?.length}{" "}
                         </span>
