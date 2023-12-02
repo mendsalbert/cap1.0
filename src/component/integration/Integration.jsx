@@ -107,7 +107,7 @@ function Integration({ donations }) {
                 </span>
               </div>
             </div>
-            <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
+            <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 overflow-hidden whitespace-nowrap text-ellipsis">
               {donation.description}
             </p>
 
