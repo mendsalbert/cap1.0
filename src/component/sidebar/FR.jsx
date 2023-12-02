@@ -119,8 +119,11 @@ function FR({ handleActive }) {
                         <div className="avatar  ml-2 online placeholder">
                           <div className="bg-red-500 text-white rounded-full w-6">
                             <span className="text-sm">
-                              {" "}
-                              {requests?.length}{" "}
+                              {
+                                requests?.filter(
+                                  (request) => !request.isFulfilled
+                                ).length
+                              }
                             </span>
                           </div>
                         </div>
