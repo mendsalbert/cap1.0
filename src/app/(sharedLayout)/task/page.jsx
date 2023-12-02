@@ -48,9 +48,9 @@ function Task() {
                     ).toLocaleDateString("en-GB")}
                   </td>
                   <th>
-                    <button className="btn btn-ghost btn-xs">
-                      <div className="badge badge-primary">primary</div>
-                    </button>
+                    {/* <button className="btn btn-ghost btn-xs"> */}
+                    <div className="btn badge badge-primary">primary</div>
+                    {/* </button> */}
                   </th>
                 </tr>
               ))}
