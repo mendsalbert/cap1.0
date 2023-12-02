@@ -7,15 +7,16 @@ function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
   const [isLoading, setisLoading] = useState(false);
   const [res, setRes] = useState("");
-
-  const openai = new OpenAI({
+  const configuration = new Configuration({
+    organization: "org-iW0tOES3m75oHB2cx9IxyB8I",
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true,
   });
+
+  const openai = new OpenAIApi(configuration);
 
   const generateContent = async () => {
     setisLoading(true);
-    const completion = await openai.chat.completions.create({
+    const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${userPrompt}`,
       temperature: 1.4,
@@ -26,6 +27,7 @@ function SendMassage() {
     setisLoading(false);
     return completion.data.choices[0]?.text;
   };
+
   const [text, setText] = useState({ text: "" });
   const toolbarOptions = [];
 
