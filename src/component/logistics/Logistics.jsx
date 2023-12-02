@@ -17,52 +17,57 @@ import Image from "next/image";
 import Link from "next/link";
 import ProtoTypes from "prop-types";
 
-function Logistics({ logistic }) {
-  const { img, title, category, text, status } = logistic;
+function Logistics({ products }) {
   return (
     <>
-      <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
-        <div className="shrink-0 rounded-full relative">
-          <img
-            priority={true}
-            src={img.src}
-            className="w-full rounded-md h-48"
-            alt="Stack Overflow"
-          />
-        </div>
-        <div className="flex space-x-5">
-          <div>
-            <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-              {title}
-            </h3>
-            <div className="flex flex-row space-x-1 cursor-pointer">
-              <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
-                {category}
-              </span>
-              <span
-                onClick={() =>
-                  document.getElementById("my_modal_2").showModal()
-                }
-                className="text-md space-x-1  py-1  flex bg-green-500 rounded-full text-white  px-2 dark:text-bgray-50"
-              >
-                <IconShip size={20} />
-                Track
-              </span>
+      {products.map((product, index) => (
+        <div className=" bg-white dark:bg-darkblack-600 rounded-lg p-6 relative">
+          <div className="shrink-0 rounded-full relative">
+            <img
+              priority={true}
+              src={product.imageCID}
+              className="w-full rounded-md h-48"
+              alt="Stack Overflow"
+            />
+          </div>
+          <div className="flex space-x-5">
+            <div>
+              <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
+                {product.name}
+              </h3>
+              <div className="flex flex-row space-x-1 cursor-pointer">
+                {/* <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
+              {category}
+            </span> */}
+                {product?.quantity > 1 ? (
+                  <span></span> // Replace with appropriate content or keep empty if needed
+                ) : (
+                  <span
+                    onClick={() =>
+                      document.getElementById("my_modal_2").showModal()
+                    }
+                    className="text-md space-x-1 py-1 flex bg-green-500 rounded-full text-white px-2 dark:text-bgray-50"
+                  >
+                    <IconShip size={20} />
+                    Track
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-          {text}
-        </p>
+          <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
+            {product.description}
+          </p>
 
-        <button
-          aria-label="none"
-          onClick={() => document.getElementById("my_modal_1").showModal()}
-          className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
-        >
-          Supply
-        </button>
-      </div>
+          <button
+            aria-label="none"
+            onClick={() => document.getElementById("my_modal_1").showModal()}
+            className="text-base w-full text-success-300 font-medium h-12 rounded-md border border-success-300 hover:text-white hover:bg-success-300 transition duration-300 ease-in-out"
+          >
+            Supply
+          </button>
+        </div>
+      ))}
 
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
