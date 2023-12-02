@@ -51,7 +51,7 @@ function Task() {
                       </div>
                     </div>
                   </td>
-                  <td>{}</td>
+                  <td>{request.status}</td>
                   <td>
                     {new Date(
                       request?.timestamp?.toString() * 1000
