@@ -4,6 +4,13 @@ import logistics from "@/data/logistics";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
 
 function LogisticsComponent() {
+  const [name, setname] = useState(null);
+  const [description, setdescription] = useState("");
+  const [image, setimage] = useState(null);
+  const [quantity, setquantity] = useState(null);
+
+  const [txPending, setTxPending] = useState(false);
+
   return (
     <>
       {/* must be seen by only NGOs */}
@@ -30,11 +37,19 @@ function LogisticsComponent() {
             <input
               type="text"
               placeholder="Name"
+              name={name}
+              onChange={(e) => {
+                setname(e.target.value);
+              }}
               className="input input-bordered input-md w-full dark:bg-darkblack-500"
             />
             <input
               type="number"
               placeholder="enter quantity"
+              name={quantity}
+              onChange={(e) => {
+                setquantity(e.target.value);
+              }}
               className="input input-bordered input-md w-full  dark:bg-darkblack-500"
             />
           </div>
