@@ -116,7 +116,7 @@ function NGO({ handleActive }) {
               </li>
 
               <li className="item py-[11px] text-bgray-900 dark:text-white">
-                <Link href="/transaction">
+                <Link href="/news">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2.5">
                       <span className="item-ico">
