@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import ProtoTypes from "prop-types";
+import { useState, useEffect } from "react";
 
 function Logistics({ products }) {
   return (
