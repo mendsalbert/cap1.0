@@ -153,11 +153,8 @@ function Logistics({ products }) {
                   selectProps={{
                     value,
                     onChange: (selection) => {
-                      // Assuming `selection` is an object that contains a `label` field
                       const label = selection ? selection.label : "";
-                      // Now you can set the label to state or handle it as needed
-                      setValue(selection); // Save the entire selection object or just the value
-                      console.log(label); // Do something with the label
+                      setValue(label);
                     },
                     styles: {
                       control: (base) => ({
