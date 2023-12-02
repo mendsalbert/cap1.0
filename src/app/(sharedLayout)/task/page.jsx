@@ -38,42 +38,44 @@ function Task() {
               <tr></tr>
             </thead>
             <tbody>
-              {requests?.map((request, index) => (
-                <tr>
-                  <td>
-                    <div className="flex items-center gap-3">
-                      <div>
-                        <div className="font-bold">{request.requestType}</div>
-                        <div className="text-sm opacity-50">
-                          {request.location}
+              {requests
+                .filter((request) => !request.isFulfilled) // Filter requests with isFulfilled set to false
+                .map((request, index) => (
+                  <tr>
+                    <td>
+                      <div className="flex items-center gap-3">
+                        <div>
+                          <div className="font-bold">{request.requestType}</div>
+                          <div className="text-sm opacity-50">
+                            {request.location}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    {request?.isFulfilled
-                      ? "Task performed"
-                      : "Task Not Performed"}
-                  </td>
-                  <td>
-                    {new Date(
-                      request?.timestamp?.toString() * 1000
-                    ).toLocaleDateString("en-GB")}
-                  </td>
-                  <th>
-                    {/* <button className="btn btn-ghost btn-xs"> */}
-                    <div
-                      onClick={() => {
-                        onChangeStatus(index, true);
-                      }}
-                      className="btn badge badge-primary"
-                    >
-                      Update Status
-                    </div>
-                    {/* </button> */}
-                  </th>
-                </tr>
-              ))}
+                    </td>
+                    <td>
+                      {request?.isFulfilled
+                        ? "Task performed"
+                        : "Task Not Performed"}
+                    </td>
+                    <td>
+                      {new Date(
+                        request?.timestamp?.toString() * 1000
+                      ).toLocaleDateString("en-GB")}
+                    </td>
+                    <th>
+                      {/* <button className="btn btn-ghost btn-xs"> */}
+                      <div
+                        onClick={() => {
+                          onChangeStatus(index, true);
+                        }}
+                        className="btn badge badge-primary"
+                      >
+                        Update Status
+                      </div>
+                      {/* </button> */}
+                    </th>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
