@@ -72,7 +72,7 @@ function News() {
                     <div className="max-w-2xl">
                       <h2 className="text-lg truncate ">{news?.description}</h2>
                     </div>
-                    <p className="text-sm ">{news?.source?.author}</p>
+                    <p className="text-sm ">{news?.author}</p>
                   </div>
                 </div>
               </div>
