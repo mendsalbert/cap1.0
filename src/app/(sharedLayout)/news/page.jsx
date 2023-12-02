@@ -89,9 +89,9 @@ function News() {
                   />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{item.value}</p>
+                  {/* <p className="text-2xl font-bold">{item.value}</p>
                   <h2 className="text-lg">{item.title}</h2>
-                  <p className="text-sm">{item.change}</p>
+                  <p className="text-sm">{item.change}</p> */}
                 </div>
               </div>
             </div>
