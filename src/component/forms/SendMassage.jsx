@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import Conversion from "../message/Conversion";
 
 function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
@@ -63,7 +64,13 @@ function SendMassage() {
           .reverse()
           .map((message, index) => (
             <>
-              {message?.sender != "user" ? <p>fdsfdf</p> : ""}
+              {message?.sender != "user" ? (
+                <p>
+                  <Conversion img={moe} text="How may I assist you today?" />
+                </p>
+              ) : (
+                ""
+              )}
               <div key={index} className={`message ${message.sender}`}>
                 <p className="message-content">{message.text}</p>
               </div>
