@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Quill from "./Quill";
-import OpenAI from "openai";
+import { Configuration, OpenAIApi } from "openai";
 
 function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
