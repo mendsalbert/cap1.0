@@ -30,7 +30,7 @@ function Task() {
         <button className="btn mb-3 mt-2 bg-black text-white">
           Task
           <div className="badge">
-            {requests?.filter((request) => !request.isFulfilled)}
+            {requests?.filter((request) => !request.isFulfilled).length}
           </div>
         </button>
 
