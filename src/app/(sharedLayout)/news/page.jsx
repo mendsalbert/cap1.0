@@ -99,7 +99,7 @@ function News() {
                     <h2 className="text-lg overflow-hidden whitespace-nowrap text-ellipsis">
                       {news?.description}
                     </h2>
-                    <p className="text-sm ">{news?.source?.name}</p>
+                    {/* <p className="text-sm ">{news?.source?.name}</p> */}
                   </div>
                 </div>
               </div>
