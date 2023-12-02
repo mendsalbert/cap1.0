@@ -14,9 +14,12 @@ function FR({ handleActive }) {
   const [activeDashboard, setActiveDashboard] = useState(false);
   const [requests, setrequest] = useState([]);
 
-  useEffect(async () => {
+  const request_ = async () => {
     const requests = await viewAllRequests();
     setrequest(requests);
+  };
+  useEffect(() => {
+    request_();
   }, []);
 
   return (
