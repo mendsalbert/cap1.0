@@ -36,7 +36,7 @@ function SendMassage() {
   };
 
   return (
-    <div className="lg:absolute bottom-10 lg:px-11 px-5 lg:mb-0 mb-5 w-full">
+    <div className="lg:absolute bottom-10 mt-20 lg:px-11 px-5 lg:mb-0 mb-5 w-full">
       <div className="">
         <textarea
           id="message"
