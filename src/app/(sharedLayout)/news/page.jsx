@@ -93,7 +93,7 @@ function News() {
                   <div>
                     <p className="text-2xl font-bold">fdsfdf</p>
                     <h2 className="text-lg">{news?.title}</h2>
-                    <p className="text-sm">{item.change}</p>
+                    <p className="text-sm">{news?.title}</p>
                   </div>
                 </div>
               </div>
