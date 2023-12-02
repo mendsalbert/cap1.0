@@ -29,7 +29,9 @@ function Task() {
         {/* <h1 className="text-lg py-2 font-bold">(faseffd)</h1> */}
         <button className="btn mb-3 mt-2 bg-black text-white">
           Task
-          <div className="badge">{requests?.length}</div>
+          <div className="badge">
+            {requests?.filter((request) => !request.isFulfilled)}
+          </div>
         </button>
 
         <div className="overflow-x-auto">
