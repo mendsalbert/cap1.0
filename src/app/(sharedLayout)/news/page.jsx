@@ -61,7 +61,7 @@ function News() {
     return () => clearInterval(interval);
   }, [newsData.length]);
 
-  console.log(newsData);
+  console.log("newsData", newsData);
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setActiveIndex((current) => (current + 1) % data.length);
