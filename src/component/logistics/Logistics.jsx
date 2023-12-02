@@ -27,6 +27,7 @@ function Logistics({ products }) {
   const [dateAdded, setdateAdded] = useState(null);
   const [exist, setexist] = useState(null);
   const [txPending, setTxPending] = useState(false);
+  const [value, setValue] = useState(null);
 
   const setCurrentState = (
     name,
@@ -116,15 +117,15 @@ function Logistics({ products }) {
               <div className="flex flex-row justify-between">
                 <div>
                   <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
-                    {title}
+                    {name}
                   </h3>
                   <span className="text-lg text-bgray-600 dark:text-bgray-50">
-                    {category}
+                    {quantity + "Product in stock"}
                   </span>
                 </div>
               </div>
               <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-                {text}
+                {description}
               </p>
 
               <div className="flex flex-row justify-between space-x-3 my-3">
@@ -146,15 +147,15 @@ function Logistics({ products }) {
                 placeholder="Or Enter quantity to supply"
                 className="rounded-full dark:bg-darkblack-500 dark:text-white input input-bordered input-md w-full"
               />
-              <select className="select mt-3 rounded-full w-full  dark:bg-darkblack-500 dark:text-white">
-                <option disabled selected>
-                  Location to deliver supply
-                </option>
-                <option>Ghana</option>
-                <option>Isreal</option>
-                <option>Gaza</option>
-                <option>Ukraine</option>
-              </select>
+              <div className="w-full">
+                <GooglePlacesAutocomplete
+                  apiKey="AIzaSyBfkyKitodTym6Q7oMEWgHAEDP9FuLrP8k"
+                  selectProps={{
+                    value,
+                    onChange: setValue,
+                  }}
+                />
+              </div>
               <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
                 Supply
               </button>
