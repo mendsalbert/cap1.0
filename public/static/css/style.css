@@ -780,7 +780,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
   align-self: flex-start;
   border-radius: 20px;
   padding: 13px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   background-color: #edf2f6; /* Light gray background for the AI messages */
 }
 
