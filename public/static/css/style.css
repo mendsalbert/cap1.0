@@ -771,6 +771,8 @@ button.fc-button.fc-button-primary.fc-prev-button {
   align-self: flex-end;
   padding: 13px;
   border-radius: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background-color: #daf4ff; /* Light blue background for the user messages */
 }
 
