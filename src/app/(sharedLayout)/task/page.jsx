@@ -43,9 +43,9 @@ function Task() {
                   </td>
 
                   <td>
-                    {new Date(request?.toString() * 1000).toLocaleDateString(
-                      "en-GB"
-                    )}
+                    {new Date(
+                      request?.timestamp?.toString() * 1000
+                    ).toLocaleDateString("en-GB")}
                   </td>
                   <th>
                     <button className="btn btn-ghost btn-xs">details</button>
