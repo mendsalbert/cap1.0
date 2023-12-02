@@ -8,9 +8,7 @@ function SendMassage() {
   const [isLoading, setisLoading] = useState(false);
   const [res, setRes] = useState("");
 
-  const openai = new OpenAI({
-    apiKey: "", // defaults to process.env["OPENAI_API_KEY"]
-  });
+  const openai = new OpenAI({});
 
   const generateContent = async () => {
     setisLoading(true);
