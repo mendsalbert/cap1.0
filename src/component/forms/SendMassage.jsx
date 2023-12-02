@@ -9,7 +9,7 @@ function SendMassage() {
   const [res, setRes] = useState("");
 
   const openai = new OpenAI({
-    apiKey: "DFSDFSDFSF", // defaults to process.env["OPENAI_API_KEY"]
+    apiKey: "", // defaults to process.env["OPENAI_API_KEY"]
   });
 
   const generateContent = async () => {
