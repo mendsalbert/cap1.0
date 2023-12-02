@@ -8,6 +8,8 @@ import {
 
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [txPending, setTxPending] = useState(false);
+
   const [requests, setrequest] = useState([]);
   useEffect(async () => {
     const requests = (await viewAllRequests()) || [];
