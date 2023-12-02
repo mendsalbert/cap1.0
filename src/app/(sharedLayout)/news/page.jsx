@@ -74,7 +74,7 @@ function News() {
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {newsData?.map((news, index) => {
-            console.log("Image URL:", news?.source?.urlToImage);
+            console.log("Image URL:", news?.source);
 
             return (
               <div
