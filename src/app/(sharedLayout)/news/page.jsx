@@ -4,6 +4,7 @@ import TeamChat from "@/component/teamChat";
 import Wallet from "@/component/wallet";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 function News() {
   const [newsData, setNewsData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -121,7 +122,9 @@ function News() {
                   </td>
                   <td>{news.publishedAt}</td>
                   <th>
-                    <button className="btn btn-ghost btn-xs">details</button>
+                    <button className="btn btn-ghost btn-xs">
+                      <Link href={news.url} />
+                    </button>
                   </th>
                 </tr>
               ))}
