@@ -1,5 +1,5 @@
 "use client";
-import { IconShip, IconX } from "@tabler/icons-react";
+import { IconCheckupList, IconShip, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProtoTypes from "prop-types";
