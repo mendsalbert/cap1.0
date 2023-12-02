@@ -20,7 +20,7 @@ function Task() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
     let value = await updateRequestStatus(index, status);
-    console.log(value);
+    alert("Task status has been updated");
     setTxPending(false);
   }
   return (
@@ -65,7 +65,7 @@ function Task() {
                       }}
                       className="btn badge badge-primary"
                     >
-                      Attend to Request
+                      Update Status
                     </div>
                     {/* </button> */}
                   </th>
