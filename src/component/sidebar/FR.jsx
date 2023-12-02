@@ -6,11 +6,19 @@ import logoW from "/public/static/images/logo/logo-white.svg";
 import logoNew from "/public/static/images/logo/cap.svg";
 import profileImg from "/public/static/images/avatar/profile-xs.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { viewAllRequests } from "../../../utils/RequestC/queries";
 
 function FR({ handleActive }) {
   const [activeDashboard, setActiveDashboard] = useState(false);
+  const [requests, setrequest] = useState([]);
+
+  useEffect(async () => {
+    const requests = await viewAllRequests();
+    setrequest(requests);
+  }, []);
+
   return (
     <aside className="sidebar-wrapper fixed top-0 z-30 block h-full w-[308px] bg-white dark:bg-darkblack-600 sm:hidden xl:block">
       <div className="sidebar-header relative z-30 flex h-[108px] w-full items-center border-b border-r border-b-[#F7F7F7] border-r-[#F7F7F7] pl-[50px] dark:border-darkblack-400">
@@ -107,7 +115,7 @@ function FR({ handleActive }) {
                         </svg>
                       </span>
                       <span className="item-text text-lg font-medium leading-none">
-                        Tasks{" "}
+                        Tasks ({requests?.length}){" "}
                       </span>
                     </div>
                   </div>
