@@ -12,6 +12,19 @@ function LogisticsComponent() {
 
   const [txPending, setTxPending] = useState(false);
 
+  async function onsubmitHandler() {
+    setTxPending(true);
+    let value = await createCampaign(
+      name,
+      country,
+      description,
+      image,
+      targetAmount
+    );
+    console.log(value);
+    setTxPending(false);
+  }
+
   return (
     <>
       {/* must be seen by only NGOs */}
