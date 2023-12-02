@@ -114,7 +114,7 @@ function FR({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
+                      <span className="item-text text-lg space-x-2 font-medium leading-none">
                         Tasks
                         <span className="bg-pink-600 p-1 w-2 h-2  text-white rounded-full">
                           {" "}
