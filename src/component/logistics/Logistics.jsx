@@ -35,6 +35,16 @@ function Logistics({ products }) {
     setexist(exists);
     console.log("id", id);
   };
+
+  async function onaddDonation() {
+    setTxPending(true);
+    document?.getElementById("my_modal_9")?.showModal();
+    let value = await supplyProduct(id, amount, value);
+    console.log(value);
+    setTxPending(false);
+  }
+  console.log(value);
+
   return (
     <>
       {products.map((product, index) => (
@@ -163,7 +173,12 @@ function Logistics({ products }) {
                   }}
                 />
               </div>
-              <button className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg">
+              <button
+                onClick={() => {
+                  onsupplyproduct();
+                }}
+                className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
+              >
                 Supply
               </button>
             </div>
