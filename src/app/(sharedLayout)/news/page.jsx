@@ -48,6 +48,7 @@ function News() {
           },
         });
         setNewsData(response.data.articles);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching news:", error);
       }
