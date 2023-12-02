@@ -18,6 +18,7 @@ function Logistics({ products }) {
   const [exist, setexist] = useState(null);
   const [txPending, setTxPending] = useState(false);
   const [value, setValue] = useState(null);
+  const [country, setcountry] = useState(null);
 
   const setCurrentState = (
     name,
@@ -41,7 +42,7 @@ function Logistics({ products }) {
   async function onsupplyproduct() {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
-    await supplyProduct(id, amount, value);
+    await supplyProduct(id, amount, country);
     setTxPending(false);
   }
 
@@ -153,8 +154,12 @@ function Logistics({ products }) {
                   selectProps={{
                     value,
                     onChange: (selection) => {
+                      // Assuming `selection` is an object that contains a `label` field
                       const label = selection ? selection.label : "";
-                      setValue(label);
+                      // Now you can set the label to state or handle it as needed
+                      setValue(selection); // Save the entire selection object or just the value
+                      setcountry(label);
+                      console.log(label); // Do something with the label
                     },
                     styles: {
                       control: (base) => ({
