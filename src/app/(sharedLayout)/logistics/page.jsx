@@ -10,7 +10,7 @@ function LogisticsComponent() {
   const [description, setdescription] = useState("");
   const [image, setimage] = useState(null);
   const [quantity, setquantity] = useState(null);
-
+  const [products, setproducts] = useState(null);
   const [txPending, setTxPending] = useState(false);
 
   async function onsubmitHandler() {
@@ -20,6 +20,12 @@ function LogisticsComponent() {
     setTxPending(false);
   }
 
+  useEffect(async () => {
+    const allProducts = await getAllProducts();
+    setproducts(allProducts);
+  }, []);
+
+  console.log(products);
   return (
     <>
       {/* must be seen by only NGOs */}
