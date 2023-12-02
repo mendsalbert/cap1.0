@@ -253,7 +253,7 @@ function Logistics({ products }) {
                 Approved
                 <span className="text-sm flex flex-row items-center space-x-1">
                   <IconClock size={17} />
-                  <span>12-04-23 5:20:34</span>
+                  <span>{dateString}</span>
                 </span>
               </div>{" "}
               <div className="timeline-middle">
