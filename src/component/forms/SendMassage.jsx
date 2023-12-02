@@ -1,18 +1,16 @@
 "use client";
 import { useState } from "react";
 import Quill from "./Quill";
-import { Configuration, OpenAIApi } from "openai";
+import OpenAI from "openai";
 
 function SendMassage() {
   const [userPrompt, setUserPrompt] = useState("");
   const [isLoading, setisLoading] = useState(false);
   const [res, setRes] = useState("");
-  const configuration = new Configuration({
-    organization: "org-iW0tOES3m75oHB2cx9IxyB8I",
-    apiKey: process.env.GREETING,
-  });
 
-  const openai = new OpenAIApi(configuration);
+  const openai = new OpenAI({
+    apiKey: "My API Key", // defaults to process.env["OPENAI_API_KEY"]
+  });
 
   const generateContent = async () => {
     setisLoading(true);
