@@ -116,7 +116,7 @@ function News() {
                   </td>
                   <td>
                     <span className="badge badge-ghost badge-sm">
-                      Desktop Support Technician
+                      {news.author}
                     </span>
                   </td>
                   <td>Purple</td>
