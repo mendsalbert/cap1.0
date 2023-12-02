@@ -1,8 +1,32 @@
 "use client";
 import { useState } from "react";
 import Quill from "./Quill";
+import { Configuration, OpenAIApi } from "openai";
 
 function SendMassage() {
+  const [userPrompt, setUserPrompt] = useState("");
+  const [isLoading, setisLoading] = useState(false);
+  const [res, setRes] = useState("");
+  const configuration = new Configuration({
+    organization: "org-iW0tOES3m75oHB2cx9IxyB8I",
+    apiKey: process.env.GREETING,
+  });
+
+  const openai = new OpenAIApi(configuration);
+
+  const generateContent = async () => {
+    setisLoading(true);
+    const completion = await openai.createCompletion({
+      model: "text-davinci-003",
+      prompt: `${userPrompt}`,
+      temperature: 1.4,
+      top_p: 0.7,
+      max_tokens: 120,
+    });
+    setRes(completion.data.choices[0].text);
+    setisLoading(false);
+    return completion.data.choices[0]?.text;
+  };
   const [text, setText] = useState({ text: "" });
   const toolbarOptions = [];
 
@@ -12,15 +36,27 @@ function SendMassage() {
 
   return (
     <div className="lg:absolute bottom-10 lg:px-11 px-5 lg:mb-0 mb-5 w-full">
-      <div>
-        <Quill
-          value={text.text}
-          onChange={handleChange}
-          modules={{
-            toolbar: toolbarOptions,
+      <div className="">
+        <label htmlFor="message">
+          Generate your video caption with vidispark AI
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          className="comment-form message"
+          cols={30}
+          rows={10}
+          value={userPrompt}
+          onChange={(e) => {
+            setUserPrompt(e.target.value);
           }}
-          className="custom-quill-2 w-full p-0 relative"
+          data-val="\S"
+          data-val-msg="* Please, type a message."
+          data-val-msg-id="textareaMessage"
+          required=""
+          //   defaultValue={userInfo[0]?.data?.bio}
         />
+        <span className="input_error-message" id="textareaMessage" />
       </div>
       <div className="flex justify-end mt-4">
         <button
