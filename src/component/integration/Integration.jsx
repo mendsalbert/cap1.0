@@ -181,7 +181,11 @@ function Integration({ donations }) {
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconCash />
-                  <p>$17,000</p>
+                  <p>
+                    $
+                    {weiToUsd(target?.toString()) -
+                      weiToUsd(amountRecieved?.toString())}
+                  </p>
                 </span>
                 <span className="flex flex-col items-center ">
                   <IconCash />
