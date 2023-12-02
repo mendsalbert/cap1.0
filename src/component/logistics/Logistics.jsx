@@ -26,7 +26,7 @@ function Logistics({ products }) {
           <div className="shrink-0 rounded-full relative">
             <img
               priority={true}
-              src={product.imageCID}
+              src={product.imageUrl}
               className="w-full rounded-md h-48"
               alt="Stack Overflow"
             />
