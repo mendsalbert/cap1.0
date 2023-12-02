@@ -57,8 +57,6 @@ function News() {
   //   fetchNews();
   // }, []);
 
-  console.log("newsData", newsData);
-  console.log("newsData");
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % data.length);
@@ -66,6 +64,8 @@ function News() {
     return () => clearInterval(interval);
   }, []);
 
+  console.log("newsData", newsData);
+  console.log("newsData");
   return (
     <>
       <div className="relative w-full overflow-hidden">
