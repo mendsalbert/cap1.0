@@ -73,7 +73,7 @@ function News() {
           className="whitespace-nowrap transition-transform duration-500 ease-linear"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {data.map((item, index) => (
+          {newsData.map((news, index) => (
             <div
               key={index}
               className="inline-block w-full h-full"
@@ -82,7 +82,7 @@ function News() {
               <div className="flex flex-row items-start space-x-4 p-4 m-2 bg-white text-gray-700 dark:text-white dark:bg-[#1d1e23] rounded-xl shadow-lg ">
                 <div>
                   <img
-                    src="war.png"
+                    src={news?.source?.urlToImage}
                     width={200}
                     height={200}
                     className="rounded-xl"
