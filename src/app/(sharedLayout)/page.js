@@ -184,7 +184,12 @@ function Home() {
                     <h1>{facility.info}</h1>
                     <div className="flex flex-col items-center">
                       <img src={facility.icon} alt={facility.info} />
-                      <span className="bg-green-500 px-3 py-0.5 rounded-lg text-white cursor-pointer">
+                      <span
+                        onClick={() => {
+                          onRequest();
+                        }}
+                        className="bg-green-500 px-3 py-0.5 rounded-lg text-white cursor-pointer"
+                      >
                         Request
                       </span>
                     </div>
