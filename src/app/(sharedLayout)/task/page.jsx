@@ -16,9 +16,8 @@ function Task() {
 
   console.log("request", requests);
 
-  async function onChangeStatus() {
+  async function onChangeStatus(index, status) {
     setTxPending(true);
-    document?.getElementById("my_modal_9")?.showModal();
     let value = await updateRequestStatus(index, status);
     alert("Task status has been updated");
     setTxPending(false);
@@ -39,7 +38,7 @@ function Task() {
               <tr></tr>
             </thead>
             <tbody>
-              {requests?.map((request, item) => (
+              {requests?.map((request, index) => (
                 <tr>
                   <td>
                     <div className="flex items-center gap-3">
@@ -65,7 +64,7 @@ function Task() {
                     {/* <button className="btn btn-ghost btn-xs"> */}
                     <div
                       onClick={() => {
-                        onChangeStatus();
+                        onChangeStatus(index, true);
                       }}
                       className="btn badge badge-primary"
                     >
