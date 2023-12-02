@@ -52,6 +52,10 @@ function LogisticsComponent() {
           </div>
           {/* description */}
           <textarea
+            value={description}
+            onChange={(e) => {
+              setdescription(e.target.value);
+            }}
             placeholder="Enter the description for this product"
             className="textarea textarea-bordered textarea-lg mt-2 w-full  dark:bg-darkblack-500 "
           ></textarea>
