@@ -38,17 +38,15 @@ function MyWallet() {
   };
 
   useEffect(() => {
-    useEffect(() => {
-      const fetchCampaigns = async () => {
-        try {
-          const allCamps = await getAllCampaigns();
-          setcampaigns(allCamps);
-        } catch (error) {
-          console.error("Error fetching campaigns:", error);
-        }
-      };
-      fetchCampaigns();
-    }, []);
+    const fetchCampaigns = async () => {
+      try {
+        const allCamps = await getAllCampaigns();
+        setcampaigns(allCamps);
+      } catch (error) {
+        console.error("Error fetching campaigns:", error);
+      }
+    };
+    fetchCampaigns();
   }, []);
 
   return (
