@@ -107,7 +107,6 @@ function Home() {
 
   async function onRequest(requestType, requestLocation) {
     setTxPending(true);
-    alert(txPending);
     let value = await createRequest(requestType, requestLocation, "urgent");
     console.log(value);
     setTxPending(false);
