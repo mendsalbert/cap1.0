@@ -35,13 +35,11 @@ function LogisticsComponent() {
         <IconCirclePlus />
         <span>Add Product</span>
       </button>
+      {/* LIST OF PRODUCTS */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 lg:gap-4 xl:gap-6">
-        {/* LIST OF PRODUCTS */}
-        {logistics?.map((logistic) => (
-          <Logistics key={logistic.id} logistic={logistic} />
-        ))}
-        {/* LIST OF PRODUCTS */}
+        <Logistics products={products} />
       </div>
+      {/* LIST OF PRODUCTS */}
 
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-6/12 max-w-5xl dark:bg-[#1d1e23] dark:text-white">
