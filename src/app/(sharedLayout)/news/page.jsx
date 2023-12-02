@@ -107,7 +107,12 @@ function News() {
                         </div>
                       </div>
                       <div>
-                        <div className="font-bold">Hart Hagerty</div>
+                        {/* <div className="font-bold">Hart Hagerty</div> */}
+                        <div className="max-w-2xl">
+                          <h2 className="text-lg truncate ">
+                            {news?.description}
+                          </h2>
+                        </div>
                         <div className="text-sm opacity-50">
                           {news?.source?.name}
                         </div>
