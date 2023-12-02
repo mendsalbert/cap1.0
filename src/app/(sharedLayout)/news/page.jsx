@@ -4,7 +4,7 @@ import ListTab from "@/component/listTab";
 import TeamChat from "@/component/teamChat";
 import Wallet from "@/component/wallet";
 import React, { useEffect, useState } from "react";
-
+import axios from "axios";
 function News() {
   const data = [
     {
