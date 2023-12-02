@@ -55,21 +55,16 @@ function News() {
     };
 
     fetchNews();
-
-    const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % newsData.length);
-    }, 1200); // Change slide every 3 seconds
-    return () => clearInterval(interval);
   }, []);
 
   console.log("newsData", newsData);
   console.log("newsData");
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveIndex((current) => (current + 1) % data.length);
-  //   }, 1200); // Change slide every second
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % data.length);
+    }, 1200); // Change slide every second
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
