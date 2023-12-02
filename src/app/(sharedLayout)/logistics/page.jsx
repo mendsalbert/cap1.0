@@ -68,6 +68,7 @@ function LogisticsComponent() {
             <input
               type="text"
               name={image}
+              placeholder="Insert image url"
               onChange={(e) => {
                 setimage(e.target.value);
               }}
