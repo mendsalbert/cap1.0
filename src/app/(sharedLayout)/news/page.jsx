@@ -36,26 +36,26 @@ function News() {
   const [newsData, setNewsData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const fetchNews = async () => {
-  //     try {
-  //       const response = await axios.get("https://newsapi.org/v2/everything", {
-  //         params: {
-  //           q: "war",
-  //           apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
-  //           pageSize: 10,
-  //           language: "en",
-  //         },
-  //       });
-  //       setNewsData(response.data.articles);
-  //       console.log(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching news:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await axios.get("https://newsapi.org/v2/everything", {
+          params: {
+            q: "war",
+            apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
+            pageSize: 10,
+            language: "en",
+          },
+        });
+        setNewsData(response.data.articles);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
 
-  //   fetchNews();
-  // }, []);
+    fetchNews();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
