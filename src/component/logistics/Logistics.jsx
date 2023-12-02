@@ -43,7 +43,7 @@ function Logistics({ products }) {
     console.log(value);
     setTxPending(false);
   }
-  console.log(value);
+  console.log(value.label);
 
   return (
     <>
