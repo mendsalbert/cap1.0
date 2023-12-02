@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { viewAllRequests } from "../../../../utils/RequestC/queries";
+import {
+  updateRequestStatus,
+  viewAllRequests,
+} from "../../../../utils/RequestC/queries";
 
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,6 +16,13 @@ function Task() {
 
   console.log("request", requests);
 
+  async function onChangeStatus() {
+    setTxPending(true);
+    document?.getElementById("my_modal_9")?.showModal();
+    let value = await updateRequestStatus(index, status);
+    console.log(value);
+    setTxPending(false);
+  }
   return (
     <>
       <section className="2xl:w-70 w-full 2xl:mb-0 mb-6">
