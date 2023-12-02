@@ -15,7 +15,7 @@ function Conversions() {
     <>
       <div className="2xl:col-span-9 xl:col-span-8 dark:bg-darkblack-500 lg:col-span-7 col-span-12 relative">
         <ConversionsHeader toggleSetting={() => toggleSetting(!isOpen)} />
-        <div className="lg:pt-20 dark:bg-darkblack-500 px-11 p-5 mb-5 lg:mb-0 space-y-10">
+        <div className="lg:pt-20 dark:bg-darkblack-500 lg:px-3 p-5 mb-5 lg:mb-0 space-y-10">
           <Conversion img={moe} text="How may I assist you today?" />
         </div>
         <SendMassage />
