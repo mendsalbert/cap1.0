@@ -121,7 +121,6 @@ function SendMassage() {
         }}
         required
         type="text"
-        placeholder="Type here"
         className="input input-bordered w-full max-w-xs"
       />
       <button
