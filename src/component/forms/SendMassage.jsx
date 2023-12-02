@@ -85,25 +85,7 @@ function SendMassage() {
             </>
           ))}
       </div>
-      <textarea
-        id="message"
-        name="message"
-        className="comment-form message"
-        cols={30}
-        rows={10}
-        placeholder="Type your message..."
-        value={userPrompt}
-        onChange={(e) => {
-          setUserPrompt(e.target.value);
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            generateContent();
-          }
-        }}
-        required
-      />
+
       <input
         name="message"
         cols={30}
