@@ -53,6 +53,10 @@ function Logistics({ products }) {
     setTxPending(false);
   }
 
+  const dateString = new Date(dateAdded?.toString() * 1000).toLocaleDateString(
+    "en-GB"
+  );
+
   console.log(parseInt(quantity?.toString()) > 1);
   return (
     <>
@@ -222,7 +226,8 @@ function Logistics({ products }) {
                 Order Sent
                 <span className="text-sm flex flex-row items-center space-x-1">
                   <IconClock size={17} />
-                  <span>12-04-23 5:20:34</span>
+
+                  <span>{dateString}</span>
                 </span>
               </div>
               <div className="timeline-middle">
