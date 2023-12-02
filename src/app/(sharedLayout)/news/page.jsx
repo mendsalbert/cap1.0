@@ -119,7 +119,7 @@ function News() {
                       {news.author}
                     </span>
                   </td>
-                  <td>Purple</td>
+                  <td>{news.publishedAt}</td>
                   <th>
                     <button className="btn btn-ghost btn-xs">details</button>
                   </th>
