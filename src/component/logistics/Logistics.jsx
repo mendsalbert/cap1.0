@@ -148,7 +148,7 @@ function Logistics({ products }) {
                         // boxShadow: "inset 0 2px 2px rgba(203, 204, 209, 0.5)", // Similar to Tailwind coolGray-300 with an inset shadow
                         borderRadius: "9999px", // Fully rounded corners like Tailwind rounded-full
                         padding: "0.5rem", // Similar to Tailwind p-2
-                        height: "3.2rem", // Similar to Tailwind h-12
+                        height: "3.3rem", // Similar to Tailwind h-12
                       }),
                       input: (base) => ({
                         ...base,
