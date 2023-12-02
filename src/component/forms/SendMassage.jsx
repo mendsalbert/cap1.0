@@ -15,7 +15,7 @@ function SendMassage() {
 
   const generateContent = async () => {
     setisLoading(true);
-    const completion = await openai.createCompletion({
+    const completion = await openai.chat.completions.create({
       model: "text-davinci-003",
       prompt: `${userPrompt}`,
       temperature: 1.4,
