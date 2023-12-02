@@ -2,6 +2,7 @@
 import Logistics from "@/component/logistics/Logistics";
 import logistics from "@/data/logistics";
 import { IconCirclePlus, IconX } from "@tabler/icons-react";
+import { useState, useEffect } from "react";
 
 function LogisticsComponent() {
   const [name, setname] = useState(null);
