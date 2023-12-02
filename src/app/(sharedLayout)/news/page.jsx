@@ -4,6 +4,7 @@ import ListTab from "@/component/listTab";
 import TeamChat from "@/component/teamChat";
 import Wallet from "@/component/wallet";
 import React, { useEffect, useState } from "react";
+
 function News() {
   const data = [
     {
@@ -32,14 +33,41 @@ function News() {
     },
   ];
 
+  const [newsData, setNewsData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await axios.get("https://newsapi.org/v2/everything", {
+          params: {
+            q: "war",
+            apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
+            pageSize: 10,
+            language: "en",
+          },
+        });
+        setNewsData(response.data.articles);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+
+    fetchNews();
+
     const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % data.length);
-    }, 1200); // Change slide every second
+      setActiveIndex((current) => (current + 1) % newsData.length);
+    }, 1200); // Change slide every 3 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [newsData.length]);
+
+  console.log(newsData);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex((current) => (current + 1) % data.length);
+  //   }, 1200); // Change slide every second
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <>
