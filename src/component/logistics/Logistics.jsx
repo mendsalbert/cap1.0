@@ -69,7 +69,7 @@ function Logistics({ products }) {
                 <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
                   In stock{" "}
                 </span>
-                {product?.quantity?.toString() > 1 ? (
+                {Number(product?.quantity?.toString()) > 1 ? (
                   <span></span>
                 ) : (
                   <span
