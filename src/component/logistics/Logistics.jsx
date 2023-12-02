@@ -69,7 +69,7 @@ function Logistics({ products }) {
         </div>
       ))}
 
-      <dialog id="my_modal_1" className="modal ">
+      {/* <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
           <div className="flex p-2 space-x-5">
             <img src="/blood.jpeg" width={500} className="rounded-lg" />
@@ -129,10 +129,10 @@ function Logistics({ products }) {
             </form>
           </div>
         </div>
-      </dialog>
+      </dialog> */}
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
-
+      {/* 
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box flex flex-row justify-center w-9/12 max-w-3xl ">
           <ul className="timeline mt-10">
@@ -222,7 +222,7 @@ function Logistics({ products }) {
             </form>
           </div>
         </div>
-      </dialog>
+      </dialog> */}
     </>
   );
 }
