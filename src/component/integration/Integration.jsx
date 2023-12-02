@@ -9,7 +9,10 @@ import {
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
-import { getCampaign } from "../../../utils/DonationC/queries";
+import {
+  getCampaign,
+  donateToCampaign,
+} from "../../../utils/DonationC/queries";
 import axios from "axios";
 
 function Integration({ donations }) {
@@ -45,7 +48,6 @@ function Integration({ donations }) {
     const ether = wei / 1e18;
     return (ether * ethToUsdRate).toFixed(2);
   };
-  console.log("ethToUsdRate", weiToUsd(50000000));
 
   const setCurrentState = (
     name,
@@ -67,7 +69,7 @@ function Integration({ donations }) {
   };
 
   useEffect(async () => {
-    const donation = await getCampaign(0);
+    const donation = await donateToCampaign(0);
     // setcampaigns(allCamps);
     console.log("donation", donation);
   }, []);
