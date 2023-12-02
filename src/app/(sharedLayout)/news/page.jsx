@@ -63,7 +63,7 @@ function News() {
                   </div>
                   <div>
                     <p className="text-2xl font-bold">
-                      {news?.title.length > 100
+                      {news?.title.?length > 100
                         ? news?.title.slice(0, 100) + "..."
                         : news?.title}
                     </p>
