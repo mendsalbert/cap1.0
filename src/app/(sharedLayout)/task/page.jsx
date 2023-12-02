@@ -1,10 +1,5 @@
 "use client";
 
-import ListTab from "@/component/listTab";
-import TaskTab from "@/component/listTab/TaskTab";
-
-import TeamChat from "@/component/teamChat";
-import Wallet from "@/component/wallet";
 import React, { useEffect, useState } from "react";
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
