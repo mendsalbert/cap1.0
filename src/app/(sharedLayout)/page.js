@@ -7,6 +7,7 @@ import {
   InfoWindow,
   Circle,
 } from "@react-google-maps/api";
+import { createRequest } from "../../../utils/RequestC/queries";
 
 const containerStyle = {
   width: "100%",
@@ -22,6 +23,7 @@ function Home() {
   const [selectedFacility, setSelectedFacility] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(14);
   const [iconSize, setIconSize] = useState({ width: 30, height: 30 });
+  const [txPending, setTxPending] = useState(false);
 
   const facilities = [
     {
@@ -30,6 +32,7 @@ function Home() {
       type: "ambulance",
       info: "Request Ambulance",
       icon: "/ambulance.svg",
+      location: "isreal",
     },
     {
       id: 2,
@@ -37,6 +40,7 @@ function Home() {
       type: "Water and Food",
       info: "Request for food or water",
       icon: "/droplet-half-2-filled.svg",
+      location: "isreal",
     },
     {
       id: 3,
@@ -44,6 +48,7 @@ function Home() {
       type: "Medical Equipments",
       info: "Find Medical Equipments (Medicine etc)",
       icon: "/pill.svg",
+      location: "isreal",
     },
   ];
 
@@ -99,6 +104,14 @@ function Home() {
   const handleActiveMarker = (facility) => {
     setSelectedFacility(facility.id);
   };
+
+  async function onRequest(requestType) {
+    setTxPending(true);
+    alert(txPending);
+    let value = await createRequest(requestType, "isreal", "urgent");
+    console.log(value);
+    setTxPending(false);
+  }
 
   return (
     <>
@@ -186,7 +199,7 @@ function Home() {
                       <img src={facility.icon} alt={facility.info} />
                       <span
                         onClick={() => {
-                          onRequest();
+                          onRequest(facility.type);
                         }}
                         className="bg-green-500 px-3 py-0.5 rounded-lg text-white cursor-pointer"
                       >
