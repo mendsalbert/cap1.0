@@ -27,6 +27,12 @@ function MyWallet() {
       image,
       targetAmount
     );
+    setname("");
+    setcountry("");
+    setdescription("");
+    setimage("");
+    settargetAmount("");
+
     console.log(value);
     setTxPending(false);
   }
