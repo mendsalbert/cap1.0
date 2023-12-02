@@ -1,11 +1,17 @@
 "use client";
-import { IconCheckupList, IconShip, IconX } from "@tabler/icons-react";
+import {
+  IconCheckupList,
+  IconCircleCheck,
+  IconShip,
+  IconX,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProtoTypes from "prop-types";
 import { useState, useEffect } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { supplyProduct } from "../../../utils/ProductC/queries";
+import { IconTruckDelivery } from "@tabler/icons-react";
 
 function Logistics({ products }) {
   const [amount, setAmount] = useState();
