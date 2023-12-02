@@ -66,7 +66,7 @@ function News() {
 
   console.log("newsData", newsData);
   console.log("newsData");
-  alert("newdate");
+  alert(newsData);
   return (
     <>
       <div className="relative w-full overflow-hidden">
