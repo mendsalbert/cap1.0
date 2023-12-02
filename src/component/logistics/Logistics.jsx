@@ -46,7 +46,7 @@ function Logistics({ products }) {
     setTxPending(false);
   }
 
-  console.log("number", Number(quantity?.toString()));
+  console.log("number", parseInt(quantity?.toString()));
 
   return (
     <>
