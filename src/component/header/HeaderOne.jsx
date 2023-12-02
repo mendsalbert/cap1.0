@@ -91,7 +91,7 @@ function HeaderOne({ handleSidebar }) {
             </div>
             <div className="hidden h-[48px] w-[1px] bg-bgray-300 dark:bg-darkblack-400 xl:block"></div>
             {/* author */}
-            <Author showProfile={handlePopup} />
+            {/* <Author showProfile={handlePopup} /> */}
             {/* if connected show Author component else show connect buttton */}
             <a href="#">
               {/* <div className="flex h-[36px] w-[134px] justify-center rounded-lg bg-success-300 transition duration-300 ease-in-out hover:bg-success-400">
