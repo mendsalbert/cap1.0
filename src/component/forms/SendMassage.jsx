@@ -67,7 +67,14 @@ function SendMassage() {
             <>
               {message?.sender != "user" ? (
                 <p>
-                  <Conversion img={moe} text="How may I assist you today?" />
+                  <Image
+                    priority={true}
+                    height={5}
+                    width={5}
+                    src={"/moe.png"}
+                    // className="shrink-0"
+                    alt=""
+                  />
                 </p>
               ) : (
                 ""
