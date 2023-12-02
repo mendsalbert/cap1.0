@@ -71,6 +71,14 @@ function Integration({ donations }) {
     console.log("donation", donation);
   }, []);
 
+  async function onaddDonation() {
+    setTxPending(true);
+    document?.getElementById("my_modal_9")?.showModal();
+    let value = await donateToCarbonFootPrintProject(id, amount);
+    console.log(value);
+    setTxPending(false);
+  }
+
   console.log(amountRecieved?.toString());
   return (
     <>
@@ -210,6 +218,26 @@ function Integration({ donations }) {
               <button className="">
                 <IconX className="dark:text-white" />
               </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="my_modal_9" className="modal">
+        <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
+          <h3 className="font-bold text-lg">Transaction Processing!</h3>
+          <p className="py-4">
+            {txPending ? (
+              <div className="flex flex-col items-start">
+                <span className="loading loading-spinner text-accent"></span>
+                Confirm transaction
+              </div>
+            ) : (
+              "Transaction completed"
+            )}
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">Close</button>
             </form>
           </div>
         </div>
