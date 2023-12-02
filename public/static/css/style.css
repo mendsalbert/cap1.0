@@ -766,6 +766,21 @@ button.fc-button.fc-button-primary.fc-prev-button {
   color: #000 !important;
 }
 
+/* Add this to your styles.css file or within a <style> tag */
+.message.user {
+  align-self: flex-end;
+  background-color: #daf4ff; /* Light blue background for the user messages */
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #f0f0f0; /* Light gray background for the AI messages */
+}
+
+.messages-container {
+  max-height: 80vh; /* Adjust height as needed */
+}
+
 .min-calender .fc-daygrid-day-number {
   margin-bottom: 10px !important;
 }
