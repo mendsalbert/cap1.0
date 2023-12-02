@@ -118,7 +118,7 @@ function FR({ handleActive }) {
                         Tasks
                         <div className="avatar online placeholder">
                           <div className="bg-red-500 text-neutral-content rounded-full w-6">
-                            <span className="text-xl">AI</span>
+                            <span className="text-sm">AI</span>
                           </div>
                         </div>
                         {/* <span className="bg-pink-600 text-sm p-2 w-5 h-4 ml-2 text-center text-white rounded-full">
