@@ -39,8 +39,8 @@ function Task() {
             </thead>
             <tbody>
               {requests
-                .filter((request) => !request.isFulfilled) // Filter requests with isFulfilled set to false
-                .map((request, index) => (
+                ?.filter((request) => !request.isFulfilled) // Filter requests with isFulfilled set to false
+                ?.map((request, index) => (
                   <tr>
                     <td>
                       <div className="flex items-center gap-3">
