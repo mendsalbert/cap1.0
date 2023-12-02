@@ -25,6 +25,7 @@ function LogisticsComponent() {
     setproducts(allProducts);
   }, []);
 
+  console.log("produdct", products);
   return (
     <>
       {/* must be seen by only NGOs */}
