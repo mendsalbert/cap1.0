@@ -48,7 +48,6 @@ function MyWallet() {
           console.error("Error fetching campaigns:", error);
         }
       };
-
       fetchCampaigns();
     }, []);
   }, []);
