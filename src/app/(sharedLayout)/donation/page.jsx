@@ -38,7 +38,6 @@ function MyWallet() {
   };
 
   useEffect(() => {
-    // allCampaigns();
     useEffect(() => {
       const fetchCampaigns = async () => {
         try {
