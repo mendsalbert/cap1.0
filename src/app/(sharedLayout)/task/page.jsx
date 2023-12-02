@@ -5,7 +5,7 @@ import { viewAllRequests } from "../../../../utils/RequestC/queries";
 
 function Task() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [requests, setrequest] = useState(null);
+  const [requests, setrequest] = useState([]);
   useEffect(async () => {
     const requests = await viewAllRequests();
     setrequest(requests);
@@ -19,7 +19,7 @@ function Task() {
         {/* <h1 className="text-lg py-2 font-bold">(faseffd)</h1> */}
         <button className="btn mb-3 mt-2 bg-black text-white">
           Task
-          <div className="badge">+44</div>
+          <div className="badge">{requests?.lenght}</div>
         </button>
 
         <div className="overflow-x-auto">
