@@ -21,7 +21,7 @@ function LogisticsComponent() {
   }
 
   useEffect(async () => {
-    const allProducts = await getAllProducts();
+    const allProducts = (await getAllProducts()) || [];
     setproducts(allProducts);
   }, []);
 
