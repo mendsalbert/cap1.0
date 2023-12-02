@@ -5,33 +5,6 @@ import Wallet from "@/component/wallet";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function News() {
-  const data = [
-    {
-      title: "Total Earnings",
-      value: "$Issue happening in Gaza is getting serious 1",
-      change:
-        "+3.5% from last week dont mind this one. dont mind this one. dont mind this one. dont mind this one. dont mind this one too",
-    },
-    {
-      title: "Total Spending",
-      value: "Issue happening in Gaza is getting serious 2",
-      change:
-        "+3.5% from last week dont mind this one. dont mind this one. dont mind this one. dont mind this one. dont mind this one too",
-    },
-    {
-      title: "Spending Goal",
-      value: "Issue happening in Gaza is getting serious 3",
-      change:
-        "+3.5% from last week dont mind this one. dont mind this one. dont mind this one. dont mind this one. dont mind this one too",
-    },
-    {
-      title: "Spending Goal",
-      value: "Issue happening in Gaza is getting serious 4",
-      change:
-        "+3.5% from last week dont mind this one. dont mind this one. dont mind this one. dont mind this one. dont mind this one too",
-    },
-  ];
-
   const [newsData, setNewsData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
