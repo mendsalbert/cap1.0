@@ -84,7 +84,7 @@ function News() {
                 <div className="flex flex-row items-start space-x-4 p-4 m-2 bg-white text-gray-700 dark:text-white dark:bg-[#1d1e23] rounded-xl shadow-lg ">
                   <div>
                     <img
-                      src={news?.source?.urlToImage}
+                      src={news?.urlToImage}
                       width={200}
                       height={200}
                       className="rounded-xl"
