@@ -38,7 +38,7 @@ function Logistics({ products }) {
               </h3>
               <div className="flex flex-row space-x-1 cursor-pointer">
                 <span className="text-md py-1 bg-blue-500 rounded-full text-white  px-2 dark:text-bgray-50">
-                  {category}
+                  In stock{" "}
                 </span>
                 {product?.quantity?.toString() > 1 ? (
                   <span></span>
