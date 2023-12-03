@@ -75,7 +75,6 @@ function Integration({ donations }) {
     document.getElementById("my_modal_1").close();
     document?.getElementById("my_modal_9")?.showModal();
 
-    console.log(value);
     setTxPending(false);
   }
 
