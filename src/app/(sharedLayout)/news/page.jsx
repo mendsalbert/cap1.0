@@ -21,6 +21,7 @@ function News() {
           },
         });
         setNewsData(response.data.articles);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching news:", error);
       }
@@ -37,6 +38,7 @@ function News() {
   }, [newsData.length]);
 
   console.log(newsData);
+
   // alert(newsData.length);
   return (
     <>
