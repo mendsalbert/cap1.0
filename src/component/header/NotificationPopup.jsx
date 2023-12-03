@@ -60,7 +60,7 @@ function NotificationPopup({ active, handlePopup }) {
                     <br />
                   </p>
                   <span className="text-xs font-medium text-bgray-500">
-                    23 mins left
+                    {/* 23 mins left */}
                   </span>
                 </div>
               </Link>
