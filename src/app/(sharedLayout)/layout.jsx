@@ -89,9 +89,7 @@ function Layout({ bg, overlay, children }) {
       <NGO handleActive={() => setSidebar(!sidebar)} />
     ) : null;
   } else if (currentPath.startsWith("/fr")) {
-    sidebarComponent = user ? (
-      <FR handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
+    sidebarComponent = <FR handleActive={() => setSidebar(!sidebar)} />;
   } else {
     sidebarComponent = <Sidebar handleActive={() => setSidebar(!sidebar)} />;
   }
