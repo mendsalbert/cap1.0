@@ -38,7 +38,7 @@ function News() {
   }, [newsData.length]);
 
   console.log(newsData);
-
+  console.log("news data new new new new new");
   // alert(newsData.length);
   return (
     <>
