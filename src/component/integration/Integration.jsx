@@ -71,9 +71,9 @@ function Integration({ donations }) {
 
   async function onaddDonation() {
     setTxPending(true);
-    document?.getElementById("my_modal_9")?.showModal();
     let value = await donateToCampaign(id, amount);
     document.getElementById("my_modal_1").close();
+    document?.getElementById("my_modal_9")?.showModal();
 
     console.log(value);
     setTxPending(false);
