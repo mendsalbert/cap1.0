@@ -223,7 +223,7 @@ function Integration({ donations }) {
                 </button>
                 <button
                   onClick={async () => {
-                    let value = await donateToCampaign(id, 0.2);
+                    await donateToCampaign(id, 0.2);
                   }}
                   className=" rounded-full btn btn-outline btn-error"
                 >
