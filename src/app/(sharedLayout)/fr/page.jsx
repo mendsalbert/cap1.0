@@ -2,7 +2,7 @@ import FR from "@/component/sidebar/FR";
 function FRPage() {
   return (
     <div>
-      <NGO />
+      <FR />
     </div>
   );
 }
