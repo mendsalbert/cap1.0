@@ -126,7 +126,13 @@ function Logistics({ products }) {
       <dialog id="my_modal_1" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl dark:bg-[#1d1e23]">
           <div className="flex p-2 space-x-5">
-            <img src={imageCID} width={500} className="rounded-lg" />
+            <div className="flex-1 overflow-hidden rounded-lg">
+              <img
+                src={imageCID}
+                className="object-cover w-full h-full"
+                alt="Campaign Image"
+              />
+            </div>{" "}
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
                 <div>
