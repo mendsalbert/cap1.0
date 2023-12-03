@@ -93,9 +93,7 @@ function Layout({ bg, overlay, children }) {
       <FR handleActive={() => setSidebar(!sidebar)} />
     ) : null;
   } else {
-    sidebarComponent = !user ? (
-      <Sidebar handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
+    sidebarComponent = <Sidebar handleActive={() => setSidebar(!sidebar)} />;
   }
   return (
     <WagmiConfig config={wagmiClient}>
