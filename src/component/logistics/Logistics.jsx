@@ -245,6 +245,7 @@ function Logistics({ products }) {
 
                   <span>{dateString}</span>
                 </span>
+                <br />
               </div>
               <div className="timeline-middle">
                 <svg
