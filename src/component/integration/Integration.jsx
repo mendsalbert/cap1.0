@@ -74,7 +74,6 @@ function Integration({ donations }) {
     let value = await donateToCampaign(id, amount);
     document.getElementById("my_modal_1").close();
     document?.getElementById("my_modal_9")?.showModal();
-
     setTxPending(false);
   }
 
