@@ -313,16 +313,9 @@ function Logistics({ products }) {
 
       <dialog id="my_modal_9" className="modal">
         <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
-          <h3 className="font-bold text-lg">Transaction Processing!</h3>
+          <h3 className="font-bold text-lg">You just Delivered an Item ❤️!</h3>
           <p className="py-4">
-            {txPending ? (
-              <div className="flex flex-col items-start">
-                <span className="loading loading-spinner text-accent"></span>
-                Confirm transaction
-              </div>
-            ) : (
-              "Transaction completed"
-            )}
+            Click on the 'Track" button to tract the product
           </p>
           <div className="modal-action">
             <form method="dialog">
