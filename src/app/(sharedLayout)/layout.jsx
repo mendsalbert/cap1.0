@@ -105,7 +105,7 @@ function Layout({ bg, overlay, children }) {
               } `}
             >
               <HeaderOne handleSidebar={() => setSidebar(!sidebar)} />
-              <HeaderTwo handleSidebar={() => setSidebar(!sidebar)} />
+              {/* <HeaderTwo handleSidebar={() => setSidebar(!sidebar)} /> */}
               {children}
             </div>
           </div>
