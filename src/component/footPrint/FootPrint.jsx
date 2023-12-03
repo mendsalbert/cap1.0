@@ -220,7 +220,11 @@ function FootPrint({ footprints }) {
                 }}
                 className=" btn bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
               >
-                Support
+                {txPending ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  "Support"
+                )}
               </button>
             </div>
           </div>
