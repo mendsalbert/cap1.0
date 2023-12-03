@@ -81,23 +81,7 @@ const myTheme = merge(midnightTheme(), {
 
 function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
-  const user = true;
-  const currentPath = window.location.pathname;
-  let sidebarComponent;
 
-  if (currentPath.startsWith("/ngo")) {
-    sidebarComponent = user ? (
-      <NGO handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
-  } else if (currentPath.startsWith("/fr")) {
-    sidebarComponent = user ? (
-      <FR handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
-  } else {
-    sidebarComponent = !user ? (
-      <Sidebar handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
-  }
   return (
     <WagmiConfig config={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={myTheme}>
