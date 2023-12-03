@@ -85,9 +85,7 @@ function Layout({ bg, overlay, children }) {
   const currentPath = window.location.pathname;
   let sidebarComponent;
   if (currentPath.startsWith("/ngo")) {
-    sidebarComponent = user ? (
-      <NGO handleActive={() => setSidebar(!sidebar)} />
-    ) : null;
+    sidebarComponent = <NGO handleActive={() => setSidebar(!sidebar)} />;
   } else if (currentPath.startsWith("/fr")) {
     sidebarComponent = <FR handleActive={() => setSidebar(!sidebar)} />;
   } else {
