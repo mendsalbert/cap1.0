@@ -58,7 +58,6 @@ function NotificationPopup({ active, handlePopup }) {
                       Mends Albert
                     </strong>
                     <br />
-                    Ambulance is on its way
                   </p>
                   <span className="text-xs font-medium text-bgray-500">
                     23 mins left
