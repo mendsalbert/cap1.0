@@ -84,7 +84,9 @@ const myTheme = merge(midnightTheme(), {
 function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
 
-  const storedUser = window?.localStorage?.getItem("selectedUser");
+  // const storedUser = localStorage.getItem("selectedUser");
+  const storedUser =
+    JSON.parse(localStorage.getItem("selectedUser") || "{}") || null;
 
   console.log(storedUser);
 
