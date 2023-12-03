@@ -27,7 +27,7 @@ function News() {
     };
 
     fetchNews();
-  }, [newsData.length]);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
