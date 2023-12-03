@@ -1,78 +1,63 @@
-import userImg from "/public/static/images/avatar/user-40x40.png";
-import userImg1 from "/public/static/images/avatar/user-40x40-1.png";
-import userImg2 from "/public/static/images/avatar/user-40x40-2.png";
-import userImg3 from "/public/static/images/avatar/user-40x40-3.png";
-import userImg4 from "/public/static/images/avatar/user-40x40-4.png";
-import userImg5 from "/public/static/images/avatar/user-40x40-5.png";
-import userImg6 from "/public/static/images/avatar/user-40x40-6.png";
-import author from "/public/static/images/avatar/user-1.png";
-import author1 from "/public/static/images/avatar/aj.png";
-import author2 from "/public/static/images/avatar/ma.png";
-import author3 from "/public/static/images/avatar/ni.png";
-import author4 from "/public/static/images/avatar/am.png";
-import author5 from "/public/static/images/avatar/sr.png";
-import war from "/public/war.png";
-import blood from "/public/blood.jpeg";
 const task = [
   {
     id: 1,
-    img: blood,
+    img: "blood",
     name: "Request for ambulance",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: blood,
+    img: "blood",
     name: "Request for medicine",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: blood,
-    name: "Request for Blood",
+    img: "blood",
+    name: "Request for 'Blood'",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: blood,
+    img: "blood",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: blood,
+    img: "blood",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: blood,
+    img: "blood",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: war,
+    img: "war",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: war,
+    img: "war",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
   },
   {
     id: 1,
-    img: war,
+    img: "war",
     name: "Exlosion at gaza",
     email: "6:45pm",
     location: "Gaza, Isreal",
