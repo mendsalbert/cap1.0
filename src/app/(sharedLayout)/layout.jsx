@@ -103,10 +103,10 @@ function Layout({ bg, overlay, children }) {
       <RainbowKitProvider chains={chains} theme={myTheme}>
         <div className={`layout-wrapper ${sidebar && "active"}  w-full`}>
           <div className="relative flex w-full">
-            {sidebarComponent}
+            {/* {sidebarComponent} */}
 
+            <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
             {/* {user ? (
-              // <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
               <NGO handleActive={() => setSidebar(!sidebar)} />
             ) : (
               // <FR handleActive={() => setSidebar(!sidebar)} />
