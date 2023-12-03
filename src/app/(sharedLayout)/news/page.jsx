@@ -8,7 +8,6 @@ import Link from "next/link";
 function News() {
   // const [newsData, setNewsData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
-
   const newsData = [
     {
       author: "Karissa Bell",
