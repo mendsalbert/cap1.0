@@ -112,7 +112,8 @@ function Logistics({ products }) {
                 product?.imageUrl,
                 index,
                 product.dateAdded,
-                product.exists
+                product.exists,
+                product.supplyLocation
               );
               document.getElementById("my_modal_1").showModal();
             }}
