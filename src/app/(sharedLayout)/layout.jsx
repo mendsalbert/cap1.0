@@ -84,14 +84,19 @@ function Layout({ bg, overlay, children }) {
   const user = true;
   const currentPath = window.location.pathname;
   let sidebarComponent;
+
   if (currentPath.startsWith("/ngo")) {
-    sidebarComponent = <NGO handleActive={() => setSidebar(!sidebar)} />;
+    sidebarComponent = user ? (
+      <NGO handleActive={() => setSidebar(!sidebar)} />
+    ) : null;
   } else if (currentPath.startsWith("/fr")) {
-    sidebarComponent = <FR handleActive={() => setSidebar(!sidebar)} />;
+    sidebarComponent = user ? (
+      <FR handleActive={() => setSidebar(!sidebar)} />
+    ) : null;
   } else {
-    sidebarComponent = (
-      <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
-    );
+    sidebarComponent = !user ? (
+      <Sidebar handleActive={() => setSidebar(!sidebar)} />
+    ) : null;
   }
   return (
     <WagmiConfig config={wagmiClient}>
