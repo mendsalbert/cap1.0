@@ -15,7 +15,7 @@ function News() {
         const response = await axios.get("https://newsapi.org/v2/everything", {
           params: {
             q: "war",
-            apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
+            apiKey: "c7a7c8720b7945039ff620cbf0ffe973",
             pageSize: 10,
             language: "en",
           },
@@ -27,7 +27,7 @@ function News() {
     };
 
     fetchNews();
-  }, []);
+  }, [newsData.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
