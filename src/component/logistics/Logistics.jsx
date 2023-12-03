@@ -109,7 +109,7 @@ function Logistics({ products }) {
                 product.name,
                 product.quantity,
                 product.description,
-                product?.imageCID,
+                product?.imageUrl,
                 index,
                 product.dateAdded,
                 product.exists
