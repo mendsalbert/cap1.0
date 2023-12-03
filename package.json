@@ -43,6 +43,7 @@
     "next": "13.4.13",
     "next-transpile-modules": "^10.0.1",
     "openai": "3.2.1",
+    "pino-pretty": "^10.2.3",
     "react": "18.2.0",
     "react-calendar": "^4.6.0",
     "react-chartjs-2": "^5.2.0",
