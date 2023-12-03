@@ -73,6 +73,8 @@ function Integration({ donations }) {
     setTxPending(true);
     document?.getElementById("my_modal_9")?.showModal();
     let value = await donateToCampaign(id, amount);
+    document.getElementById("my_modal_1").close();
+
     console.log(value);
     setTxPending(false);
   }
