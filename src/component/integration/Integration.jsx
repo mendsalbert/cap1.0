@@ -197,7 +197,12 @@ function Integration({ donations }) {
                 </span>
               </div>
               <div className="flex flex-row justify-between space-x-3 my-3">
-                <button className="rounded-full btn btn-outline btn-info">
+                <button
+                  onClick={async () => {
+                    let value = await donateToCampaign(id, 5);
+                  }}
+                  className="rounded-full btn btn-outline btn-info"
+                >
                   $5.00
                 </button>
                 <button className="rounded-full btn btn-outline btn-success">
