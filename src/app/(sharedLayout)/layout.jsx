@@ -12,7 +12,8 @@ import ProtoTypes from "prop-types";
 import { useState } from "react";
 
 //wallet imports
-import merge from "lodash.merge";
+// import merge from "lodash.merge";
+import { merge } from "lodash";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
   getDefaultWallets,
