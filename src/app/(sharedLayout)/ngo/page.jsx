@@ -1,10 +1,10 @@
 // pages/client.js
-import ClientComponent from "@/components/ClientComponent"; // Import your CLIENT component
+import NGO from "@/component/sidebar/NGO";
 
 function ClientPage() {
   return (
     <div>
-      <ClientComponent />
+      <NGO />
     </div>
   );
 }
