@@ -271,6 +271,7 @@ function Logistics({ products }) {
                   <IconClock size={17} />
                   <span>{dateString}</span>
                 </span>
+                <br />
                 <span> </span>
               </div>{" "}
               <div className="timeline-middle">
