@@ -77,7 +77,7 @@ function NGO({ handleActive }) {
               Menu (NGO)
             </h4>
             <ul className="mt-2.5">
-              <li
+              {/* <li
                 className="item py-[11px] text-bgray-900 dark:text-white"
                 onClick={() => setActiveDashboard(!activeDashboard)}
               >
@@ -113,7 +113,7 @@ function NGO({ handleActive }) {
                     </div>
                   </Link>
                 </a>
-              </li>
+              </li> */}
 
               <li className="item py-[11px] text-bgray-900 dark:text-white">
                 <Link href="/news">
