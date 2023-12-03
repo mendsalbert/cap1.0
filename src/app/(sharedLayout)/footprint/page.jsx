@@ -37,10 +37,6 @@ function FootPrintComponent() {
     setTxPending(false);
   }
 
-  async function onsubmitHandler() {
-    setTxPending(true);
-  }
-
   useEffect(async () => {
     const allCamps = (await getCampaigns()) || [];
     setcampaigns(allCamps);
