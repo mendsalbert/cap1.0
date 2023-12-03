@@ -26,7 +26,7 @@ function Logistics({ products }) {
   const [txPending, setTxPending] = useState(false);
   const [value, setValue] = useState(null);
   const [country, setcountry] = useState(null);
-
+  const [supplyLocation, setsupplyLocation] = useState(null);
   const setCurrentState = (
     name,
     quantity,
@@ -34,7 +34,8 @@ function Logistics({ products }) {
     imageCID,
     index,
     dateAdded,
-    exists
+    exists,
+    supplyLocation
   ) => {
     setname(name);
     setquantity(quantity);
@@ -43,6 +44,7 @@ function Logistics({ products }) {
     setid(index);
     setdateAdded(dateAdded);
     setexist(exists);
+    setsupplyLocation(supplyLocation);
     console.log("id", id);
   };
 
