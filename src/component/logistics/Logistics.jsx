@@ -133,7 +133,7 @@ function Logistics({ products }) {
                 alt="Campaign Image"
               />
             </div>{" "}
-            <div className="flex flex-col">
+            <div className="flex-1 flex flex-col p-2 space-y-2">
               <div className="flex flex-row justify-between">
                 <div>
                   <h3 className="text-2xl text-bgray-900 dark:text-white font-bold">
