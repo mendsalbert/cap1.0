@@ -1,7 +1,7 @@
 // pages/client.js
 import NGO from "@/component/sidebar/NGO";
 
-function ClientPage() {
+function NGOPage() {
   return (
     <div>
       <NGO />
@@ -9,4 +9,4 @@ function ClientPage() {
   );
 }
 
-export default ClientPage;
+export default NGOPage;
