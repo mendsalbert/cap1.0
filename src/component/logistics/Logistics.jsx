@@ -48,8 +48,9 @@ function Logistics({ products }) {
 
   async function onsupplyproduct() {
     setTxPending(true);
-    document?.getElementById("my_modal_9")?.showModal();
     await supplyProduct(id, amount, country);
+    document.getElementById("my_modal_1").close();
+    document?.getElementById("my_modal_9")?.showModal();
     setTxPending(false);
   }
 
@@ -203,7 +204,11 @@ function Logistics({ products }) {
                 }}
                 className="bg-[#21c55d] mt-4 hover:bg-green-600 text-white rounded-full px-10  py-2 text-lg"
               >
-                Supply
+                {txPending ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  "Supply"
+                )}
               </button>
             </div>
           </div>
