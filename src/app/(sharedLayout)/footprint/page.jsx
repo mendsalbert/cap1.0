@@ -34,7 +34,9 @@ function FootPrintComponent() {
       deadline,
       image
     );
-    console.log(value);
+    document.getElementById("my_modal_4").close();
+    alert("Donation added successfully");
+
     setTxPending(false);
   }
 
@@ -149,7 +151,11 @@ function FootPrintComponent() {
             }}
             className="bg-green-500 hover:bg-green-600 w-full my-2 p-3 rounded-full text-white "
           >
-            Upload
+            {txPending ? (
+              <span className="loading loading-spinner loading-md"></span>
+            ) : (
+              "Upload"
+            )}
           </button>
           {/* add */}
           <div className="modal-action absolute -top-3 right-4">
