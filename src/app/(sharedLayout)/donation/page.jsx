@@ -28,6 +28,7 @@ function MyWallet() {
       targetAmount
     );
     document.getElementById("my_modal_4").close();
+    alert("Donation added successfully");
     setTxPending(false);
   }
 
