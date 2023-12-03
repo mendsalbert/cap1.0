@@ -89,7 +89,9 @@ function Layout({ bg, overlay, children }) {
   } else if (currentPath.startsWith("/fr")) {
     sidebarComponent = <FR handleActive={() => setSidebar(!sidebar)} />;
   } else {
-    sidebarComponent = <Sidebar handleActive={() => setSidebar(!sidebar)} />;
+    sidebarComponent = (
+      <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
+    );
   }
   return (
     <WagmiConfig config={wagmiClient}>
