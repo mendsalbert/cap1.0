@@ -29,10 +29,9 @@ function MyWallet() {
     );
     setname("");
     setcountry("");
-    // setdescription("");
+    setdescription("");
     setimage("");
     settargetAmount("");
-    console.log(value);
     setTxPending(false);
   }
 
