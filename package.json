@@ -24,6 +24,7 @@
     "@react-google-maps/api": "^2.19.2",
     "@tabler/icons-react": "^2.40.0",
     "@web3-storage/w3up-client": "^11.2.0",
+    "add": "^2.0.6",
     "aos": "^2.3.4",
     "axios": "^1.6.2",
     "chart.js": "^4.3.2",
@@ -35,6 +36,7 @@
     "formidable": "^3.5.1",
     "framer-motion": "^10.16.7",
     "fullcalendar": "^6.1.9",
+    "google-maps-react": "^2.0.6",
     "ipfs-http-client": "^60.0.1",
     "jsvectormap": "^1.5.3",
     "lodash": "^4.17.21",
@@ -51,7 +53,8 @@
     "react-quill": "^2.0.0",
     "swiper": "^10.1.0",
     "viem": "^1.19.9",
-    "wagmi": "^1.4.7"
+    "wagmi": "^1.4.7",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
