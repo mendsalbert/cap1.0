@@ -32,6 +32,8 @@ import {
 import { publicProvider } from "wagmi/providers/public";
 import { createPublicClient, http } from "viem";
 
+const isBrowser = typeof window !== "undefined";
+
 const mumbaiApothem = {
   id: 80001,
   name: "Mumbai (TestNet)",
@@ -85,10 +87,10 @@ function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
 
   // const storedUser = localStorage.getItem("selectedUser");
-  const storedUser =
-    JSON.parse(localStorage.getItem("selectedUser") || "{}") || null;
+  // const storedUser =
+  //   JSON.parse(localStorage.getItem("selectedUser") || "{}") || null;
 
-  console.log(storedUser);
+  const storedUser = isBrowser ? localStorage.getItem("selectedUser") : null;
 
   return (
     <WagmiConfig config={wagmiClient}>
