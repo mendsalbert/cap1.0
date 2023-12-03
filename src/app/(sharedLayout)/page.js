@@ -6,7 +6,7 @@ import {
   Marker,
   InfoWindow,
   Circle,
-} from "@react-google-maps/api";
+} from "@react-google-maps/api ";
 import { createRequest } from "../../../utils/RequestC/queries";
 
 const containerStyle = {
