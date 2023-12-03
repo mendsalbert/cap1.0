@@ -43,7 +43,7 @@ function FootPrintComponent() {
   }
 
   useEffect(async () => {
-    const allCamps = await getCampaigns();
+    const allCamps = (await getCampaigns()) || [];
     setcampaigns(allCamps);
   }, []);
 
