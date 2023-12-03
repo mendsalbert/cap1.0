@@ -199,7 +199,7 @@ function Integration({ donations }) {
               <div className="flex flex-row justify-between space-x-3 my-3">
                 <button
                   onClick={async () => {
-                    let value = await donateToCampaign(id, 1);
+                    let value = await donateToCampaign(id, 5);
                   }}
                   className="rounded-full btn btn-outline btn-info"
                 >
