@@ -295,7 +295,7 @@ function Logistics({ products }) {
                 Shipping
                 <span className="text-sm flex flex-row items-center space-x-1">
                   <IconClock size={17} />
-                  <span>{dateString}</span>
+                  <span>{dateString}</span> <br />
                   {supplyLocation}
                 </span>
               </div>{" "}
