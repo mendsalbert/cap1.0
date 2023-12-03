@@ -215,7 +215,7 @@ function Integration({ donations }) {
                 </button>
                 <button
                   onClick={async () => {
-                    let value = await donateToCampaign(id, 0.1);
+                    await donateToCampaign(id, 0.1);
                   }}
                   className=" rounded-full btn btn-outline btn-warning"
                 >
