@@ -289,7 +289,7 @@ function Logistics({ products }) {
               <hr />
               <div className="timeline-start flex flex-col items-center timeline-box">
                 <IconTruckDelivery size={33} />
-                Shippingg
+                Shipping
                 <span className="text-sm flex flex-row items-center space-x-1">
                   <IconClock size={17} />
                   <span>{dateString}</span>
