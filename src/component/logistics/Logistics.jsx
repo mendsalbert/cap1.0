@@ -95,9 +95,11 @@ function Logistics({ products }) {
               </div>
             </div>
           </div>
-          <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 ">
-            {product.description}
-          </p>
+          <div className="max-w-2xl">
+            <p className="pt-5 pb-8 text-lg text-bgray-600 dark:text-bgray-50 overflow-hidden whitespace-nowrap text-ellipsis">
+              {product.description}
+            </p>
+          </div>
 
           <button
             aria-label="none"
