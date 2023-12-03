@@ -54,9 +54,9 @@ function FootPrint({ footprints }) {
 
   async function onaddDonation() {
     setTxPending(true);
-    document?.getElementById("my_modal_9")?.showModal();
     let value = await donateToCarbonFootPrintProject(id, amount);
-    console.log(value);
+    document.getElementById("my_modal_1").close();
+    document?.getElementById("my_modal_9")?.showModal();
     setTxPending(false);
   }
 
@@ -239,17 +239,8 @@ function FootPrint({ footprints }) {
       </dialog>
       <dialog id="my_modal_9" className="modal">
         <div className="modal-box dark:bg-[#1d1e23] dark:text-white">
-          <h3 className="font-bold text-lg">Transaction Processing!</h3>
-          <p className="py-4">
-            {txPending ? (
-              <div className="flex flex-col items-start">
-                <span className="loading loading-spinner text-accent"></span>
-                Confirm transaction
-              </div>
-            ) : (
-              "Transaction completed"
-            )}
-          </p>
+          <h3 className="font-bold text-lg">You just Donated ❤️!</h3>
+          <p className="py-4">Thanks for Supporting 🎉</p>
           <div className="modal-action">
             <form method="dialog">
               <button className="btn">Close</button>
