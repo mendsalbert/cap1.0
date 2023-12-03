@@ -59,7 +59,7 @@ function ClientSidebar({ handleActive }) {
         <div className="nav-wrapper mb-[36px] pr-[50px]">
           <div className="item-wrapper mb-5">
             <h4 className="border-b border-bgray-200 text-sm font-medium leading-7 text-bgray-700 dark:border-darkblack-400 dark:text-bgray-50">
-              Menu (Client)
+              Menu (Civilian)
             </h4>
             <ul className="mt-2.5">
               <li

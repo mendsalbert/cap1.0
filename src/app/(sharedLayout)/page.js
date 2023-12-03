@@ -25,6 +25,8 @@ function Home() {
   const [iconSize, setIconSize] = useState({ width: 30, height: 30 });
   const [txPending, setTxPending] = useState(false);
 
+  //application state
+  const [user, setUser] = useState(null);
   const facilities = [
     {
       id: 1,
@@ -115,6 +117,17 @@ function Home() {
 
     setTxPending(false);
   }
+
+  useEffect(() => {
+    document.getElementById("my_modal_1").showModal();
+  }, []);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("selectedUser");
+    if (storedUser) {
+      document.getElementById("my_modal_1").close();
+    }
+  }, []);
 
   return (
     <>
@@ -218,6 +231,58 @@ function Home() {
           {/* {currentLocation && <Marker position={currentLocation} />} */}
         </GoogleMap>
       </LoadScript>
+
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Select the type of user!</h3>
+          <select
+            className="select select-bordered w-full mb-5 mt-3 "
+            onChange={(e) => {
+              setUser(e.target.value);
+              if (e.target.value == "client") {
+                document.getElementById("my_modal_1").close();
+                localStorage.setItem("selectedUser", "client");
+                window.location.href = "/";
+              }
+            }}
+          >
+            <option disabled selected>
+              Select User
+            </option>
+            <option value="client">Civilian</option>
+            <option value="ngo">NGO</option>
+            <option value="fr">First Respondant</option>
+          </select>
+
+          {user == "ngo" ? (
+            <input
+              type="password"
+              onChange={(e) => {
+                if (e.target.value === "ngoadmin1234") {
+                  localStorage.setItem("selectedUser", "ngo");
+                  document.getElementById("my_modal_1").close();
+                  window.location.href = "/";
+                }
+              }}
+              className="input input-bordered w-full  text-xl"
+            />
+          ) : user == "fr" ? (
+            <input
+              type="password"
+              onChange={(e) => {
+                if (e.target.value === "fradmin1234") {
+                  localStorage.setItem("selectedUser", "fr");
+                  document.getElementById("my_modal_1").close();
+                  window.location.href = "/";
+                }
+              }}
+              className="input input-bordered w-full  text-xl "
+            />
+          ) : (
+            ""
+          )}
+        </div>
+      </dialog>
     </>
   );
 }

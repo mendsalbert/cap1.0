@@ -8,6 +8,7 @@ import FR from "@/component/sidebar/FR";
 import NGO from "@/component/sidebar/NGO";
 import SidebarV2 from "@/component/sidebar/SidebarV2";
 import ProtoTypes from "prop-types";
+import { useRouter } from "next/router";
 
 import { useState } from "react";
 
@@ -82,6 +83,9 @@ const myTheme = merge(midnightTheme(), {
 
 function Layout({ bg, overlay, children }) {
   const [sidebar, setSidebar] = useState(true);
+  const storedUser = localStorage.getItem("selectedUser");
+
+  console.log(storedUser);
 
   return (
     <WagmiConfig config={wagmiClient}>
@@ -90,13 +94,15 @@ function Layout({ bg, overlay, children }) {
           <div className="relative flex w-full">
             {/* {sidebarComponent} */}
 
-            <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
-            {/* {user ? (
+            {storedUser == "ngo" ? (
               <NGO handleActive={() => setSidebar(!sidebar)} />
+            ) : storedUser == "fr" ? (
+              <FR handleActive={() => setSidebar(!sidebar)} />
+            ) : storedUser == "client" ? (
+              <ClientSidebar handleActive={() => setSidebar(!sidebar)} />
             ) : (
-              // <FR handleActive={() => setSidebar(!sidebar)} />
-              <Sidebar handleActive={() => setSidebar(!sidebar)} />
-            )} */}
+              ""
+            )}
 
             {overlay ? overlay : <Overlay />}
             <SidebarV2 />
