@@ -16,7 +16,6 @@ function LogisticsComponent() {
   async function onsubmitHandler() {
     setTxPending(true);
     let value = await addProduct(name, quantity, description, image);
-    console.log(value);
     setTxPending(false);
   }
 
