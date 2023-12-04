@@ -3,7 +3,7 @@ function SidebarHeader() {
     <header>
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-3xl font-semibold text-bgray-900 dark:text-white">
-          Presets
+          Search Templates{" "}
         </h3>
       </div>
       {/* <div className="relative">

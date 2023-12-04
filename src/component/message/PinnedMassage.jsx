@@ -1,3 +1,4 @@
+"use Client";
 import Image from "next/image";
 import ProtoTypes from "prop-types";
 function PinnedMassage({ pinnedMassage }) {

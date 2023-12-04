@@ -204,7 +204,13 @@ function ClientSidebar({ handleActive }) {
               Others
             </h4>
             <ul className="mt-2.5">
-              <li className="item py-[11px] text-bgray-900 dark:text-white">
+              <li
+                className="item py-[11px] text-bgray-900 dark:text-white"
+                onClick={() => {
+                  localStorage.removeItem("selectedUser");
+                  window.location.href = "/";
+                }}
+              >
                 <Link href="#">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2.5">
@@ -240,7 +246,7 @@ function ClientSidebar({ handleActive }) {
                         </svg>
                       </span>
                       <span className="item-text text-lg font-medium leading-none">
-                        Disconnect
+                        Logout
                       </span>
                     </div>
                   </div>

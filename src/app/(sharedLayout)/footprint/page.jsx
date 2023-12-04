@@ -33,7 +33,7 @@ function FootPrintComponent() {
       image
     );
     document.getElementById("my_modal_4").close();
-    alert("Donation added successfully");
+    alert("Footprint added successfully");
     setTxPending(false);
   }
 

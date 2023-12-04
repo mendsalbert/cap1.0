@@ -17,7 +17,7 @@ function LogisticsComponent() {
     setTxPending(true);
     let value = await addProduct(name, quantity, description, image);
     document.getElementById("my_modal_4").close();
-    alert("Donation added successfully");
+    alert("Product added successfully");
 
     setTxPending(false);
   }

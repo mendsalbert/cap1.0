@@ -57,9 +57,9 @@ function SendMassage() {
 
   return (
     <div className="chat-container relative w-full h-screen">
+      {/* <div ref={endOfMessagesRef} className="" /> */}
       <div className="messages-container overflow-auto p-4 flex flex-col-reverse">
         {/* Ref for auto-scrolling */}
-        <div ref={endOfMessagesRef} className="relative" />
         {messages
           .slice()
           .reverse()
@@ -91,6 +91,7 @@ function SendMassage() {
           name="message"
           cols={30}
           rows={10}
+          // ref={endOfMessagesRef}
           placeholder="Type your message..."
           value={userPrompt}
           onChange={(e) => {
