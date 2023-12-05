@@ -4,7 +4,7 @@ import Donation from "./Donation.json";
 export const DonationContract = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const { ethereum } = window;
-  const contractAddress = "0x0aFDd95dCc4118d45fe97D7C1900da604f309D66";
+  const contractAddress = "0x02Ba7aEBeC9054FAbe5a065826F86DEe4d789F31";
   if (ethereum) {
     const signer = provider.getSigner();
     const contractReader = new ethers.Contract(
